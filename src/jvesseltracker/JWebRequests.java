@@ -30,7 +30,7 @@ public class JWebRequests {
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					connection.getInputStream()));
 			String inputLine;
-			StringBuffer response = new StringBuffer();
+			StringBuilder response = new StringBuilder();
 
 			while ((inputLine = in.readLine()) != null) {
 				response.append(inputLine).append("\n");
@@ -50,11 +50,11 @@ public class JWebRequests {
 
 		// For POST only - START
 		connection.setDoOutput(true);
-		OutputStream os = connection.getOutputStream();
-		os.write(postParams.getBytes());
-		os.flush();
-		os.close();
-		// For POST only - END
+		try (OutputStream os = connection.getOutputStream()) {
+			os.write(postParams.getBytes());
+			os.flush();
+			// For POST only - END
+		}
 
 		int responseCode = connection.getResponseCode();
 		System.out.println("POST Response Code :: " + responseCode);
@@ -63,7 +63,7 @@ public class JWebRequests {
 			BufferedReader in = new BufferedReader(new InputStreamReader(
 					connection.getInputStream()));
 			String inputLine;
-			StringBuffer response = new StringBuffer();
+			StringBuilder response = new StringBuilder();
 
 			while ((inputLine = in.readLine()) != null) {
 				response.append(inputLine);
