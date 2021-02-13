@@ -33,7 +33,7 @@ public class JWebRequests {
 			StringBuffer response = new StringBuffer();
 
 			while ((inputLine = in.readLine()) != null) {
-				response.append(inputLine);
+				response.append(inputLine).append("\n");
 			}
 
 			// print result
