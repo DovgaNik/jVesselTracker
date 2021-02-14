@@ -1,5 +1,5 @@
 package jvesseltracker;
 
-public class simpleJsonParser {
+public class parsedJson {
 	
 }
