@@ -15,25 +15,24 @@ public class JVesselTracker {
 	
 		String json = jWeb.sendGET();
 		System.out.println(json);
+
+		parsedJson parser = new parsedJson(json);
 		
-		String parsed = "";
-		
-		for (int i = 0; i < json.length(); i++) {
-			char charAt = json.charAt(i);
-			if (charAt != '[' & json.charAt(i) != ']' & json.charAt(i) != '"') {
-				parsed += charAt;
-			}
-		}
-		
-		System.out.println(parsed);
-		
-		String[] jsonInfo = parsed.split(",");
-		
-		for (int i = 0; i < jsonInfo.length; i++) {
-			System.out.println(i + "	" +jsonInfo[i]);
-		}
+		System.out.println("course" + parser.course);
+		System.out.println("dataSource" + parser.dataSource);
+		System.out.println("day" + parser.day);
+		System.out.println("heading" + parser.heading);
+		System.out.println("hour" + parser.hour);
+		System.out.println("lat" + parser.lat);
+		System.out.println("lat" + parser.lon);
+		System.out.println("minute" + parser.minute);
+		System.out.println("mmsi" + parser.mmsi);
+		System.out.println("month" + parser.month);
+		System.out.println("second" + parser.second);
+		System.out.println("speed" + parser.speed);
+		System.out.println("status" + parser.status);
+		System.out.println("year" + parser.year);
+			
 	}
-	
-	
 	
 }
