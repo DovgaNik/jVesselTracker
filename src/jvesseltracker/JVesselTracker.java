@@ -12,9 +12,13 @@ public class JVesselTracker {
 
 
 		JWebRequests jWeb = new JWebRequests(agent, url);
-
-		System.out.println(jWeb.sendGET());
+	
+		String json = jWeb.sendGET();
+		System.out.println(json);
 		
+
 	}
+	
+	
 	
 }
