@@ -1,6 +1,7 @@
 package jvesseltracker;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class JVesselTracker {
 
@@ -10,10 +11,15 @@ public class JVesselTracker {
 	private static final String mmsi = "246896000"; //mmsi
 	private static byte timespan = 10; //timespan of the position
 	
-	private static final String url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + shipid + "/timespan:" + timespan + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
+	private static String url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + shipid + "/timespan:" + timespan + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
 
 	public static void main(String[] args) throws IOException {
-
+                
+                
+            Scanner in = new Scanner(System.in);
+                
+           url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + shipid + "/timespan:" + in.nextInt() + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
+            
 		JWebRequests jWeb = new JWebRequests(agent, url);
 	
 		String json = jWeb.sendGET();
