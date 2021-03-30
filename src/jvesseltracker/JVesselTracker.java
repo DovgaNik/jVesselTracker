@@ -7,18 +7,18 @@ public class JVesselTracker {
 
 	private static final String agent = "Mozilla/5.0";//User agent by default (recommended)
 
-	private static final String shipid = "dbc7e47f9ead3b31f4602a1720d6219e489d27a8";//shipid on marinetraffic
+	private static final String apikey = "86a2ee2d5c2b22ae2c87320b7ddc4dd1697964ce";//apikey on marinetraffic
 	private static final String mmsi = "246896000"; //mmsi
 	private static byte timespan = 10; //timespan of the position
 	
-	private static String url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + shipid + "/timespan:" + timespan + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
+	private static String url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + apikey + "/timespan:" + timespan + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
 
 	public static void main(String[] args) throws IOException {
                 
                 
             Scanner in = new Scanner(System.in);
                 
-           url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + shipid + "/timespan:" + in.nextInt() + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
+           url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + apikey + "/timespan:" + in.nextInt() + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
             
 		JWebRequests jWeb = new JWebRequests(agent, url);
 	
