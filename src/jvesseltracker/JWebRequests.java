@@ -13,7 +13,7 @@ public class JWebRequests {
 	static HttpURLConnection connection;
 	String link;
 	
-	JWebRequests(final String userAgent, final String getPostURL) throws MalformedURLException, IOException{
+	public JWebRequests(final String userAgent, final String getPostURL) throws MalformedURLException, IOException{
 		
 		URL URL = new URL(getPostURL);
 		link = getPostURL;

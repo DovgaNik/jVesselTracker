@@ -1,14 +1,15 @@
-package jvesseltracker;
+package jvesseltracker.jSingleVesselPosition;
 
 import java.io.IOException;
+import jvesseltracker.JWebRequests;
 
 public class JPosition {
     
     public static void get(String mmsi, int timespan, String apikey, String agent) throws IOException{
         
         String url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + apikey + "/timespan:" + timespan + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
-        JWebRequests jWeb = new JWebRequests(agent, url);
-        
+        jvesseltracker.JWebRequests jWeb = new jvesseltracker.JWebRequests(agent, url);
+  
         String json = jWeb.sendGET();
         System.out.println(json);
 		

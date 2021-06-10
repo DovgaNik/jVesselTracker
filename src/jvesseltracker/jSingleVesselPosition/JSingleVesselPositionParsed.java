@@ -1,4 +1,4 @@
-package jvesseltracker;
+package jvesseltracker.jSingleVesselPosition;
 
 public class JSingleVesselPositionParsed {
 	String //Creating public string to store all parsed information
