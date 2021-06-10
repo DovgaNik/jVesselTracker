@@ -7,50 +7,16 @@ public class JVesselTracker {
 
 	private static final String agent = "Mozilla/5.0";//User agent by default (recommended)
 
-	private static final String apikey = "196b47649e313f2b0b2c71c3a04771ba4ca0c811";//apikey on marinetraffic
+	private static final String apikey = "196b47649e313f2b0b2c71c3a04771ba4ca0c811";//apikey for single vessel position on marinetraffic
 	private static final String mmsi = "353136000"; //mmsi
-	private static byte timespan = 10; //timespan of the position
 	
-	private static String url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + apikey + "/timespan:" + timespan + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
+	//private static String url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + apikey + "/timespan:" + timespan + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
 
 	public static void main(String[] args) throws IOException {
-                
-                
-            System.out.println(url); // For debug purposes
             
-            Scanner in = new Scanner(System.in);
-                
-            url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + apikey + "/timespan:" + in.nextInt() + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
+            Scanner in = new Scanner(System.in);        
             
-		JWebRequests jWeb = new JWebRequests(agent, url);
-	
-		String json = jWeb.sendGET();
-		System.out.println(json);
-		
-		System.out.println(json.length());
-		
-		if(json.length() == 3){
-			System.out.println("Fuck");
-		}else{
-		
-			parsedJson parser = new parsedJson(json);
-
-			System.out.println("course " + parser.course);
-			System.out.println("dataSource " + parser.dataSource);
-			System.out.println("day " + parser.day);
-			System.out.println("heading " + parser.heading);
-			System.out.println("hour " + parser.hour);
-			System.out.println("lat " + parser.lat);
-			System.out.println("lon " + parser.lon);
-			System.out.println("minute " + parser.minute);
-			System.out.println("mmsi " + parser.mmsi);
-			System.out.println("month " + parser.month);
-			System.out.println("second " + parser.second);
-			System.out.println("speed " + parser.speed);
-			System.out.println("status " + parser.status);
-			System.out.println("year " + parser.year);
-			
-		}
-	}
-	
+            JPosition.get(mmsi, in.nextInt(), apikey, agent);
+                
+        }
 }
