@@ -1,7 +1,6 @@
 package jvesseltracker.jSingleVesselPosition;
 
 import java.io.IOException;
-import jvesseltracker.JWebRequests;
 
 public class JPosition {
     
