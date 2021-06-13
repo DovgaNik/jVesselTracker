@@ -1,6 +1,8 @@
 package jvesseltracker.jVesselParticulars;
 
 import java.io.IOException;
+import java.net.URL;
+import jvesseltracker.JDownload;
 import jvesseltracker.JGet;
 import jvesseltracker.JWebRequests;
 
@@ -29,6 +31,8 @@ public class JParticulars {
 	// </editor-fold>
         
         System.out.println(temp);        
+        
+        JDownload.download(new URL(temp), "123");
         
     }
             
