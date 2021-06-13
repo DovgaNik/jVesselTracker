@@ -3,6 +3,7 @@ package jvesseltracker;
 import jvesseltracker.jSingleVesselPosition.JPosition;
 import java.io.IOException;
 import java.util.Scanner;
+import jvesseltracker.jVesselParticulars.JParticulars;
 
 public class JVesselTracker {
 
@@ -18,6 +19,7 @@ public class JVesselTracker {
             Scanner in = new Scanner(System.in);        
             
             JPosition.get(mmsi, in.nextInt(), apikey, agent);
-                
+            
+            JParticulars.get("9811000", "d32a46d8ab7bf29d86aaa02a405f403874981517", agent);
         }
 }

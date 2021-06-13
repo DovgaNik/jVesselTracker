@@ -1,6 +1,7 @@
 package jvesseltracker.jVesselParticulars;
 
 import java.io.IOException;
+import jvesseltracker.JGet;
 import jvesseltracker.JWebRequests;
 
 public class JParticulars {
@@ -29,9 +30,10 @@ public class JParticulars {
         
         System.out.println(temp);
         
-        jvesseltracker.JWebRequests jWebTemp = new jvesseltracker.JWebRequests(agent, temp);
-        String photohtml = jWebTemp.sendGET();
-        System.out.println(photohtml);
+        JGet.download(temp);
+//        System.out.println(photohtml);
+        
+        
     }
             
 }
