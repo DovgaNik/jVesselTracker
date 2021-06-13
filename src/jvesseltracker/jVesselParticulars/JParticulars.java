@@ -28,11 +28,7 @@ public class JParticulars {
             }
 	// </editor-fold>
         
-        System.out.println(temp);
-        
-        JGet.download(temp);
-//        System.out.println(photohtml);
-        
+        System.out.println(temp);        
         
     }
             

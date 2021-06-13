@@ -18,7 +18,7 @@ public class JVesselTracker {
             
             Scanner in = new Scanner(System.in);        
             
-            JPosition.get(mmsi, in.nextInt(), apikey, agent);
+            JPosition.get(mmsi, 100, apikey, agent);
             
             JParticulars.get("9811000", "d32a46d8ab7bf29d86aaa02a405f403874981517", agent);
         }
