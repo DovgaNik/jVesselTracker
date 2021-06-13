@@ -32,7 +32,7 @@ public class JParticulars {
         
         System.out.println(temp);        
         
-        JDownload.download(new URL(temp), "123");
+        JDownload.download(new URL(temp), "123.jpg");
         
     }
             
