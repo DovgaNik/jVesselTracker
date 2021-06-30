@@ -9,12 +9,14 @@ import java.net.URL;
 
 public class JGet {
     
-    public static void download(String url){
+    public static String download(String url){
      
         URL u;
         InputStream is = null;
         DataInputStream dis;
         String s;
+        
+        String returning = "";
 
         try {
             
@@ -22,7 +24,7 @@ public class JGet {
             is = u.openStream();
             dis = new DataInputStream(new BufferedInputStream(is));
             while ((s = dis.readLine()) != null)
-                System.out.println(s);
+                returning += s;
             
         }
         catch (MalformedURLException mue) {
@@ -46,7 +48,9 @@ public class JGet {
           catch (IOException ioe){}
           
         }
-
+        
+        return returning;
+        
     }
     
 }
