@@ -9,6 +9,8 @@ public class JPosition {
         String url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + apikey + "/timespan:" + timespan + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
         jvesseltracker.JWebRequests jWeb = new jvesseltracker.JWebRequests(agent, url);
   
+        System.out.println(url);
+        
         String json = jWeb.sendGET();
         System.out.println(json);
 		
