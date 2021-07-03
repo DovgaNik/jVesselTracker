@@ -15,7 +15,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanelRoot = new javax.swing.JPanel();
         jPanelTitle = new javax.swing.JPanel();
-        jSplitPaneMain = new javax.swing.JSplitPane();
         jPanelSidebar = new javax.swing.JPanel();
         jPanelContent = new javax.swing.JPanel();
 
@@ -27,7 +26,7 @@ public class MainFrame extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1000, 600));
         setResizable(false);
 
-        jPanelRoot.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelRoot.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanelTitle.setBackground(new java.awt.Color(179, 73, 93));
         jPanelTitle.setToolTipText("");
@@ -53,23 +52,18 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 35, Short.MAX_VALUE)
         );
 
-        jSplitPaneMain.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(250, 248, 241)));
-        jSplitPaneMain.setDividerLocation(200);
-
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
 
         javax.swing.GroupLayout jPanelSidebarLayout = new javax.swing.GroupLayout(jPanelSidebar);
         jPanelSidebar.setLayout(jPanelSidebarLayout);
         jPanelSidebarLayout.setHorizontalGroup(
             jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 199, Short.MAX_VALUE)
+            .addGap(0, 256, Short.MAX_VALUE)
         );
         jPanelSidebarLayout.setVerticalGroup(
             jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 560, Short.MAX_VALUE)
         );
-
-        jSplitPaneMain.setLeftComponent(jPanelSidebar);
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
 
@@ -77,34 +71,34 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelContent.setLayout(jPanelContentLayout);
         jPanelContentLayout.setHorizontalGroup(
             jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 794, Short.MAX_VALUE)
+            .addGap(0, 737, Short.MAX_VALUE)
         );
         jPanelContentLayout.setVerticalGroup(
             jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 560, Short.MAX_VALUE)
         );
 
-        jSplitPaneMain.setRightComponent(jPanelContent);
-
         javax.swing.GroupLayout jPanelRootLayout = new javax.swing.GroupLayout(jPanelRoot);
         jPanelRoot.setLayout(jPanelRootLayout);
         jPanelRootLayout.setHorizontalGroup(
             jPanelRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelRootLayout.createSequentialGroup()
-                .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanelRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanelRootLayout.createSequentialGroup()
+                        .addComponent(jPanelSidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanelContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanelRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jSplitPaneMain, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanelRootLayout.setVerticalGroup(
             jPanelRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelRootLayout.createSequentialGroup()
                 .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 565, Short.MAX_VALUE))
-            .addGroup(jPanelRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelRootLayout.createSequentialGroup()
-                    .addGap(0, 38, Short.MAX_VALUE)
-                    .addComponent(jSplitPaneMain, javax.swing.GroupLayout.PREFERRED_SIZE, 562, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanelRootLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanelSidebar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanelContent, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -170,6 +164,5 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelRoot;
     private javax.swing.JPanel jPanelSidebar;
     private javax.swing.JPanel jPanelTitle;
-    private javax.swing.JSplitPane jSplitPaneMain;
     // End of variables declaration//GEN-END:variables
 }
