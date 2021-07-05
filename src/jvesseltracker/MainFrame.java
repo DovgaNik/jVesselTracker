@@ -14,6 +14,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelTitle = new javax.swing.JPanel();
+        jButtonExit = new javax.swing.JButton();
         jPanelSidebar = new javax.swing.JPanel();
         jPanelShip1 = new javax.swing.JPanel();
         jPaneShipl2 = new javax.swing.JPanel();
@@ -48,15 +49,30 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButtonExit.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/mooringPoingExit.png"))); // NOI18N
+        jButtonExit.setToolTipText("Close");
+        jButtonExit.setBorder(null);
+        jButtonExit.setFocusable(false);
+        jButtonExit.setOpaque(false);
+        jButtonExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExitActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelTitleLayout = new javax.swing.GroupLayout(jPanelTitle);
         jPanelTitle.setLayout(jPanelTitleLayout);
         jPanelTitleLayout.setHorizontalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTitleLayout.createSequentialGroup()
+                .addContainerGap(955, Short.MAX_VALUE)
+                .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 35, Short.MAX_VALUE)
+            .addComponent(jButtonExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
@@ -305,6 +321,10 @@ public class MainFrame extends javax.swing.JFrame {
         
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_jPanelTitleMouseDragged
+
+    private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButtonExitActionPerformed
     
     public static void main(String args[]) {
         
@@ -332,6 +352,7 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonExit;
     private javax.swing.JPanel jPaneShip5;
     private javax.swing.JPanel jPaneShipl2;
     private javax.swing.JPanel jPaneShipl4;
