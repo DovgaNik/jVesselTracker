@@ -80,6 +80,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelSidebar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelShip1.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelShip1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanelShip1MousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelShip1Layout = new javax.swing.GroupLayout(jPanelShip1);
         jPanelShip1.setLayout(jPanelShip1Layout);
@@ -95,6 +100,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelSidebar.add(jPanelShip1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 296, 100));
 
         jPaneShipl2.setBackground(new java.awt.Color(250, 248, 241));
+        jPaneShipl2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPaneShipl2MousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPaneShipl2Layout = new javax.swing.GroupLayout(jPaneShipl2);
         jPaneShipl2.setLayout(jPaneShipl2Layout);
@@ -110,6 +120,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelSidebar.add(jPaneShipl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 122, 296, 100));
 
         jPanelShip3.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelShip3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanelShip3MousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelShip3Layout = new javax.swing.GroupLayout(jPanelShip3);
         jPanelShip3.setLayout(jPanelShip3Layout);
@@ -125,6 +140,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelSidebar.add(jPanelShip3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 233, -1, 100));
 
         jPaneShipl4.setBackground(new java.awt.Color(250, 248, 241));
+        jPaneShipl4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPaneShipl4MousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPaneShipl4Layout = new javax.swing.GroupLayout(jPaneShipl4);
         jPaneShipl4.setLayout(jPaneShipl4Layout);
@@ -140,6 +160,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelSidebar.add(jPaneShipl4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 344, 296, 100));
 
         jPaneShip5.setBackground(new java.awt.Color(250, 248, 241));
+        jPaneShip5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPaneShip5MousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPaneShip5Layout = new javax.swing.GroupLayout(jPaneShip5);
         jPaneShip5.setLayout(jPaneShip5Layout);
@@ -296,6 +321,31 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButtonExitActionPerformed
+
+    private void jPanelShip1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip1MousePressed
+        setAnimationInvisible();
+        jPanelShipAnim1.setVisible(true);
+    }//GEN-LAST:event_jPanelShip1MousePressed
+
+    private void jPaneShipl2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShipl2MousePressed
+        setAnimationInvisible();
+        jPanelShipAnim2.setVisible(true);
+    }//GEN-LAST:event_jPaneShipl2MousePressed
+
+    private void jPanelShip3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip3MousePressed
+        setAnimationInvisible();
+        jPanelShipAnim3.setVisible(true);
+    }//GEN-LAST:event_jPanelShip3MousePressed
+
+    private void jPaneShipl4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShipl4MousePressed
+        setAnimationInvisible();
+        jPanelShipAnim4.setVisible(true);
+    }//GEN-LAST:event_jPaneShipl4MousePressed
+
+    private void jPaneShip5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShip5MousePressed
+        setAnimationInvisible();
+        jPanelShipAnim5.setVisible(true);
+    }//GEN-LAST:event_jPaneShip5MousePressed
     
     public static void main(String args[]) {
         
