@@ -6,6 +6,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     public MainFrame() {
         initComponents();
+        setAnimationInvisible();
     }
 
     @SuppressWarnings("unchecked")
@@ -21,11 +22,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelShip3 = new javax.swing.JPanel();
         jPaneShipl4 = new javax.swing.JPanel();
         jPaneShip5 = new javax.swing.JPanel();
-        jPanelShiAnim1 = new javax.swing.JPanel();
-        jPanelShiAnim2 = new javax.swing.JPanel();
-        jPanelShiAnim3 = new javax.swing.JPanel();
-        jPanelShiAnim4 = new javax.swing.JPanel();
-        jPanelShiAnim5 = new javax.swing.JPanel();
+        jPanelShipAnim1 = new javax.swing.JPanel();
+        jPanelShipAnim2 = new javax.swing.JPanel();
+        jPanelShipAnim3 = new javax.swing.JPanel();
+        jPanelShipAnim4 = new javax.swing.JPanel();
+        jPanelShipAnim5 = new javax.swing.JPanel();
         jPanelContent = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -76,6 +77,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
+        jPanelSidebar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelShip1.setBackground(new java.awt.Color(250, 248, 241));
 
@@ -90,6 +92,8 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        jPanelSidebar.add(jPanelShip1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 296, 100));
+
         jPaneShipl2.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPaneShipl2Layout = new javax.swing.GroupLayout(jPaneShipl2);
@@ -102,6 +106,8 @@ public class MainFrame extends javax.swing.JFrame {
             jPaneShipl2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
+
+        jPanelSidebar.add(jPaneShipl2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 122, 296, 100));
 
         jPanelShip3.setBackground(new java.awt.Color(250, 248, 241));
 
@@ -116,6 +122,8 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        jPanelSidebar.add(jPanelShip3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 233, -1, 100));
+
         jPaneShipl4.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPaneShipl4Layout = new javax.swing.GroupLayout(jPaneShipl4);
@@ -128,6 +136,8 @@ public class MainFrame extends javax.swing.JFrame {
             jPaneShipl4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
+
+        jPanelSidebar.add(jPaneShipl4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 344, 296, 100));
 
         jPaneShip5.setBackground(new java.awt.Color(250, 248, 241));
 
@@ -142,129 +152,82 @@ public class MainFrame extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jPanelShiAnim1.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelSidebar.add(jPaneShip5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 455, 296, 100));
 
-        javax.swing.GroupLayout jPanelShiAnim1Layout = new javax.swing.GroupLayout(jPanelShiAnim1);
-        jPanelShiAnim1.setLayout(jPanelShiAnim1Layout);
-        jPanelShiAnim1Layout.setHorizontalGroup(
-            jPanelShiAnim1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelShipAnim1.setBackground(new java.awt.Color(250, 248, 241));
+
+        javax.swing.GroupLayout jPanelShipAnim1Layout = new javax.swing.GroupLayout(jPanelShipAnim1);
+        jPanelShipAnim1.setLayout(jPanelShipAnim1Layout);
+        jPanelShipAnim1Layout.setHorizontalGroup(
+            jPanelShipAnim1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 10, Short.MAX_VALUE)
         );
-        jPanelShiAnim1Layout.setVerticalGroup(
-            jPanelShiAnim1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelShipAnim1Layout.setVerticalGroup(
+            jPanelShipAnim1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jPanelShiAnim2.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelSidebar.add(jPanelShipAnim1, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 11, -1, -1));
 
-        javax.swing.GroupLayout jPanelShiAnim2Layout = new javax.swing.GroupLayout(jPanelShiAnim2);
-        jPanelShiAnim2.setLayout(jPanelShiAnim2Layout);
-        jPanelShiAnim2Layout.setHorizontalGroup(
-            jPanelShiAnim2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelShipAnim2.setBackground(new java.awt.Color(250, 248, 241));
+
+        javax.swing.GroupLayout jPanelShipAnim2Layout = new javax.swing.GroupLayout(jPanelShipAnim2);
+        jPanelShipAnim2.setLayout(jPanelShipAnim2Layout);
+        jPanelShipAnim2Layout.setHorizontalGroup(
+            jPanelShipAnim2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 10, Short.MAX_VALUE)
         );
-        jPanelShiAnim2Layout.setVerticalGroup(
-            jPanelShiAnim2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelShipAnim2Layout.setVerticalGroup(
+            jPanelShipAnim2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jPanelShiAnim3.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelSidebar.add(jPanelShipAnim2, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 122, -1, -1));
 
-        javax.swing.GroupLayout jPanelShiAnim3Layout = new javax.swing.GroupLayout(jPanelShiAnim3);
-        jPanelShiAnim3.setLayout(jPanelShiAnim3Layout);
-        jPanelShiAnim3Layout.setHorizontalGroup(
-            jPanelShiAnim3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelShipAnim3.setBackground(new java.awt.Color(250, 248, 241));
+
+        javax.swing.GroupLayout jPanelShipAnim3Layout = new javax.swing.GroupLayout(jPanelShipAnim3);
+        jPanelShipAnim3.setLayout(jPanelShipAnim3Layout);
+        jPanelShipAnim3Layout.setHorizontalGroup(
+            jPanelShipAnim3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 10, Short.MAX_VALUE)
         );
-        jPanelShiAnim3Layout.setVerticalGroup(
-            jPanelShiAnim3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelShipAnim3Layout.setVerticalGroup(
+            jPanelShipAnim3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jPanelShiAnim4.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelSidebar.add(jPanelShipAnim3, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 233, -1, -1));
 
-        javax.swing.GroupLayout jPanelShiAnim4Layout = new javax.swing.GroupLayout(jPanelShiAnim4);
-        jPanelShiAnim4.setLayout(jPanelShiAnim4Layout);
-        jPanelShiAnim4Layout.setHorizontalGroup(
-            jPanelShiAnim4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelShipAnim4.setBackground(new java.awt.Color(250, 248, 241));
+
+        javax.swing.GroupLayout jPanelShipAnim4Layout = new javax.swing.GroupLayout(jPanelShipAnim4);
+        jPanelShipAnim4.setLayout(jPanelShipAnim4Layout);
+        jPanelShipAnim4Layout.setHorizontalGroup(
+            jPanelShipAnim4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 10, Short.MAX_VALUE)
         );
-        jPanelShiAnim4Layout.setVerticalGroup(
-            jPanelShiAnim4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelShipAnim4Layout.setVerticalGroup(
+            jPanelShipAnim4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jPanelShiAnim5.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelSidebar.add(jPanelShipAnim4, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 344, -1, -1));
 
-        javax.swing.GroupLayout jPanelShiAnim5Layout = new javax.swing.GroupLayout(jPanelShiAnim5);
-        jPanelShiAnim5.setLayout(jPanelShiAnim5Layout);
-        jPanelShiAnim5Layout.setHorizontalGroup(
-            jPanelShiAnim5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelShipAnim5.setBackground(new java.awt.Color(250, 248, 241));
+
+        javax.swing.GroupLayout jPanelShipAnim5Layout = new javax.swing.GroupLayout(jPanelShipAnim5);
+        jPanelShipAnim5.setLayout(jPanelShipAnim5Layout);
+        jPanelShipAnim5Layout.setHorizontalGroup(
+            jPanelShipAnim5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 10, Short.MAX_VALUE)
         );
-        jPanelShiAnim5Layout.setVerticalGroup(
-            jPanelShiAnim5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelShipAnim5Layout.setVerticalGroup(
+            jPanelShipAnim5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanelSidebarLayout = new javax.swing.GroupLayout(jPanelSidebar);
-        jPanelSidebar.setLayout(jPanelSidebarLayout);
-        jPanelSidebarLayout.setHorizontalGroup(
-            jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelSidebarLayout.createSequentialGroup()
-                .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelSidebarLayout.createSequentialGroup()
-                        .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelSidebarLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jPanelShip3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanelSidebarLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPanelShip1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jPaneShipl2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(0, 0, 0)
-                        .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jPanelShiAnim2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jPanelShiAnim1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanelShiAnim3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanelSidebarLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPaneShip5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPaneShipl4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, 0)
-                        .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanelShiAnim4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanelShiAnim5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 0, 0))
-        );
-        jPanelSidebarLayout.setVerticalGroup(
-            jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelSidebarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelShip1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelShiAnim1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPaneShipl2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelShiAnim2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(11, 11, 11)
-                .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelShip3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelShiAnim3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPaneShipl4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelShiAnim4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPaneShip5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelShiAnim5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanelSidebar.add(jPanelShipAnim5, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 455, -1, -1));
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
 
@@ -276,7 +239,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         jPanelContentLayout.setVerticalGroup(
             jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 568, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -322,6 +285,14 @@ public class MainFrame extends javax.swing.JFrame {
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_jPanelTitleMouseDragged
 
+    private void setAnimationInvisible(){
+        jPanelShipAnim1.setVisible(false);
+        jPanelShipAnim2.setVisible(false);
+        jPanelShipAnim3.setVisible(false);
+        jPanelShipAnim4.setVisible(false);
+        jPanelShipAnim5.setVisible(false);
+    }
+    
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButtonExitActionPerformed
@@ -357,13 +328,13 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPaneShipl2;
     private javax.swing.JPanel jPaneShipl4;
     private javax.swing.JPanel jPanelContent;
-    private javax.swing.JPanel jPanelShiAnim1;
-    private javax.swing.JPanel jPanelShiAnim2;
-    private javax.swing.JPanel jPanelShiAnim3;
-    private javax.swing.JPanel jPanelShiAnim4;
-    private javax.swing.JPanel jPanelShiAnim5;
     private javax.swing.JPanel jPanelShip1;
     private javax.swing.JPanel jPanelShip3;
+    private javax.swing.JPanel jPanelShipAnim1;
+    private javax.swing.JPanel jPanelShipAnim2;
+    private javax.swing.JPanel jPanelShipAnim3;
+    private javax.swing.JPanel jPanelShipAnim4;
+    private javax.swing.JPanel jPanelShipAnim5;
     private javax.swing.JPanel jPanelSidebar;
     private javax.swing.JPanel jPanelTitle;
     // End of variables declaration//GEN-END:variables
