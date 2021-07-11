@@ -18,6 +18,9 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonExit = new javax.swing.JButton();
         jPanelSidebar = new javax.swing.JPanel();
         jPanelShip1 = new javax.swing.JPanel();
+        jLabelVesselName1 = new javax.swing.JLabel();
+        jLabelVesselType1 = new javax.swing.JLabel();
+        jLabelVesselCoordinates1 = new javax.swing.JLabel();
         jPaneShipl2 = new javax.swing.JPanel();
         jPanelShip3 = new javax.swing.JPanel();
         jPaneShipl4 = new javax.swing.JPanel();
@@ -73,7 +76,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButtonExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jButtonExit, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
         );
 
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
@@ -86,15 +89,37 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabelVesselName1.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        jLabelVesselName1.setMaximumSize(new java.awt.Dimension(280, 42));
+
+        jLabelVesselCoordinates1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabelVesselCoordinates1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout jPanelShip1Layout = new javax.swing.GroupLayout(jPanelShip1);
         jPanelShip1.setLayout(jPanelShip1Layout);
         jPanelShip1Layout.setHorizontalGroup(
             jPanelShip1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanelShip1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelShip1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelShip1Layout.createSequentialGroup()
+                        .addComponent(jLabelVesselName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanelShip1Layout.createSequentialGroup()
+                        .addComponent(jLabelVesselType1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addComponent(jLabelVesselCoordinates1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         jPanelShip1Layout.setVerticalGroup(
             jPanelShip1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelShip1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabelVesselName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelShip1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabelVesselType1, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                    .addComponent(jLabelVesselCoordinates1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanelSidebar.add(jPanelShip1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 296, 100));
@@ -264,7 +289,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         jPanelContentLayout.setVerticalGroup(
             jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 568, Short.MAX_VALUE)
+            .addGap(0, 566, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -285,7 +310,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelSidebar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelSidebar, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)
                     .addComponent(jPanelContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
         );
@@ -374,6 +399,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonExit;
+    private javax.swing.JLabel jLabelVesselCoordinates1;
+    private javax.swing.JLabel jLabelVesselName1;
+    private javax.swing.JLabel jLabelVesselType1;
     private javax.swing.JPanel jPaneShip5;
     private javax.swing.JPanel jPaneShipl2;
     private javax.swing.JPanel jPaneShipl4;
