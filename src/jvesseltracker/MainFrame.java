@@ -502,6 +502,8 @@ public class MainFrame extends javax.swing.JFrame {
     int xMouse;
     int yMouse;
     
+    vessels vessel;
+    
     private void jPanelTitleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTitleMousePressed
         xMouse  = evt.getX();
         yMouse = evt.getY();
@@ -528,26 +530,36 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jPanelShip1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip1MousePressed
         setAnimationInvisible();
+        vessel = vessels.vessel1;
+        System.out.println("Ship selected is " + vessel);
         jPanelShipAnim1.setVisible(true);
     }//GEN-LAST:event_jPanelShip1MousePressed
 
     private void jPaneShipl2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShipl2MousePressed
         setAnimationInvisible();
+        vessel = vessels.vessel2;
+        System.out.println("Ship selected is " + vessel);
         jPanelShipAnim2.setVisible(true);
     }//GEN-LAST:event_jPaneShipl2MousePressed
 
     private void jPanelShip3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip3MousePressed
         setAnimationInvisible();
+        vessel = vessels.vessel3;
+        System.out.println("Ship selected is " + vessel);
         jPanelShipAnim3.setVisible(true);
     }//GEN-LAST:event_jPanelShip3MousePressed
 
     private void jPaneShipl4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShipl4MousePressed
         setAnimationInvisible();
+        vessel = vessels.vessel4;
+        System.out.println("Ship selected is " + vessel);
         jPanelShipAnim4.setVisible(true);
     }//GEN-LAST:event_jPaneShipl4MousePressed
 
     private void jPaneShip5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShip5MousePressed
         setAnimationInvisible();
+        vessel = vessels.vessel5;
+        System.out.println("Ship selected is " + vessel);
         jPanelShipAnim5.setVisible(true);
     }//GEN-LAST:event_jPaneShip5MousePressed
     
