@@ -43,6 +43,15 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelShipAnim4 = new javax.swing.JPanel();
         jPanelShipAnim5 = new javax.swing.JPanel();
         jPanelContent = new javax.swing.JPanel();
+        jLabelVesselImage = new javax.swing.JLabel();
+        jLabelVesselMMSI = new javax.swing.JLabel();
+        jLabelVesselIMO = new javax.swing.JLabel();
+        jLabelVesselHeading = new javax.swing.JLabel();
+        jLabelVesselCourse = new javax.swing.JLabel();
+        jLabelVesselDifferenceCourseHeading = new javax.swing.JLabel();
+        jLabelVesselSpeed = new javax.swing.JLabel();
+        jLabelVesselStatus = new javax.swing.JLabel();
+        jLabelRequestTimestamp = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("jVesselTracker");
@@ -381,15 +390,85 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
 
+        jLabelVesselMMSI.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVesselMMSI.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelVesselMMSI.setText("MMSI");
+
+        jLabelVesselIMO.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVesselIMO.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelVesselIMO.setText("IMO");
+
+        jLabelVesselHeading.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVesselHeading.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelVesselHeading.setText("Heading");
+
+        jLabelVesselCourse.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVesselCourse.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVesselCourse.setText("Course");
+
+        jLabelVesselDifferenceCourseHeading.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVesselDifferenceCourseHeading.setText("Difference");
+
+        jLabelVesselSpeed.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVesselSpeed.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelVesselSpeed.setText("Speed");
+
+        jLabelVesselStatus.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVesselStatus.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabelVesselStatus.setText("Status");
+
+        jLabelRequestTimestamp.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelRequestTimestamp.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelRequestTimestamp.setText("Timestamp");
+
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
         jPanelContentLayout.setHorizontalGroup(
             jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelContentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelVesselImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelContentLayout.createSequentialGroup()
+                        .addComponent(jLabelVesselMMSI)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabelVesselIMO))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelContentLayout.createSequentialGroup()
+                        .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelVesselCourse)
+                            .addComponent(jLabelVesselSpeed))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelVesselHeading, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelVesselDifferenceCourseHeading, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelContentLayout.createSequentialGroup()
+                        .addComponent(jLabelRequestTimestamp)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabelVesselStatus)))
+                .addContainerGap())
         );
         jPanelContentLayout.setVerticalGroup(
             jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 566, Short.MAX_VALUE)
+            .addGroup(jPanelContentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelVesselImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelVesselDifferenceCourseHeading)
+                    .addComponent(jLabelVesselSpeed))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelVesselHeading)
+                    .addComponent(jLabelVesselCourse))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelVesselMMSI)
+                    .addComponent(jLabelVesselIMO))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelRequestTimestamp)
+                    .addComponent(jLabelVesselStatus))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -410,7 +489,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelSidebar, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)
+                    .addComponent(jPanelSidebar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanelContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
         );
@@ -499,16 +578,25 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonExit;
+    private javax.swing.JLabel jLabelRequestTimestamp;
     private javax.swing.JLabel jLabelVesselCoordinates1;
     private javax.swing.JLabel jLabelVesselCoordinates2;
     private javax.swing.JLabel jLabelVesselCoordinates3;
     private javax.swing.JLabel jLabelVesselCoordinates4;
     private javax.swing.JLabel jLabelVesselCoordinates5;
+    private javax.swing.JLabel jLabelVesselCourse;
+    private javax.swing.JLabel jLabelVesselDifferenceCourseHeading;
+    private javax.swing.JLabel jLabelVesselHeading;
+    private javax.swing.JLabel jLabelVesselIMO;
+    private javax.swing.JLabel jLabelVesselImage;
+    private javax.swing.JLabel jLabelVesselMMSI;
     private javax.swing.JLabel jLabelVesselName1;
     private javax.swing.JLabel jLabelVesselName2;
     private javax.swing.JLabel jLabelVesselName3;
     private javax.swing.JLabel jLabelVesselName4;
     private javax.swing.JLabel jLabelVesselName5;
+    private javax.swing.JLabel jLabelVesselSpeed;
+    private javax.swing.JLabel jLabelVesselStatus;
     private javax.swing.JLabel jLabelVesselType1;
     private javax.swing.JLabel jLabelVesselType2;
     private javax.swing.JLabel jLabelVesselType3;
