@@ -1,7 +1,14 @@
 package jvesseltracker;
 
+import java.io.IOException;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.UIManager;
+import jvesseltracker.jSingleVesselPosition.JPosition;
+import jvesseltracker.jSingleVesselPosition.JSingleVesselPositionParsed;
 
 public class MainFrame extends javax.swing.JFrame {
 
@@ -506,11 +513,14 @@ public class MainFrame extends javax.swing.JFrame {
     
     vessels vessel;
     
-    Vessel vessel1 = new Vessel();
-    Vessel vessel2 = new Vessel();
-    Vessel vessel3 = new Vessel();
-    Vessel vessel4 = new Vessel();
-    Vessel vessel5 = new Vessel();
+    static String MMSI1 = "353136000";
+    static String name1 = "EVER GIVEN";
+    static String speed1;
+    static String course1;
+    static String heading1;
+    static String status1;
+    static String timestamp1;
+    static String description1;
     
     private void jPanelTitleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTitleMousePressed
         xMouse  = evt.getX();
@@ -561,7 +571,16 @@ public class MainFrame extends javax.swing.JFrame {
     }
     
     private void fullUpdate(){
-        
+        try {
+            String json = JPosition.get(MMSI1, 100, "66d817df5ba972bec458f47448d7c5bf2b9d3ed7", "Mozilla/5.0");
+            JSingleVesselPositionParsed parser = new JSingleVesselPositionParsed(json);
+            jLabelVesselCoordinates1.setText(parser.lat + " / " + parser.lon);
+            jLabelVesselName1.setText(name1);
+            
+            clearDisplayedData();
+        } catch (IOException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
