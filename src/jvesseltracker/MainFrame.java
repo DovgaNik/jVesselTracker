@@ -13,6 +13,8 @@ public class MainFrame extends javax.swing.JFrame {
     public MainFrame() {
         initComponents();
         setAnimationInvisible();
+        vessel1.MMSI = "353136000";
+        vessel1.name = "EVER GIVEN";
         fullUpdate();
     }
 
@@ -476,14 +478,11 @@ public class MainFrame extends javax.swing.JFrame {
     
     vessels vessel;
     
-    static String MMSI1 = "353136000";
-    static String name1 = "EVER GIVEN";
-    static String speed1;
-    static String course1;
-    static String heading1;
-    static String status1;
-    static String timestamp1;
-    static String description1;
+    Vessel vessel1 = new Vessel();
+    Vessel vessel2 = new Vessel();
+    Vessel vessel3 = new Vessel();
+    Vessel vessel4 = new Vessel();
+    Vessel vessel5 = new Vessel();
     
     private void jPanelTitleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTitleMousePressed
         xMouse  = evt.getX();
@@ -535,15 +534,24 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void fullUpdate(){
         try {
-            String json = JPosition.get(MMSI1, 100, "66d817df5ba972bec458f47448d7c5bf2b9d3ed7", "Mozilla/5.0");
+            System.out.println(vessel1.MMSI);
+            String json = JPosition.get(vessel1.MMSI, 100, "66d817df5ba972bec458f47448d7c5bf2b9d3ed7", "Mozilla/5.0");
             JSingleVesselPositionParsed parser = new JSingleVesselPositionParsed(json);
             jLabelVesselCoordinates1.setText(parser.lat + " / " + parser.lon);
-            jLabelVesselName1.setText(name1);
+            jLabelVesselName1.setText(vessel1.name);
+            
+            vessel1.course = parser.course;
+            vessel1.description = parser.dataSource;
+            vessel1.heading = parser.heading;
+            vessel1.speed = parser.speed;
+            vessel1.status = parser.status;
+            vessel1.timestamp = parser.year;
             
             clearDisplayedData();
         } catch (IOException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
     
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed

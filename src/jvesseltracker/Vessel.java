@@ -1,12 +1,15 @@
 package jvesseltracker;
 
 public class Vessel {
-    static String MMSI;
-    static String IMO;
-    static String speed;
-    static String course;
-    static String heading;
-    static String status;
-    static String timestamp;
-    static String description;
+    
+    public String MMSI;
+    public String name;   
+    public String IMO;
+    public String speed;
+    public String course;
+    public String heading;
+    public String status;
+    public String timestamp;
+    public String description;
+    
 }
