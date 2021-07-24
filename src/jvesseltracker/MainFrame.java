@@ -524,6 +524,18 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelShipAnim5.setVisible(false);
     }
     
+    private void clearDisplayedData(){
+        jLabelVesselImage.setText("");
+        jLabelVesselMMSI.setText("");
+        jLabelVesselIMO.setText("");
+        jLabelVesselHeading.setText("");
+        jLabelVesselCourse.setText("");
+        jLabelVesselDifferenceCourseHeading.setText("");
+        jLabelVesselSpeed.setText("");
+        jLabelVesselStatus.setText("");
+        jLabelRequestTimestamp.setText("");
+    }
+    
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButtonExitActionPerformed
