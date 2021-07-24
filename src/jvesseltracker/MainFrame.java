@@ -506,6 +506,12 @@ public class MainFrame extends javax.swing.JFrame {
     
     vessels vessel;
     
+    Vessel vessel1 = new Vessel();
+    Vessel vessel2 = new Vessel();
+    Vessel vessel3 = new Vessel();
+    Vessel vessel4 = new Vessel();
+    Vessel vessel5 = new Vessel();
+    
     private void jPanelTitleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTitleMousePressed
         xMouse  = evt.getX();
         yMouse = evt.getY();
