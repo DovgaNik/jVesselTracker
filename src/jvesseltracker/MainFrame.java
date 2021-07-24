@@ -1,5 +1,6 @@
 package jvesseltracker;
 
+import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 
 public class MainFrame extends javax.swing.JFrame {
@@ -534,6 +535,18 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelVesselSpeed.setText("");
         jLabelVesselStatus.setText("");
         jLabelRequestTimestamp.setText("");
+    }
+    
+    private void setDisplayedData(String linkToIcon, String MMSI, String IMO, String heading, String course, String differenceCourseHeading, String speed, String status, String timestamp){
+        jLabelVesselImage.setIcon(new ImageIcon(linkToIcon));
+        jLabelVesselMMSI.setText(MMSI);
+        jLabelVesselIMO.setText(IMO);
+        jLabelVesselHeading.setText(heading);
+        jLabelVesselCourse.setText(course);
+        jLabelVesselDifferenceCourseHeading.setText(differenceCourseHeading);
+        jLabelVesselSpeed.setText(speed);
+        jLabelVesselStatus.setText(status);
+        jLabelRequestTimestamp.setText(timestamp);
     }
     
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
