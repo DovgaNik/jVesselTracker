@@ -539,14 +539,14 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void setDisplayedData(String linkToIcon, String MMSI, String IMO, String heading, String course, String differenceCourseHeading, String speed, String status, String timestamp){
         jLabelVesselImage.setIcon(new ImageIcon(linkToIcon));
-        jLabelVesselMMSI.setText(MMSI);
-        jLabelVesselIMO.setText(IMO);
-        jLabelVesselHeading.setText(heading);
-        jLabelVesselCourse.setText(course);
-        jLabelVesselDifferenceCourseHeading.setText(differenceCourseHeading);
-        jLabelVesselSpeed.setText(speed);
-        jLabelVesselStatus.setText(status);
-        jLabelRequestTimestamp.setText(timestamp);
+        jLabelVesselMMSI.setText("MMSI :" + MMSI);
+        jLabelVesselIMO.setText("IMO :" + IMO);
+        jLabelVesselHeading.setText("Heading :" + heading);
+        jLabelVesselCourse.setText("Course :" + course);
+        jLabelVesselDifferenceCourseHeading.setText("Difference :" + differenceCourseHeading);
+        jLabelVesselSpeed.setText("Speed:" + speed);
+        jLabelVesselStatus.setText("Status: " + status);
+        jLabelRequestTimestamp.setText("Timestamp: " + timestamp);
     }
     
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
@@ -594,22 +594,14 @@ public class MainFrame extends javax.swing.JFrame {
         
         try {
             javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         
         //</editor-fold>
         
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new MainFrame().setVisible(true);
         });
     }
 

@@ -1,7 +1,7 @@
 package jvesseltracker.jSingleVesselPosition;
 
 public class JSingleVesselPositionParsed {
-	String //Creating public string to store all parsed information
+	public String //Creating public string to store all parsed information
 		mmsi, 
 		lat, 
 		lon, 
@@ -24,7 +24,7 @@ public class JSingleVesselPositionParsed {
 		date[], 
 		time[];
 	
-	JSingleVesselPositionParsed(String jsonToParse){ // Constructor of the class
+	public JSingleVesselPositionParsed(String jsonToParse){ // Constructor of the class
 		json = jsonToParse; // Writes variable, given by driver code to a protected variable
 		
 		parse(); //Calling parsing function
