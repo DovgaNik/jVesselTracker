@@ -528,7 +528,20 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelRequestTimestamp.setText("Timestamp: " + timestamp);
     }
     
-    private void update(){
+    private void update1(){
+        
+    }
+    
+    private void update2(){
+        
+    }
+    private void update3(){
+        
+    }
+    private void update4(){
+        
+    }
+    private void update5(){
         
     }
     
@@ -565,7 +578,7 @@ public class MainFrame extends javax.swing.JFrame {
         vessel = vessels.vessel1;
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnim1.setVisible(true);
-        update();
+        update1();
     }//GEN-LAST:event_jPanelShip1MousePressed
 
     private void jPaneShipl2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShipl2MousePressed
@@ -573,7 +586,7 @@ public class MainFrame extends javax.swing.JFrame {
         vessel = vessels.vessel2;
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnim2.setVisible(true);
-        update();
+        update2();
     }//GEN-LAST:event_jPaneShipl2MousePressed
 
     private void jPanelShip3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip3MousePressed
@@ -581,7 +594,7 @@ public class MainFrame extends javax.swing.JFrame {
         vessel = vessels.vessel3;
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnim3.setVisible(true);
-        update();
+        update3();
     }//GEN-LAST:event_jPanelShip3MousePressed
 
     private void jPaneShipl4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShipl4MousePressed
@@ -589,7 +602,7 @@ public class MainFrame extends javax.swing.JFrame {
         vessel = vessels.vessel4;
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnim4.setVisible(true);
-        update();
+        update4();
     }//GEN-LAST:event_jPaneShipl4MousePressed
 
     private void jPaneShip5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShip5MousePressed
@@ -597,7 +610,7 @@ public class MainFrame extends javax.swing.JFrame {
         vessel = vessels.vessel5;
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnim5.setVisible(true);
-        update();
+        update5();
     }//GEN-LAST:event_jPaneShip5MousePressed
     
     public static void main(String args[]) {
