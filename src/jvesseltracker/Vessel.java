@@ -23,6 +23,9 @@ public class Vessel {
     public String second;
     public String description;
     
+    Vessel(File file) throws IOException{
+        read(file);
+    }
     
     void read(File file) throws FileNotFoundException, IOException {
         

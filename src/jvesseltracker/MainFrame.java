@@ -1,5 +1,9 @@
 package jvesseltracker;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 
@@ -10,7 +14,31 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
         setAnimationInvisible();
         
+        //<editor-fold defaultstate="collapsed" desc="Creating objects">
+        
+        try {
+
+            //<editor-fold defaultstate="collapsed" desc="Creating objects">
+            
+            Vessel vessel1 = new Vessel(new File("vessel1.vesseldata"));
+            Vessel vessel2 = new Vessel(new File("vessel2.vesseldata"));
+            Vessel vessel3 = new Vessel(new File("vessel3.vesseldata"));
+            Vessel vessel4 = new Vessel(new File("vessel4.vesseldata"));
+            Vessel vessel5 = new Vessel(new File("vessel5.vesseldata"));
+            
+            //</editor-fold>
+            
+        } catch (IOException ex) {
+            
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            
+        }
+        
+        //</editor-fold>
+        
     }
+    
+    vessels vessel;
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -464,18 +492,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    //<editor-fold defaultstate="collapsed" desc="Creating objects">
-    
-    vessels vessel;
-    
-    Vessel vessel1 = new Vessel();
-    Vessel vessel2 = new Vessel();
-    Vessel vessel3 = new Vessel();
-    Vessel vessel4 = new Vessel();
-    Vessel vessel5 = new Vessel();
-    
-    //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc="Drag and move window">
     
