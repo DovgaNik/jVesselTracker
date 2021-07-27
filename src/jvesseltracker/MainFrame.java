@@ -1,21 +1,15 @@
 package jvesseltracker;
 
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.UIManager;
-import jvesseltracker.jSingleVesselPosition.JPosition;
-import jvesseltracker.jSingleVesselPosition.JSingleVesselPositionParsed;
 
 public class MainFrame extends javax.swing.JFrame {
 
     public MainFrame() {
+        
         initComponents();
         setAnimationInvisible();
-        vessel1.MMSI = "353136000";
-        vessel1.name = "EVER GIVEN";
-        fullUpdate();
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -546,24 +540,6 @@ public class MainFrame extends javax.swing.JFrame {
     }
     
     private void fullUpdate(){
-        try {
-            System.out.println(vessel1.MMSI);
-            String json = JPosition.get(vessel1.MMSI, 100, "66d817df5ba972bec458f47448d7c5bf2b9d3ed7", "Mozilla/5.0");
-            JSingleVesselPositionParsed parser = new JSingleVesselPositionParsed(json);
-            jLabelVesselCoordinates1.setText(parser.lat + " / " + parser.lon);
-            jLabelVesselName1.setText(vessel1.name);
-            
-            vessel1.course = parser.course;
-            vessel1.description = parser.dataSource;
-            vessel1.heading = parser.heading;
-            vessel1.speed = parser.speed;
-            vessel1.status = parser.status;
-            vessel1.timestamp = parser.year;
-            
-            clearDisplayedData();
-        } catch (IOException ex) {
-            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
         
     }
     
