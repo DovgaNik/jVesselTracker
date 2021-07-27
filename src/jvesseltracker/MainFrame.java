@@ -11,8 +11,6 @@ public class MainFrame extends javax.swing.JFrame {
         setAnimationInvisible();
         
     }
-
-    @SuppressWarnings("unchecked")
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -466,9 +464,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    int xMouse;
-    int yMouse;
+    
+    //<editor-fold defaultstate="collapsed" desc="Creating objects">
     
     vessels vessel;
     
@@ -477,6 +474,13 @@ public class MainFrame extends javax.swing.JFrame {
     Vessel vessel3 = new Vessel();
     Vessel vessel4 = new Vessel();
     Vessel vessel5 = new Vessel();
+    
+    //</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="Drag and move window">
+    
+    int xMouse;
+    int yMouse;
     
     private void jPanelTitleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTitleMousePressed
         xMouse  = evt.getX();
@@ -490,15 +494,22 @@ public class MainFrame extends javax.swing.JFrame {
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_jPanelTitleMouseDragged
 
+    //</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="Working with on-screen data">
+    
     private void setAnimationInvisible(){
+        
         jPanelShipAnim1.setVisible(false);
         jPanelShipAnim2.setVisible(false);
         jPanelShipAnim3.setVisible(false);
         jPanelShipAnim4.setVisible(false);
         jPanelShipAnim5.setVisible(false);
+        
     }
     
     private void clearDisplayedData(){
+        
         jLabelVesselImage.setText("");
         jLabelVesselMMSI.setText("");
         jLabelVesselIMO.setText("");
@@ -508,9 +519,11 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelVesselSpeed.setText("");
         jLabelVesselStatus.setText("");
         jLabelRequestTimestamp.setText("");
+        
     }
     
     private void setDisplayedData(String linkToIcon, String MMSI, String IMO, String heading, String course, String differenceCourseHeading, String speed, String status, String timestamp){
+        
         jLabelVesselImage.setIcon(new ImageIcon(linkToIcon));
         jLabelVesselMMSI.setText("MMSI :" + MMSI);
         jLabelVesselIMO.setText("IMO :" + IMO);
@@ -520,7 +533,12 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelVesselSpeed.setText("Speed:" + speed);
         jLabelVesselStatus.setText("Status: " + status);
         jLabelRequestTimestamp.setText("Timestamp: " + timestamp);
+        
     }
+    
+    //</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="Updating data">
     
     private void update1(){
         
@@ -543,9 +561,13 @@ public class MainFrame extends javax.swing.JFrame {
         
     }
     
+    //</editor-fold>
+    
+    //<editor-fold defaultstate="collapsed" desc="Mouse Events">
+    
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
         System.out.println("Exiting");
-        
+
         System.exit(0);
     }//GEN-LAST:event_jButtonExitActionPerformed
 
@@ -589,21 +611,30 @@ public class MainFrame extends javax.swing.JFrame {
         update5();
     }//GEN-LAST:event_jPaneShip5MousePressed
     
+    //</editor-fold>
+    
     public static void main(String args[]) {
         
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code">
         
         try {
+            
             javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            
             java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            
         }
-        
+                
         //</editor-fold>
         
         java.awt.EventQueue.invokeLater(() -> {
+            
             new MainFrame().setVisible(true);
+            
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
