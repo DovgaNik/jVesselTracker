@@ -42,32 +42,35 @@ public class Vessel {
                 
         System.out.println(text);
         
-        String[] splitFile = text.split("\n");
-        
-        for (int i = 0; i < splitFile.length; i++)
+        if(text != null) {
+            String[] splitFile = text.split("\n");
+            
+            for (int i = 0; i < splitFile.length; i++)
             System.out.println(splitFile[i]);
                 
-        if (splitFile.length == 16){
-            System.out.println("good");
-            MMSI = splitFile[0];
-            name = splitFile[1];
-            IMO = splitFile[2];
-            lat = splitFile[3];
-            lon = splitFile[4];
-            speed = splitFile[5];
-            course = splitFile[6];
-            heading = splitFile[7];
-            status = splitFile[8];
-            year = splitFile[9];
-            month = splitFile[10];
-            day = splitFile[11];
-            hour = splitFile[12];
-            minute = splitFile[13];
-            second = splitFile[14];
-            dataSource = splitFile[15];
-        }else
-            System.out.println("Error: data file is damaged!!!");
-                
+            if (splitFile.length == 16) {
+                System.out.println("good");
+                MMSI = splitFile[0];
+                name = splitFile[1];
+                IMO = splitFile[2];
+                lat = splitFile[3];
+                lon = splitFile[4];
+                speed = splitFile[5];
+                course = splitFile[6];
+                heading = splitFile[7];
+                status = splitFile[8];
+                year = splitFile[9];
+                month = splitFile[10];
+                day = splitFile[11];
+                hour = splitFile[12];
+                minute = splitFile[13];
+                second = splitFile[14];
+                dataSource = splitFile[15];
+            }else
+                System.out.println("Error: data file is damaged!!!");
+        
+        }   
+                       
     }
     
 }
