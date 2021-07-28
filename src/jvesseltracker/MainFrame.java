@@ -14,7 +14,7 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
         setAnimationInvisible();
         
-        //<editor-fold defaultstate="collapsed" desc="Creating objects">
+        //<editor-fold defaultstate="collapsed" desc="Initialazing objects">
         
         try {
            
@@ -36,6 +36,8 @@ public class MainFrame extends javax.swing.JFrame {
         
     }
     
+    //<editor-fold defaultstate="collapsed" desc="Creating objects">
+    
     vessels vessel;
     
     Vessel vessel1;
@@ -43,6 +45,8 @@ public class MainFrame extends javax.swing.JFrame {
     Vessel vessel3;
     Vessel vessel4;
     Vessel vessel5;
+    
+    //</editor-fold>
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
