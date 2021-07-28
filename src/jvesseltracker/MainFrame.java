@@ -21,10 +21,10 @@ public class MainFrame extends javax.swing.JFrame {
             //<editor-fold defaultstate="collapsed" desc="Initializing objects">
             
             vessel1 = new Vessel(new File("vessel1.vesseldata"));
-//            vessel2 = new Vessel(new File("vessel2.vesseldata"));
-//            vessel3 = new Vessel(new File("vessel3.vesseldata"));
-//            vessel4 = new Vessel(new File("vessel4.vesseldata"));
-//            vessel5 = new Vessel(new File("vessel5.vesseldata"));
+            vessel2 = new Vessel(new File("vessel2.vesseldata"));
+            vessel3 = new Vessel(new File("vessel3.vesseldata"));
+            vessel4 = new Vessel(new File("vessel4.vesseldata"));
+            vessel5 = new Vessel(new File("vessel5.vesseldata"));
             
             //</editor-fold>
             
@@ -41,10 +41,10 @@ public class MainFrame extends javax.swing.JFrame {
     vessels vessel;
     
     Vessel vessel1;
-//    Vessel vessel2;
-//    Vessel vessel3;
-//    Vessel vessel4;
-//    Vessel vessel5;
+    Vessel vessel2;
+    Vessel vessel3;
+    Vessel vessel4;
+    Vessel vessel5;
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
