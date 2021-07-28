@@ -17,24 +17,22 @@ public class MainFrame extends javax.swing.JFrame {
         //<editor-fold defaultstate="collapsed" desc="Creating objects">
         
         try {
-
-            //<editor-fold defaultstate="collapsed" desc="Initializing objects">
-            
+           
             vessel1 = new Vessel(new File("vessel1.vesseldata"));
             vessel2 = new Vessel(new File("vessel2.vesseldata"));
             vessel3 = new Vessel(new File("vessel3.vesseldata"));
             vessel4 = new Vessel(new File("vessel4.vesseldata"));
             vessel5 = new Vessel(new File("vessel5.vesseldata"));
             
-            //</editor-fold>
-            
-        } catch (IOException ex) {
+        } catch (IOException ex){
             
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
             
         }
         
         //</editor-fold>
+        
+        fullUpdate();
         
     }
     
@@ -51,7 +49,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanelTitle = new javax.swing.JPanel();
         jButtonExit = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jPanelSidebar = new javax.swing.JPanel();
         jPanelShip1 = new javax.swing.JPanel();
         jLabelVesselName1 = new javax.swing.JLabel();
@@ -117,30 +114,18 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanelTitleLayout = new javax.swing.GroupLayout(jPanelTitle);
         jPanelTitle.setLayout(jPanelTitleLayout);
         jPanelTitleLayout.setHorizontalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTitleLayout.createSequentialGroup()
-                .addGap(400, 400, 400)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 482, Short.MAX_VALUE)
+                .addContainerGap(955, Short.MAX_VALUE)
                 .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButtonExit, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-            .addGroup(jPanelTitleLayout.createSequentialGroup()
-                .addGap(0, 11, Short.MAX_VALUE)
-                .addComponent(jButton1))
         );
 
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
@@ -518,15 +503,19 @@ public class MainFrame extends javax.swing.JFrame {
     int yMouse;
     
     private void jPanelTitleMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTitleMousePressed
+        
         xMouse  = evt.getX();
         yMouse = evt.getY();
+        
     }//GEN-LAST:event_jPanelTitleMousePressed
 
     private void jPanelTitleMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelTitleMouseDragged
+        
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
         
         this.setLocation(x - xMouse, y - yMouse);
+        
     }//GEN-LAST:event_jPanelTitleMouseDragged
 
     //</editor-fold>
@@ -617,12 +606,15 @@ public class MainFrame extends javax.swing.JFrame {
     private void update2(){
         
     }
+    
     private void update3(){
         
     }
+    
     private void update4(){
         
     }
+    
     private void update5(){
         
     }
@@ -630,6 +622,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void fullUpdate(){
         
         setDisplayedDataSidebar1(vessel1.name, vessel1.lat + " / " + vessel1.lon);
+        setDisplayedDataSidebar2(vessel2.name, vessel2.lat + " / " + vessel2.lon);
+        setDisplayedDataSidebar3(vessel3.name, vessel3.lat + " / " + vessel3.lon);
+        setDisplayedDataSidebar4(vessel4.name, vessel4.lat + " / " + vessel4.lon);
+        setDisplayedDataSidebar5(vessel5.name, vessel5.lat + " / " + vessel5.lon);
         
     }
     
@@ -638,54 +634,62 @@ public class MainFrame extends javax.swing.JFrame {
     //<editor-fold defaultstate="collapsed" desc="Mouse Events">
     
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
+        
         System.out.println("Exiting");
 
         System.exit(0);
+        
     }//GEN-LAST:event_jButtonExitActionPerformed
 
     private void jPanelShip1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip1MousePressed
+        
         setAnimationInvisible();
         vessel = vessels.vessel1;
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnim1.setVisible(true);
         update1();
+        
     }//GEN-LAST:event_jPanelShip1MousePressed
 
     private void jPaneShipl2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShipl2MousePressed
+        
         setAnimationInvisible();
         vessel = vessels.vessel2;
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnim2.setVisible(true);
         update2();
+        
     }//GEN-LAST:event_jPaneShipl2MousePressed
 
     private void jPanelShip3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip3MousePressed
+        
         setAnimationInvisible();
         vessel = vessels.vessel3;
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnim3.setVisible(true);
         update3();
+        
     }//GEN-LAST:event_jPanelShip3MousePressed
 
     private void jPaneShipl4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShipl4MousePressed
+        
         setAnimationInvisible();
         vessel = vessels.vessel4;
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnim4.setVisible(true);
         update4();
+        
     }//GEN-LAST:event_jPaneShipl4MousePressed
 
     private void jPaneShip5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPaneShip5MousePressed
+        
         setAnimationInvisible();
         vessel = vessels.vessel5;
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnim5.setVisible(true);
         update5();
+        
     }//GEN-LAST:event_jPaneShip5MousePressed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        fullUpdate();
-    }//GEN-LAST:event_jButton1ActionPerformed
     
     //</editor-fold>
     
@@ -714,7 +718,6 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonExit;
     private javax.swing.JLabel jLabelRequestTimestamp;
     private javax.swing.JLabel jLabelVesselCoordinates1;
