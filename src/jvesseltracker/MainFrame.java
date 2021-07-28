@@ -21,10 +21,10 @@ public class MainFrame extends javax.swing.JFrame {
             //<editor-fold defaultstate="collapsed" desc="Initializing objects">
             
             vessel1 = new Vessel(new File("vessel1.vesseldata"));
-            vessel2 = new Vessel(new File("vessel2.vesseldata"));
-            vessel3 = new Vessel(new File("vessel3.vesseldata"));
-            vessel4 = new Vessel(new File("vessel4.vesseldata"));
-            vessel5 = new Vessel(new File("vessel5.vesseldata"));
+//            vessel2 = new Vessel(new File("vessel2.vesseldata"));
+//            vessel3 = new Vessel(new File("vessel3.vesseldata"));
+//            vessel4 = new Vessel(new File("vessel4.vesseldata"));
+//            vessel5 = new Vessel(new File("vessel5.vesseldata"));
             
             //</editor-fold>
             
@@ -41,16 +41,17 @@ public class MainFrame extends javax.swing.JFrame {
     vessels vessel;
     
     Vessel vessel1;
-    Vessel vessel2;
-    Vessel vessel3;
-    Vessel vessel4;
-    Vessel vessel5;
+//    Vessel vessel2;
+//    Vessel vessel3;
+//    Vessel vessel4;
+//    Vessel vessel5;
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanelTitle = new javax.swing.JPanel();
         jButtonExit = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanelSidebar = new javax.swing.JPanel();
         jPanelShip1 = new javax.swing.JPanel();
         jLabelVesselName1 = new javax.swing.JLabel();
@@ -116,18 +117,30 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelTitleLayout = new javax.swing.GroupLayout(jPanelTitle);
         jPanelTitle.setLayout(jPanelTitleLayout);
         jPanelTitleLayout.setHorizontalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTitleLayout.createSequentialGroup()
-                .addContainerGap(955, Short.MAX_VALUE)
+                .addGap(400, 400, 400)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 482, Short.MAX_VALUE)
                 .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButtonExit, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+            .addGroup(jPanelTitleLayout.createSequentialGroup()
+                .addGap(0, 11, Short.MAX_VALUE)
+                .addComponent(jButton1))
         );
 
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
@@ -558,6 +571,41 @@ public class MainFrame extends javax.swing.JFrame {
         
     }
     
+    private void setDisplayedDataSidebar1 (String name, String coordinates){
+    
+        jLabelVesselName1.setText(name);
+        jLabelVesselCoordinates1.setText(coordinates);
+    
+    }
+    
+    private void setDisplayedDataSidebar2 (String name, String coordinates){
+    
+        jLabelVesselName2.setText(name);
+        jLabelVesselCoordinates2.setText(coordinates);
+    
+    }
+    
+    private void setDisplayedDataSidebar3 (String name, String coordinates){
+    
+        jLabelVesselName3.setText(name);
+        jLabelVesselCoordinates3.setText(coordinates);
+    
+    }
+    
+    private void setDisplayedDataSidebar4 (String name, String coordinates){
+    
+        jLabelVesselName4.setText(name);
+        jLabelVesselCoordinates4.setText(coordinates);
+    
+    }
+    
+    private void setDisplayedDataSidebar5 (String name, String coordinates){
+    
+        jLabelVesselName5.setText(name);
+        jLabelVesselCoordinates5.setText(coordinates);
+    
+    }
+    
     //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc="Updating data">
@@ -580,6 +628,8 @@ public class MainFrame extends javax.swing.JFrame {
     }
     
     private void fullUpdate(){
+        
+        setDisplayedDataSidebar1(vessel1.name, vessel1.lat + " / " + vessel1.lon);
         
     }
     
@@ -632,6 +682,10 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelShipAnim5.setVisible(true);
         update5();
     }//GEN-LAST:event_jPaneShip5MousePressed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        fullUpdate();
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     //</editor-fold>
     
@@ -660,6 +714,7 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonExit;
     private javax.swing.JLabel jLabelRequestTimestamp;
     private javax.swing.JLabel jLabelVesselCoordinates1;
