@@ -49,22 +49,22 @@ public class Vessel {
                 
         if (splitFile.length == 16){
             System.out.println("good");
-            MMSI = splitFile[1];
-            name = splitFile[2];
-            IMO = splitFile[3];
-            lat = splitFile[4];
-            lon = splitFile[5];
-            speed = splitFile[6];
-            course = splitFile[7];
-            heading = splitFile[8];
-            status = splitFile[9];
-            year = splitFile[10];
-            month = splitFile[11];
-            day = splitFile[12];
-            hour = splitFile[13];
-            minute = splitFile[14];
-            second = splitFile[15];
-            dataSource = splitFile[16];
+            MMSI = splitFile[0];
+            name = splitFile[1];
+            IMO = splitFile[2];
+            lat = splitFile[3];
+            lon = splitFile[4];
+            speed = splitFile[5];
+            course = splitFile[6];
+            heading = splitFile[7];
+            status = splitFile[8];
+            year = splitFile[9];
+            month = splitFile[10];
+            day = splitFile[11];
+            hour = splitFile[12];
+            minute = splitFile[13];
+            second = splitFile[14];
+            dataSource = splitFile[15];
         }else
             System.out.println("Error: data file is damaged!!!");
                 
