@@ -605,7 +605,25 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void update1(){
         
-        setDisplayedData("image", vessel1.MMSI, vessel1.IMO, vessel1.heading, vessel1.course, "", vessel1.speed, vessel1.status, vessel1.year + "." + vessel1.month + "." + vessel1.day);
+        int difference = 0;
+        int heading = Integer.parseInt(vessel1.heading);
+        int course = Integer.parseInt(vessel1.course);
+        
+        
+        if (heading > course) {
+            difference = heading - course;
+        }
+        
+        if (heading < course) {
+            difference = course - heading;
+
+        }
+        
+        if (heading == course) {
+            difference = 0;
+        }
+        
+        setDisplayedData("image", vessel1.MMSI, vessel1.IMO, vessel1.heading, vessel1.course, String.valueOf(difference), vessel1.speed, vessel1.status, vessel1.year + "." + vessel1.month + "." + vessel1.day);
         
     }
     
@@ -731,6 +749,8 @@ public class MainFrame extends javax.swing.JFrame {
         
     }
 
+    //<editor-fold defaultstate="collapsed" desc="Variable declaration">
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonExit;
     private javax.swing.JLabel jLabelRequestTimestamp;
@@ -766,4 +786,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelSidebar;
     private javax.swing.JPanel jPanelTitle;
     // End of variables declaration//GEN-END:variables
+    
+    //</editor-fold>
 }
