@@ -75,6 +75,14 @@ public class Vessel {
                 dataSource = splitFile[15];
             }else
                 System.out.println("Error: data file is damaged!!!");
+            
+            if (splitFile.length == 3) {
+                System.out.println("good");
+                MMSI = splitFile[0];
+                name = splitFile[1];
+                IMO = splitFile[2];
+            }else
+                System.out.println("Error: data file is damaged!!!");
         
         }   
                        
