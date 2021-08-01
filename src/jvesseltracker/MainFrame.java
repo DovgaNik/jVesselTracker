@@ -605,21 +605,31 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void update1(){
         
+        setDisplayedData("image", vessel1.MMSI, vessel1.IMO, vessel1.heading, vessel1.course, "", vessel1.speed, vessel1.status, vessel1.year + "." + vessel1.month + "." + vessel1.day);
+        
     }
     
     private void update2(){
+        
+        
         
     }
     
     private void update3(){
         
+        
+        
     }
     
     private void update4(){
         
+        
+        
     }
     
     private void update5(){
+        
+        
         
     }
     

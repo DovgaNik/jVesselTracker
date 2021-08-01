@@ -5,6 +5,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import jvesseltracker.jSingleVesselPosition.JPosition;
+import jvesseltracker.jSingleVesselPosition.JSingleVesselPositionParsed;
 
 public class Vessel {
     
@@ -37,16 +39,21 @@ public class Vessel {
                 
         String string;
         String text = null;
-        while ((string = br.readLine()) != null)
-            text = text + string + "\n";
-                
+        while ((string = br.readLine()) != null){
+        
+            if(text != null){
+                text = text + string + "\n";
+            }else{
+                text = string + "\n";
+            }
+        }        
         System.out.println(text);
         
         if(text != null) {
             String[] splitFile = text.split("\n");
             
             for (int i = 0; i < splitFile.length; i++)
-            System.out.println(splitFile[i]);
+                System.out.println(splitFile[i]);
                 
             if (splitFile.length == 16) {
                 System.out.println("good");
@@ -71,6 +78,27 @@ public class Vessel {
         
         }   
                        
+    }
+    
+    void get(int timeStamp, String apikey) throws IOException{
+        
+        JPosition download = new JPosition();
+        JSingleVesselPositionParsed parsed = new JSingleVesselPositionParsed(download.get(MMSI, timeStamp, apikey, "Mozilla/5.0"));
+
+        lat = parsed.lat;
+        lon = parsed.lon;
+        speed = parsed.speed;
+        course = parsed.course;
+        heading = parsed.heading;
+        status = parsed.status;
+        year = parsed.year;
+        month = parsed.month;
+        day = parsed.day;
+        hour = parsed.hour;
+        minute = parsed.minute;
+        second = parsed.second;
+        dataSource = parsed.dataSource;
+        
     }
     
 }
