@@ -18,11 +18,11 @@ public class MainFrame extends javax.swing.JFrame {
         
         try {
            
-            vessel1 = new Vessel(new File("vessel1.vesseldata"));
-            vessel2 = new Vessel(new File("vessel2.vesseldata"));
-            vessel3 = new Vessel(new File("vessel3.vesseldata"));
-            vessel4 = new Vessel(new File("vessel4.vesseldata"));
-            vessel5 = new Vessel(new File("vessel5.vesseldata"));
+            vessel1 = new Vessel(new File("cache/vessel1.vesseldata"));
+            vessel2 = new Vessel(new File("cache/vessel2.vesseldata"));
+            vessel3 = new Vessel(new File("cache/vessel3.vesseldata"));
+            vessel4 = new Vessel(new File("cache/vessel4.vesseldata"));
+            vessel5 = new Vessel(new File("cache/vessel5.vesseldata"));
             
         } catch (IOException ex){
             
@@ -114,21 +114,25 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonAddNewShip.setBorder(null);
         jButtonAddNewShip.setBorderPainted(false);
         jButtonAddNewShip.setContentAreaFilled(false);
+        jButtonAddNewShip.setFocusable(false);
 
         jButtonDeleteShip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/delete.png"))); // NOI18N
         jButtonDeleteShip.setBorder(null);
         jButtonDeleteShip.setBorderPainted(false);
         jButtonDeleteShip.setContentAreaFilled(false);
+        jButtonDeleteShip.setFocusable(false);
 
         jButtonEditShip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/edit.png"))); // NOI18N
         jButtonEditShip.setBorder(null);
         jButtonEditShip.setBorderPainted(false);
         jButtonEditShip.setContentAreaFilled(false);
+        jButtonEditShip.setFocusable(false);
 
         jButtonConfigure.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/settings.png"))); // NOI18N
         jButtonConfigure.setBorder(null);
         jButtonConfigure.setBorderPainted(false);
         jButtonConfigure.setContentAreaFilled(false);
+        jButtonConfigure.setFocusable(false);
 
         jButtonExit.setBackground(new java.awt.Color(0, 0, 0));
         jButtonExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/mooringPoingExit.png"))); // NOI18N
