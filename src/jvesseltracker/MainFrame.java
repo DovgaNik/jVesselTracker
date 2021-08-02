@@ -52,6 +52,10 @@ public class MainFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelTitle = new javax.swing.JPanel();
+        jButtonAddNewShip = new javax.swing.JButton();
+        jButtonDeleteShip = new javax.swing.JButton();
+        jButtonEditShip = new javax.swing.JButton();
+        jButtonConfigure = new javax.swing.JButton();
         jButtonExit = new javax.swing.JButton();
         jPanelSidebar = new javax.swing.JPanel();
         jPanelShip1 = new javax.swing.JPanel();
@@ -106,6 +110,26 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButtonAddNewShip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/add.png"))); // NOI18N
+        jButtonAddNewShip.setBorder(null);
+        jButtonAddNewShip.setBorderPainted(false);
+        jButtonAddNewShip.setContentAreaFilled(false);
+
+        jButtonDeleteShip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/delete.png"))); // NOI18N
+        jButtonDeleteShip.setBorder(null);
+        jButtonDeleteShip.setBorderPainted(false);
+        jButtonDeleteShip.setContentAreaFilled(false);
+
+        jButtonEditShip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/edit.png"))); // NOI18N
+        jButtonEditShip.setBorder(null);
+        jButtonEditShip.setBorderPainted(false);
+        jButtonEditShip.setContentAreaFilled(false);
+
+        jButtonConfigure.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/settings.png"))); // NOI18N
+        jButtonConfigure.setBorder(null);
+        jButtonConfigure.setBorderPainted(false);
+        jButtonConfigure.setContentAreaFilled(false);
+
         jButtonExit.setBackground(new java.awt.Color(0, 0, 0));
         jButtonExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/mooringPoingExit.png"))); // NOI18N
         jButtonExit.setToolTipText("Close");
@@ -123,13 +147,25 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelTitleLayout.setHorizontalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTitleLayout.createSequentialGroup()
-                .addContainerGap(955, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButtonAddNewShip, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonDeleteShip, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonEditShip, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonConfigure, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 791, Short.MAX_VALUE)
                 .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButtonExit, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+            .addComponent(jButtonAddNewShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jButtonDeleteShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jButtonEditShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jButtonConfigure, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
@@ -491,7 +527,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelSidebar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelSidebar, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE)
                     .addComponent(jPanelContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, 0))
         );
@@ -752,6 +788,10 @@ public class MainFrame extends javax.swing.JFrame {
     //<editor-fold defaultstate="collapsed" desc="Variable declaration">
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonAddNewShip;
+    private javax.swing.JButton jButtonConfigure;
+    private javax.swing.JButton jButtonDeleteShip;
+    private javax.swing.JButton jButtonEditShip;
     private javax.swing.JButton jButtonExit;
     private javax.swing.JLabel jLabelRequestTimestamp;
     private javax.swing.JLabel jLabelVesselCoordinates1;
