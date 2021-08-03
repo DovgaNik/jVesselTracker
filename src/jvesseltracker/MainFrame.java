@@ -115,24 +115,44 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonAddNewShip.setBorderPainted(false);
         jButtonAddNewShip.setContentAreaFilled(false);
         jButtonAddNewShip.setFocusable(false);
+        jButtonAddNewShip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAddNewShipActionPerformed(evt);
+            }
+        });
 
         jButtonDeleteShip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/delete.png"))); // NOI18N
         jButtonDeleteShip.setBorder(null);
         jButtonDeleteShip.setBorderPainted(false);
         jButtonDeleteShip.setContentAreaFilled(false);
         jButtonDeleteShip.setFocusable(false);
+        jButtonDeleteShip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDeleteShipActionPerformed(evt);
+            }
+        });
 
         jButtonEditShip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/edit.png"))); // NOI18N
         jButtonEditShip.setBorder(null);
         jButtonEditShip.setBorderPainted(false);
         jButtonEditShip.setContentAreaFilled(false);
         jButtonEditShip.setFocusable(false);
+        jButtonEditShip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonEditShipActionPerformed(evt);
+            }
+        });
 
         jButtonConfigure.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/settings.png"))); // NOI18N
         jButtonConfigure.setBorder(null);
         jButtonConfigure.setBorderPainted(false);
         jButtonConfigure.setContentAreaFilled(false);
         jButtonConfigure.setFocusable(false);
+        jButtonConfigure.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConfigureActionPerformed(evt);
+            }
+        });
 
         jButtonExit.setBackground(new java.awt.Color(0, 0, 0));
         jButtonExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/mooringPoingExit.png"))); // NOI18N
@@ -762,12 +782,31 @@ public class MainFrame extends javax.swing.JFrame {
         update5();
         
     }//GEN-LAST:event_jPaneShip5MousePressed
+
+    private void jButtonAddNewShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddNewShipActionPerformed
+
+        JFrameAddVessel jFrameAddVessel = new JFrameAddVessel();
+        jFrameAddVessel.setVisible(true);
+        
+    }//GEN-LAST:event_jButtonAddNewShipActionPerformed
+
+    private void jButtonDeleteShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteShipActionPerformed
+                
+    }//GEN-LAST:event_jButtonDeleteShipActionPerformed
+
+    private void jButtonEditShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditShipActionPerformed
+        
+    }//GEN-LAST:event_jButtonEditShipActionPerformed
+
+    private void jButtonConfigureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfigureActionPerformed
+        
+    }//GEN-LAST:event_jButtonConfigureActionPerformed
     
     //</editor-fold>
     
     public static void main(String args[]) {
         
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code">
+        //<editor-fold defaultstate="collapsed" desc="Look and feel setting code">
         
         try {
             
