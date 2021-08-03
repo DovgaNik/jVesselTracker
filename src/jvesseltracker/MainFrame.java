@@ -806,6 +806,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonConfigureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfigureActionPerformed
         
+        JFrameConfigure jFrameConfigure = new JFrameConfigure();
+        jFrameConfigure.setVisible(true);
+        
     }//GEN-LAST:event_jButtonConfigureActionPerformed
     
     //</editor-fold>
