@@ -799,6 +799,9 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonEditShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditShipActionPerformed
         
+        JFrameEditVessel jFrameEditVessel = new JFrameEditVessel();
+        jFrameEditVessel.setVisible(true);
+        
     }//GEN-LAST:event_jButtonEditShipActionPerformed
 
     private void jButtonConfigureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfigureActionPerformed
