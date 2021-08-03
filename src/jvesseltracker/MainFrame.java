@@ -791,7 +791,10 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonAddNewShipActionPerformed
 
     private void jButtonDeleteShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteShipActionPerformed
-                
+        
+        JFrameRemoveVessel jFrameRemoveVessel = new JFrameRemoveVessel();
+        jFrameRemoveVessel.setVisible(true);
+        
     }//GEN-LAST:event_jButtonDeleteShipActionPerformed
 
     private void jButtonEditShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditShipActionPerformed
