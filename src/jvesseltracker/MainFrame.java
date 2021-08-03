@@ -788,12 +788,16 @@ public class MainFrame extends javax.swing.JFrame {
         JFrameAddVessel jFrameAddVessel = new JFrameAddVessel();
         jFrameAddVessel.setVisible(true);
         
+        System.out.println("Opening Add frame");
+        
     }//GEN-LAST:event_jButtonAddNewShipActionPerformed
 
     private void jButtonDeleteShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteShipActionPerformed
         
         JFrameRemoveVessel jFrameRemoveVessel = new JFrameRemoveVessel();
         jFrameRemoveVessel.setVisible(true);
+        
+        System.out.println("Opening Remove frame");
         
     }//GEN-LAST:event_jButtonDeleteShipActionPerformed
 
@@ -802,12 +806,16 @@ public class MainFrame extends javax.swing.JFrame {
         JFrameEditVessel jFrameEditVessel = new JFrameEditVessel();
         jFrameEditVessel.setVisible(true);
         
+        System.out.println("Opening Edit frame");
+        
     }//GEN-LAST:event_jButtonEditShipActionPerformed
 
     private void jButtonConfigureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfigureActionPerformed
         
         JFrameConfigure jFrameConfigure = new JFrameConfigure();
         jFrameConfigure.setVisible(true);
+        
+        System.out.println("Opening Configure frame");
         
     }//GEN-LAST:event_jButtonConfigureActionPerformed
     
