@@ -180,7 +180,9 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
 
-        jPanelShipRoot1.setBackground(new java.awt.Color(255, 0, 0));
+        jPanelShipRoot1.setBackground(new java.awt.Color(0, 0, 0));
+
+        jPanelShip1.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelShip1Layout = new javax.swing.GroupLayout(jPanelShip1);
         jPanelShip1.setLayout(jPanelShip1Layout);
@@ -192,6 +194,8 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelShip1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        jPanelShipAnimation1.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelShipAnimation1Layout = new javax.swing.GroupLayout(jPanelShipAnimation1);
         jPanelShipAnimation1.setLayout(jPanelShipAnimation1Layout);
@@ -222,7 +226,9 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jPanelShip1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanelShipRoot2.setBackground(new java.awt.Color(255, 0, 0));
+        jPanelShipRoot2.setBackground(new java.awt.Color(0, 0, 0));
+
+        jPanelShip2.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelShip2Layout = new javax.swing.GroupLayout(jPanelShip2);
         jPanelShip2.setLayout(jPanelShip2Layout);
@@ -234,6 +240,8 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelShip2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        jPanelShipAnimation2.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelShipAnimation2Layout = new javax.swing.GroupLayout(jPanelShipAnimation2);
         jPanelShipAnimation2.setLayout(jPanelShipAnimation2Layout);
@@ -264,7 +272,9 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jPanelShip2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanelShipRoot3.setBackground(new java.awt.Color(255, 0, 0));
+        jPanelShipRoot3.setBackground(new java.awt.Color(0, 0, 0));
+
+        jPanelShip3.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelShip3Layout = new javax.swing.GroupLayout(jPanelShip3);
         jPanelShip3.setLayout(jPanelShip3Layout);
@@ -276,6 +286,8 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelShip3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        jPanelShipAnimation3.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelShipAnimation3Layout = new javax.swing.GroupLayout(jPanelShipAnimation3);
         jPanelShipAnimation3.setLayout(jPanelShipAnimation3Layout);
@@ -306,7 +318,9 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jPanelShip3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanelShipRoot4.setBackground(new java.awt.Color(255, 0, 0));
+        jPanelShipRoot4.setBackground(new java.awt.Color(0, 0, 0));
+
+        jPanelShip4.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelShip4Layout = new javax.swing.GroupLayout(jPanelShip4);
         jPanelShip4.setLayout(jPanelShip4Layout);
@@ -318,6 +332,8 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelShip4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        jPanelShipAnimation4.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelShipAnimation4Layout = new javax.swing.GroupLayout(jPanelShipAnimation4);
         jPanelShipAnimation4.setLayout(jPanelShipAnimation4Layout);
@@ -348,7 +364,9 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jPanelShip4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jPanelShipRoot5.setBackground(new java.awt.Color(255, 0, 0));
+        jPanelShipRoot5.setBackground(new java.awt.Color(0, 0, 0));
+
+        jPanelShip5.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelShip5Layout = new javax.swing.GroupLayout(jPanelShip5);
         jPanelShip5.setLayout(jPanelShip5Layout);
@@ -360,6 +378,8 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelShip5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        jPanelShipAnimation5.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelShipAnimation5Layout = new javax.swing.GroupLayout(jPanelShipAnimation5);
         jPanelShipAnimation5.setLayout(jPanelShipAnimation5Layout);
@@ -420,7 +440,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanelContent.setBackground(new java.awt.Color(102, 255, 102));
+        jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
@@ -457,6 +477,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jPanelSidebar.getAccessibleContext().setAccessibleName("Sidebar");
+        jPanelContent.getAccessibleContext().setAccessibleName("Content Pane");
 
         getAccessibleContext().setAccessibleDescription("jVesselTracker window");
 

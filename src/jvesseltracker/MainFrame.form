@@ -237,7 +237,7 @@
         <Container class="javax.swing.JPanel" name="jPanelShipRoot1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="ff" type="rgb"/>
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
 
@@ -265,6 +265,11 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="jPanelShip1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f1" green="f8" red="fa" type="rgb"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -280,6 +285,11 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanelShipAnimation1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f1" green="f8" red="fa" type="rgb"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -299,7 +309,7 @@
         <Container class="javax.swing.JPanel" name="jPanelShipRoot2">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="ff" type="rgb"/>
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
 
@@ -327,6 +337,11 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="jPanelShip2">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f1" green="f8" red="fa" type="rgb"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -342,6 +357,11 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanelShipAnimation2">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f1" green="f8" red="fa" type="rgb"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -361,7 +381,7 @@
         <Container class="javax.swing.JPanel" name="jPanelShipRoot3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="ff" type="rgb"/>
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
 
@@ -389,6 +409,11 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="jPanelShip3">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f1" green="f8" red="fa" type="rgb"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -404,6 +429,11 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanelShipAnimation3">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f1" green="f8" red="fa" type="rgb"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -423,7 +453,7 @@
         <Container class="javax.swing.JPanel" name="jPanelShipRoot4">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="ff" type="rgb"/>
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
 
@@ -451,6 +481,11 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="jPanelShip4">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f1" green="f8" red="fa" type="rgb"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -466,6 +501,11 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanelShipAnimation4">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f1" green="f8" red="fa" type="rgb"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -485,7 +525,7 @@
         <Container class="javax.swing.JPanel" name="jPanelShipRoot5">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="ff" type="rgb"/>
+              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
           </Properties>
 
@@ -513,6 +553,11 @@
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="jPanelShip5">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f1" green="f8" red="fa" type="rgb"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -528,6 +573,11 @@
               </Layout>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanelShipAnimation5">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="f1" green="f8" red="fa" type="rgb"/>
+                </Property>
+              </Properties>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -549,9 +599,12 @@
     <Container class="javax.swing.JPanel" name="jPanelContent">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="66" green="ff" red="66" type="rgb"/>
+          <Color blue="f1" green="f8" red="fa" type="rgb"/>
         </Property>
       </Properties>
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Content Pane"/>
+      </AccessibilityProperties>
 
       <Layout>
         <DimensionLayout dim="0">
