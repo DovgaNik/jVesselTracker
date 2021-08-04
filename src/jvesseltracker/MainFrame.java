@@ -1,5 +1,6 @@
 package jvesseltracker;
 
+import java.awt.Color;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -510,13 +511,13 @@ public class MainFrame extends javax.swing.JFrame {
     //<editor-fold defaultstate="collapsed" desc="Working with on-screen data">
     
     private void setAnimationInvisible(){
-//        
-//        jPanelShipAnim1.setVisible(false);
-//        jPanelShipAnim2.setVisible(false);
-//        jPanelShipAnim3.setVisible(false);
-//        jPanelShipAnim4.setVisible(false);
-//        jPanelShipAnim5.setVisible(false);
-//        
+       
+        jPanelShipAnimation1.setBackground(new Color(67 ,66 ,107));
+        jPanelShipAnimation2.setBackground(new Color(67 ,66 ,107));
+        jPanelShipAnimation3.setBackground(new Color(67 ,66 ,107));
+        jPanelShipAnimation4.setBackground(new Color(67 ,66 ,107));
+        jPanelShipAnimation5.setBackground(new Color(67 ,66 ,107));
+       
     }
     
     private void clearDisplayedData(){
@@ -648,6 +649,8 @@ public class MainFrame extends javax.swing.JFrame {
     
     //<editor-fold defaultstate="collapsed" desc="Mouse Events">
     
+    //<editor-fold defaultstate="collapsed" desc="Buttons in the title bar">
+    
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
         
         System.out.println("Exiting");
@@ -691,6 +694,8 @@ public class MainFrame extends javax.swing.JFrame {
         System.out.println("Opening Configure frame");
         
     }//GEN-LAST:event_jButtonConfigureActionPerformed
+    
+    //</editor-fold>
     
     //</editor-fold>
     
