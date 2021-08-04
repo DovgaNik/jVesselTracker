@@ -249,7 +249,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanelShipRoot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanelShipAnimation1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelShip1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addComponent(jPanelShip1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE)))
         );
 
         jPanelShipRoot2.setBackground(new java.awt.Color(0, 0, 0));
@@ -309,7 +309,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanelShipRoot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanelShipAnimation2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelShip2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addComponent(jPanelShip2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE)))
         );
 
         jPanelShipRoot3.setBackground(new java.awt.Color(0, 0, 0));
@@ -369,7 +369,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanelShipRoot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanelShipAnimation3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelShip3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addComponent(jPanelShip3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE)))
         );
 
         jPanelShipRoot4.setBackground(new java.awt.Color(0, 0, 0));
@@ -429,7 +429,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanelShipRoot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanelShipAnimation4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelShip4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addComponent(jPanelShip4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE)))
         );
 
         jPanelShipRoot5.setBackground(new java.awt.Color(0, 0, 0));
@@ -489,7 +489,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanelShipRoot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanelShipAnimation5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelShip5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addComponent(jPanelShip5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanelSidebarLayout = new javax.swing.GroupLayout(jPanelSidebar);
@@ -628,37 +628,37 @@ public class MainFrame extends javax.swing.JFrame {
     }
     
     private void setDisplayedDataSidebar1 (String name, String coordinates){
-//    
-//        jLabelVesselName1.setText(name);
-//        jLabelVesselCoordinates1.setText(coordinates);
-//    
+   
+        jLabelVesselName1.setText(name);
+        jLabelVesselCoordinates1.setText(coordinates);
+   
     }
     
     private void setDisplayedDataSidebar2 (String name, String coordinates){
-//    
-//        jLabelVesselName2.setText(name);
-//        jLabelVesselCoordinates2.setText(coordinates);
-//    
+    
+        jLabelVesselName2.setText(name);
+        jLabelVesselCoordinates2.setText(coordinates);
+   
     }
     
     private void setDisplayedDataSidebar3 (String name, String coordinates){
-//    
-//        jLabelVesselName3.setText(name);
-//        jLabelVesselCoordinates3.setText(coordinates);
-//    
+    
+        jLabelVesselName3.setText(name);
+        jLabelVesselCoordinates3.setText(coordinates);
+    
     }
     
     private void setDisplayedDataSidebar4 (String name, String coordinates){
-//    
-//        jLabelVesselName4.setText(name);
-//        jLabelVesselCoordinates4.setText(coordinates);
+    
+        jLabelVesselName4.setText(name);
+        jLabelVesselCoordinates4.setText(coordinates);
     
     }
     
     private void setDisplayedDataSidebar5 (String name, String coordinates){
     
-//        jLabelVesselName5.setText(name);
-//        jLabelVesselCoordinates5.setText(coordinates);
+        jLabelVesselName5.setText(name);
+        jLabelVesselCoordinates5.setText(coordinates);
     
     }
     

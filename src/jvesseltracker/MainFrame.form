@@ -254,7 +254,7 @@
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jPanelShipAnimation1" max="32767" attributes="0"/>
-                          <Component id="jPanelShip1" pref="0" max="32767" attributes="0"/>
+                          <Component id="jPanelShip1" pref="100" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -354,7 +354,7 @@
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jPanelShipAnimation2" max="32767" attributes="0"/>
-                          <Component id="jPanelShip2" pref="0" max="32767" attributes="0"/>
+                          <Component id="jPanelShip2" pref="100" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -453,7 +453,7 @@
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jPanelShipAnimation3" max="32767" attributes="0"/>
-                          <Component id="jPanelShip3" pref="0" max="32767" attributes="0"/>
+                          <Component id="jPanelShip3" pref="100" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -552,7 +552,7 @@
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jPanelShipAnimation4" max="32767" attributes="0"/>
-                          <Component id="jPanelShip4" pref="0" max="32767" attributes="0"/>
+                          <Component id="jPanelShip4" pref="100" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -651,7 +651,7 @@
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jPanelShipAnimation5" max="32767" attributes="0"/>
-                          <Component id="jPanelShip5" pref="0" max="32767" attributes="0"/>
+                          <Component id="jPanelShip5" pref="100" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
