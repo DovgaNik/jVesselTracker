@@ -61,18 +61,28 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelSidebar = new javax.swing.JPanel();
         jPanelShipRoot1 = new javax.swing.JPanel();
         jPanelShip1 = new javax.swing.JPanel();
+        jLabelVesselName1 = new javax.swing.JLabel();
+        jLabelVesselCoordinates1 = new javax.swing.JLabel();
         jPanelShipAnimation1 = new javax.swing.JPanel();
         jPanelShipRoot2 = new javax.swing.JPanel();
         jPanelShip2 = new javax.swing.JPanel();
+        jLabelVesselCoordinates2 = new javax.swing.JLabel();
+        jLabelVesselName2 = new javax.swing.JLabel();
         jPanelShipAnimation2 = new javax.swing.JPanel();
         jPanelShipRoot3 = new javax.swing.JPanel();
         jPanelShip3 = new javax.swing.JPanel();
+        jLabelVesselName3 = new javax.swing.JLabel();
+        jLabelVesselCoordinates3 = new javax.swing.JLabel();
         jPanelShipAnimation3 = new javax.swing.JPanel();
         jPanelShipRoot4 = new javax.swing.JPanel();
         jPanelShip4 = new javax.swing.JPanel();
+        jLabelVesselName4 = new javax.swing.JLabel();
+        jLabelVesselCoordinates4 = new javax.swing.JLabel();
         jPanelShipAnimation4 = new javax.swing.JPanel();
         jPanelShipRoot5 = new javax.swing.JPanel();
         jPanelShip5 = new javax.swing.JPanel();
+        jLabelVesselName5 = new javax.swing.JLabel();
+        jLabelVesselCoordinates5 = new javax.swing.JLabel();
         jPanelShipAnimation5 = new javax.swing.JPanel();
         jPanelContent = new javax.swing.JPanel();
 
@@ -185,15 +195,30 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanelShip1.setBackground(new java.awt.Color(250, 248, 241));
 
+        jLabelVesselName1.setFont(new java.awt.Font("Lato", 0, 36)); // NOI18N
+        jLabelVesselName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVesselName1.setText("N/A");
+        jLabelVesselName1.setToolTipText("");
+
+        jLabelVesselCoordinates1.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelVesselCoordinates1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVesselCoordinates1.setText("N/A");
+
         javax.swing.GroupLayout jPanelShip1Layout = new javax.swing.GroupLayout(jPanelShip1);
         jPanelShip1.setLayout(jPanelShip1Layout);
         jPanelShip1Layout.setHorizontalGroup(
             jPanelShip1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 290, Short.MAX_VALUE)
+            .addComponent(jLabelVesselName1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabelVesselCoordinates1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanelShip1Layout.setVerticalGroup(
             jPanelShip1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanelShip1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelVesselName1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelVesselCoordinates1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelShipAnimation1.setBackground(new java.awt.Color(250, 248, 241));
@@ -222,24 +247,38 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelShipRoot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelShipRoot1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanelShipRoot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelShipAnimation1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelShip1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanelShipRoot1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelShipAnimation1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelShip1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
         );
 
         jPanelShipRoot2.setBackground(new java.awt.Color(0, 0, 0));
 
         jPanelShip2.setBackground(new java.awt.Color(250, 248, 241));
 
+        jLabelVesselCoordinates2.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelVesselCoordinates2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVesselCoordinates2.setText("N/A");
+
+        jLabelVesselName2.setFont(new java.awt.Font("Lato", 0, 36)); // NOI18N
+        jLabelVesselName2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVesselName2.setText("N/A");
+
         javax.swing.GroupLayout jPanelShip2Layout = new javax.swing.GroupLayout(jPanelShip2);
         jPanelShip2.setLayout(jPanelShip2Layout);
         jPanelShip2Layout.setHorizontalGroup(
             jPanelShip2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 290, Short.MAX_VALUE)
+            .addComponent(jLabelVesselName2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabelVesselCoordinates2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanelShip2Layout.setVerticalGroup(
             jPanelShip2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanelShip2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelVesselName2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelVesselCoordinates2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelShipAnimation2.setBackground(new java.awt.Color(250, 248, 241));
@@ -268,24 +307,38 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelShipRoot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelShipRoot2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanelShipRoot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelShipAnimation2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelShip2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanelShipRoot2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelShipAnimation2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelShip2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
         );
 
         jPanelShipRoot3.setBackground(new java.awt.Color(0, 0, 0));
 
         jPanelShip3.setBackground(new java.awt.Color(250, 248, 241));
 
+        jLabelVesselName3.setFont(new java.awt.Font("Lato", 0, 36)); // NOI18N
+        jLabelVesselName3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVesselName3.setText("N/A");
+
+        jLabelVesselCoordinates3.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelVesselCoordinates3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVesselCoordinates3.setText("N/A");
+
         javax.swing.GroupLayout jPanelShip3Layout = new javax.swing.GroupLayout(jPanelShip3);
         jPanelShip3.setLayout(jPanelShip3Layout);
         jPanelShip3Layout.setHorizontalGroup(
             jPanelShip3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 290, Short.MAX_VALUE)
+            .addComponent(jLabelVesselName3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabelVesselCoordinates3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanelShip3Layout.setVerticalGroup(
             jPanelShip3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanelShip3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelVesselName3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelVesselCoordinates3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelShipAnimation3.setBackground(new java.awt.Color(250, 248, 241));
@@ -314,24 +367,38 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelShipRoot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelShipRoot3Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanelShipRoot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelShipAnimation3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelShip3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanelShipRoot3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelShipAnimation3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelShip3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
         );
 
         jPanelShipRoot4.setBackground(new java.awt.Color(0, 0, 0));
 
         jPanelShip4.setBackground(new java.awt.Color(250, 248, 241));
 
+        jLabelVesselName4.setFont(new java.awt.Font("Lato", 0, 36)); // NOI18N
+        jLabelVesselName4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVesselName4.setText("N/A");
+
+        jLabelVesselCoordinates4.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelVesselCoordinates4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVesselCoordinates4.setText("N/A");
+
         javax.swing.GroupLayout jPanelShip4Layout = new javax.swing.GroupLayout(jPanelShip4);
         jPanelShip4.setLayout(jPanelShip4Layout);
         jPanelShip4Layout.setHorizontalGroup(
             jPanelShip4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 290, Short.MAX_VALUE)
+            .addComponent(jLabelVesselName4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabelVesselCoordinates4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanelShip4Layout.setVerticalGroup(
             jPanelShip4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanelShip4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelVesselName4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelVesselCoordinates4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelShipAnimation4.setBackground(new java.awt.Color(250, 248, 241));
@@ -360,24 +427,38 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelShipRoot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelShipRoot4Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanelShipRoot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelShipAnimation4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelShip4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanelShipRoot4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelShipAnimation4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelShip4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
         );
 
         jPanelShipRoot5.setBackground(new java.awt.Color(0, 0, 0));
 
         jPanelShip5.setBackground(new java.awt.Color(250, 248, 241));
 
+        jLabelVesselName5.setFont(new java.awt.Font("Lato", 0, 36)); // NOI18N
+        jLabelVesselName5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVesselName5.setText("N/A");
+
+        jLabelVesselCoordinates5.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelVesselCoordinates5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVesselCoordinates5.setText("N/A");
+
         javax.swing.GroupLayout jPanelShip5Layout = new javax.swing.GroupLayout(jPanelShip5);
         jPanelShip5.setLayout(jPanelShip5Layout);
         jPanelShip5Layout.setHorizontalGroup(
             jPanelShip5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 290, Short.MAX_VALUE)
+            .addComponent(jLabelVesselName5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jLabelVesselCoordinates5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanelShip5Layout.setVerticalGroup(
             jPanelShip5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(jPanelShip5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelVesselName5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelVesselCoordinates5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelShipAnimation5.setBackground(new java.awt.Color(250, 248, 241));
@@ -406,9 +487,9 @@ public class MainFrame extends javax.swing.JFrame {
             jPanelShipRoot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelShipRoot5Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanelShipRoot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelShipAnimation5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelShip5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanelShipRoot5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelShipAnimation5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelShip5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout jPanelSidebarLayout = new javax.swing.GroupLayout(jPanelSidebar);
@@ -428,7 +509,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelSidebarLayout.setVerticalGroup(
             jPanelSidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelSidebarLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(11, 11, 11)
                 .addComponent(jPanelShipRoot1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
                 .addComponent(jPanelShipRoot2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -436,7 +517,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jPanelShipRoot3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(11, 11, 11)
                 .addComponent(jPanelShipRoot4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(11, 11, 11)
                 .addComponent(jPanelShipRoot5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -472,9 +553,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jPanelSidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(jPanelContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(jPanelContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         jPanelSidebar.getAccessibleContext().setAccessibleName("Sidebar");
@@ -731,6 +810,16 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonDeleteShip;
     private javax.swing.JButton jButtonEditShip;
     private javax.swing.JButton jButtonExit;
+    private javax.swing.JLabel jLabelVesselCoordinates1;
+    private javax.swing.JLabel jLabelVesselCoordinates2;
+    private javax.swing.JLabel jLabelVesselCoordinates3;
+    private javax.swing.JLabel jLabelVesselCoordinates4;
+    private javax.swing.JLabel jLabelVesselCoordinates5;
+    private javax.swing.JLabel jLabelVesselName1;
+    private javax.swing.JLabel jLabelVesselName2;
+    private javax.swing.JLabel jLabelVesselName3;
+    private javax.swing.JLabel jLabelVesselName4;
+    private javax.swing.JLabel jLabelVesselName5;
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JPanel jPanelShip1;
     private javax.swing.JPanel jPanelShip2;
