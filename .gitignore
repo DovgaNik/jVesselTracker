@@ -25,5 +25,8 @@ hs_err_pid*
 /dist/
 
 #temporary files
-/src/icons/blank.png
 *.jpg
+
+*.vesseldata
+
+newfile

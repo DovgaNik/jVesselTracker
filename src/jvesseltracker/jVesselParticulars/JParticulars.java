@@ -4,9 +4,7 @@ import jvesseltracker.JGet;
 
 public class JParticulars {
     
-    public static void get(String url) {
-    
-        String 
+    public static String 
                 mmsi,
                 imo,
                 name,
@@ -28,7 +26,9 @@ public class JParticulars {
                 financialOwner,
                 technicalManager,
                 type;
-        
+    
+    public static void get(String url) {
+
         String json = JGet.download(url);
         
         // <editor-fold defaultstate="collapsed" desc="deleting all unwanted characters in downloaded jason file">
