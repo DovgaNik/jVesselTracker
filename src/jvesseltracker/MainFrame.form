@@ -267,6 +267,9 @@
                   <Color blue="f1" green="f8" red="fa" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanelShip1MousePressed"/>
+              </Events>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -367,6 +370,9 @@
                   <Color blue="f1" green="f8" red="fa" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanelShip2MousePressed"/>
+              </Events>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -466,6 +472,9 @@
                   <Color blue="f1" green="f8" red="fa" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanelShip3MousePressed"/>
+              </Events>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -565,6 +574,9 @@
                   <Color blue="f1" green="f8" red="fa" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanelShip4MousePressed"/>
+              </Events>
 
               <Layout>
                 <DimensionLayout dim="0">
@@ -664,6 +676,9 @@
                   <Color blue="f1" green="f8" red="fa" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jPanelShip5MousePressed"/>
+              </Events>
 
               <Layout>
                 <DimensionLayout dim="0">

@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 
 public class MainFrame extends javax.swing.JFrame {
@@ -46,6 +45,9 @@ public class MainFrame extends javax.swing.JFrame {
     Vessel vessel3;
     Vessel vessel4;
     Vessel vessel5;
+    
+    Color oldGloryWhite = new Color(250, 248, 241);
+    Color oldGloryNavy = new Color(67 ,66 ,107);
     
     //</editor-fold>
     
@@ -194,6 +196,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelShipRoot1.setBackground(new java.awt.Color(0, 0, 0));
 
         jPanelShip1.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelShip1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanelShip1MousePressed(evt);
+            }
+        });
 
         jLabelVesselName1.setFont(new java.awt.Font("Lato", 0, 36)); // NOI18N
         jLabelVesselName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -255,6 +262,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelShipRoot2.setBackground(new java.awt.Color(0, 0, 0));
 
         jPanelShip2.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelShip2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanelShip2MousePressed(evt);
+            }
+        });
 
         jLabelVesselCoordinates2.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelVesselCoordinates2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -315,6 +327,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelShipRoot3.setBackground(new java.awt.Color(0, 0, 0));
 
         jPanelShip3.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelShip3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanelShip3MousePressed(evt);
+            }
+        });
 
         jLabelVesselName3.setFont(new java.awt.Font("Lato", 0, 36)); // NOI18N
         jLabelVesselName3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -375,6 +392,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelShipRoot4.setBackground(new java.awt.Color(0, 0, 0));
 
         jPanelShip4.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelShip4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanelShip4MousePressed(evt);
+            }
+        });
 
         jLabelVesselName4.setFont(new java.awt.Font("Lato", 0, 36)); // NOI18N
         jLabelVesselName4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -435,6 +457,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelShipRoot5.setBackground(new java.awt.Color(0, 0, 0));
 
         jPanelShip5.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelShip5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanelShip5MousePressed(evt);
+            }
+        });
 
         jLabelVesselName5.setFont(new java.awt.Font("Lato", 0, 36)); // NOI18N
         jLabelVesselName5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -591,12 +618,12 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void setAnimationInvisible(){
        
-        jPanelShipAnimation1.setBackground(new Color(67 ,66 ,107));
-        jPanelShipAnimation2.setBackground(new Color(67 ,66 ,107));
-        jPanelShipAnimation3.setBackground(new Color(67 ,66 ,107));
-        jPanelShipAnimation4.setBackground(new Color(67 ,66 ,107));
-        jPanelShipAnimation5.setBackground(new Color(67 ,66 ,107));
-       
+        jPanelShipAnimation1.setBackground(oldGloryNavy);
+        jPanelShipAnimation2.setBackground(oldGloryNavy);
+        jPanelShipAnimation3.setBackground(oldGloryNavy);
+        jPanelShipAnimation4.setBackground(oldGloryNavy);
+        jPanelShipAnimation5.setBackground(oldGloryNavy);
+        
     }
     
     private void clearDisplayedData(){
@@ -668,25 +695,25 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void update1(){
         
-        int difference = 0;
-        int heading = Integer.parseInt(vessel1.heading);
-        int course = Integer.parseInt(vessel1.course);
-        
-        
-        if (heading > course) {
-            difference = heading - course;
-        }
-        
-        if (heading < course) {
-            difference = course - heading;
-
-        }
-        
-        if (heading == course) {
-            difference = 0;
-        }
-        
-        setDisplayedData("image", vessel1.MMSI, vessel1.IMO, vessel1.heading, vessel1.course, String.valueOf(difference), vessel1.speed, vessel1.status, vessel1.year + "." + vessel1.month + "." + vessel1.day);
+//        int difference = 0;
+//        int heading = Integer.parseInt(vessel1.heading);
+//        int course = Integer.parseInt(vessel1.course);
+//        
+//        
+//        if (heading > course) {
+//            difference = heading - course;
+//        }
+//        
+//        if (heading < course) {
+//            difference = course - heading;
+//
+//        }
+//        
+//        if (heading == course) {
+//            difference = 0;
+//        }
+//        
+//        setDisplayedData("image", vessel1.MMSI, vessel1.IMO, vessel1.heading, vessel1.course, String.valueOf(difference), vessel1.speed, vessel1.status, vessel1.year + "." + vessel1.month + "." + vessel1.day);
         
     }
     
@@ -773,8 +800,58 @@ public class MainFrame extends javax.swing.JFrame {
         System.out.println("Opening Configure frame");
         
     }//GEN-LAST:event_jButtonConfigureActionPerformed
-    
+
     //</editor-fold>
+    
+    private void jPanelShip1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip1MousePressed
+        
+        setAnimationInvisible();
+        vessel = vessels.vessel1;
+        System.out.println("Ship selected is " + vessel);
+        jPanelShipAnimation1.setBackground(oldGloryWhite);
+        update1();
+        
+    }//GEN-LAST:event_jPanelShip1MousePressed
+
+    private void jPanelShip2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip2MousePressed
+        
+        setAnimationInvisible();
+        vessel = vessels.vessel2;
+        System.out.println("Ship selected is " + vessel);
+        jPanelShipAnimation2.setBackground(oldGloryWhite);
+        update2();
+        
+    }//GEN-LAST:event_jPanelShip2MousePressed
+
+    private void jPanelShip3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip3MousePressed
+        
+        setAnimationInvisible();
+        vessel = vessels.vessel3;
+        System.out.println("Ship selected is " + vessel);
+        jPanelShipAnimation3.setBackground(oldGloryWhite);
+        update3();
+        
+    }//GEN-LAST:event_jPanelShip3MousePressed
+
+    private void jPanelShip4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip4MousePressed
+        
+        setAnimationInvisible();
+        vessel = vessels.vessel4;
+        System.out.println("Ship selected is " + vessel);
+        jPanelShipAnimation4.setBackground(oldGloryWhite);
+        update4();
+        
+    }//GEN-LAST:event_jPanelShip4MousePressed
+
+    private void jPanelShip5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip5MousePressed
+        
+        setAnimationInvisible();
+        vessel = vessels.vessel5;
+        System.out.println("Ship selected is " + vessel);
+        jPanelShipAnimation5.setBackground(oldGloryWhite);
+        update5();
+        
+    }//GEN-LAST:event_jPanelShip5MousePressed
     
     //</editor-fold>
     
