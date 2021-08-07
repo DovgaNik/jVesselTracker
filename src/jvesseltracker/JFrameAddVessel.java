@@ -117,7 +117,7 @@ public class JFrameAddVessel extends javax.swing.JFrame {
                             .addComponent(jLabelIMO)
                             .addGroup(jPanelContentLayout.createSequentialGroup()
                                 .addComponent(jButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
