@@ -18,11 +18,12 @@ public class JFrameAddVessel extends javax.swing.JFrame {
         jPanelTitle = new javax.swing.JPanel();
         jButtonExit = new javax.swing.JButton();
         jPanelContent = new javax.swing.JPanel();
-        jTextFieldMMSI = new javax.swing.JTextField();
-        jTextFieldIMO = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
         jLabelMMSI = new javax.swing.JLabel();
+        jTextFieldMMSI = new javax.swing.JTextField();
         jLabelIMO = new javax.swing.JLabel();
+        jTextFieldIMO = new javax.swing.JTextField();
+        jButtonAdd = new javax.swing.JButton();
+        jButtonCancel = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Add Vessel");
@@ -72,21 +73,27 @@ public class JFrameAddVessel extends javax.swing.JFrame {
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
 
-        jTextFieldMMSI.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
-
-        jTextFieldIMO.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
-
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jButton1.setText("Add");
-        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
-        jButton1.setContentAreaFilled(false);
-
         jLabelMMSI.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelMMSI.setText("Enter MMSI (Required)");
 
+        jTextFieldMMSI.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
+
         jLabelIMO.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelIMO.setText("Enter IMO (optional)");
+
+        jTextFieldIMO.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
+
+        jButtonAdd.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonAdd.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jButtonAdd.setText("Add");
+        jButtonAdd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
+        jButtonAdd.setContentAreaFilled(false);
+
+        jButtonCancel.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonCancel.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jButtonCancel.setText("Cancel");
+        jButtonCancel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
+        jButtonCancel.setContentAreaFilled(false);
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
@@ -101,7 +108,10 @@ public class JFrameAddVessel extends javax.swing.JFrame {
                         .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelMMSI)
                             .addComponent(jLabelIMO)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelContentLayout.createSequentialGroup()
+                                .addComponent(jButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -117,7 +127,9 @@ public class JFrameAddVessel extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextFieldIMO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -133,8 +145,7 @@ public class JFrameAddVessel extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, 0)
-                .addComponent(jPanelContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addComponent(jPanelContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -197,7 +208,8 @@ public class JFrameAddVessel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonAdd;
+    private javax.swing.JButton jButtonCancel;
     private javax.swing.JButton jButtonExit;
     private javax.swing.JLabel jLabelIMO;
     private javax.swing.JLabel jLabelMMSI;
