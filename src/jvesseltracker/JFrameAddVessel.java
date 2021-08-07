@@ -22,8 +22,10 @@ public class JFrameAddVessel extends javax.swing.JFrame {
         jTextFieldMMSI = new javax.swing.JTextField();
         jLabelIMO = new javax.swing.JLabel();
         jTextFieldIMO = new javax.swing.JTextField();
-        jButtonAdd = new javax.swing.JButton();
+        jLabelName = new javax.swing.JLabel();
+        jTextFieldName = new javax.swing.JTextField();
         jButtonCancel = new javax.swing.JButton();
+        jButtonAdd = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Add Vessel");
@@ -66,9 +68,7 @@ public class JFrameAddVessel extends javax.swing.JFrame {
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelTitleLayout.createSequentialGroup()
-                .addComponent(jButtonExit)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jButtonExit)
         );
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
@@ -79,16 +79,14 @@ public class JFrameAddVessel extends javax.swing.JFrame {
         jTextFieldMMSI.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
 
         jLabelIMO.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabelIMO.setText("Enter IMO (optional)");
+        jLabelIMO.setText("Enter IMO (Optional)");
 
         jTextFieldIMO.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
 
-        jButtonAdd.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonAdd.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jButtonAdd.setText("Add");
-        jButtonAdd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
-        jButtonAdd.setContentAreaFilled(false);
-        jButtonAdd.setFocusable(false);
+        jLabelName.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelName.setText("Enter name (Required)");
+
+        jTextFieldName.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
 
         jButtonCancel.setBackground(new java.awt.Color(0, 0, 0));
         jButtonCancel.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
@@ -101,6 +99,13 @@ public class JFrameAddVessel extends javax.swing.JFrame {
                 jButtonCancelActionPerformed(evt);
             }
         });
+
+        jButtonAdd.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonAdd.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jButtonAdd.setText("Add");
+        jButtonAdd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
+        jButtonAdd.setContentAreaFilled(false);
+        jButtonAdd.setFocusable(false);
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
@@ -115,11 +120,14 @@ public class JFrameAddVessel extends javax.swing.JFrame {
                         .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelMMSI)
                             .addComponent(jLabelIMO)
-                            .addGroup(jPanelContentLayout.createSequentialGroup()
-                                .addComponent(jButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(jLabelName))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jTextFieldName)
+                    .addGroup(jPanelContentLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanelContentLayout.setVerticalGroup(
@@ -133,6 +141,10 @@ public class JFrameAddVessel extends javax.swing.JFrame {
                 .addComponent(jLabelIMO)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextFieldIMO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -150,7 +162,7 @@ public class JFrameAddVessel extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanelContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -226,9 +238,11 @@ public class JFrameAddVessel extends javax.swing.JFrame {
     private javax.swing.JButton jButtonExit;
     private javax.swing.JLabel jLabelIMO;
     private javax.swing.JLabel jLabelMMSI;
+    private javax.swing.JLabel jLabelName;
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JPanel jPanelTitle;
     private javax.swing.JTextField jTextFieldIMO;
     private javax.swing.JTextField jTextFieldMMSI;
+    private javax.swing.JTextField jTextFieldName;
     // End of variables declaration//GEN-END:variables
 }
