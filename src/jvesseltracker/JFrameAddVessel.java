@@ -88,12 +88,19 @@ public class JFrameAddVessel extends javax.swing.JFrame {
         jButtonAdd.setText("Add");
         jButtonAdd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonAdd.setContentAreaFilled(false);
+        jButtonAdd.setFocusable(false);
 
         jButtonCancel.setBackground(new java.awt.Color(0, 0, 0));
         jButtonCancel.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jButtonCancel.setText("Cancel");
         jButtonCancel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonCancel.setContentAreaFilled(false);
+        jButtonCancel.setFocusable(false);
+        jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
@@ -182,7 +189,13 @@ public class JFrameAddVessel extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jPanelTitleMousePressed
 
-    //</editor-fold>
+    //</editor-fold>    
+    
+    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
+        
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonCancelActionPerformed
     
     public static void main(String args[]) {
 
