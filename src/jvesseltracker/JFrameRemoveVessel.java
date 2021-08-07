@@ -18,6 +18,10 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         jPanelTitle = new javax.swing.JPanel();
         jButtonExit = new javax.swing.JButton();
         jPanelContent = new javax.swing.JPanel();
+        jLabelFirst = new javax.swing.JLabel();
+        jLabelVesselName = new javax.swing.JLabel();
+        jButtonDisagree = new javax.swing.JButton();
+        jButtonAgree = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Remove Vessel");
@@ -54,28 +58,68 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         jPanelTitleLayout.setHorizontalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTitleLayout.createSequentialGroup()
-                .addContainerGap(357, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonExit)
                 .addContainerGap())
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelTitleLayout.createSequentialGroup()
-                .addComponent(jButtonExit)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jButtonExit)
         );
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
+
+        jLabelFirst.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelFirst.setText("Do you really want to remove");
+        jLabelFirst.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jLabelVesselName.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelVesselName.setText("vessel");
+        jLabelVesselName.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jButtonDisagree.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonDisagree.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
+        jButtonDisagree.setText("No, cancel");
+        jButtonDisagree.setActionCommand("");
+        jButtonDisagree.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
+        jButtonDisagree.setContentAreaFilled(false);
+
+        jButtonAgree.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonAgree.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
+        jButtonAgree.setText("Yes");
+        jButtonAgree.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
+        jButtonAgree.setContentAreaFilled(false);
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
         jPanelContentLayout.setHorizontalGroup(
             jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanelContentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelContentLayout.createSequentialGroup()
+                        .addComponent(jButtonDisagree, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonAgree, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelContentLayout.createSequentialGroup()
+                        .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelVesselName)
+                            .addComponent(jLabelFirst))
+                        .addGap(0, 114, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanelContentLayout.setVerticalGroup(
             jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 269, Short.MAX_VALUE)
+            .addGroup(jPanelContentLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelFirst)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelVesselName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonDisagree)
+                    .addComponent(jButtonAgree))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -88,9 +132,10 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanelContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanelContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -153,7 +198,11 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonAgree;
+    private javax.swing.JButton jButtonDisagree;
     private javax.swing.JButton jButtonExit;
+    private javax.swing.JLabel jLabelFirst;
+    private javax.swing.JLabel jLabelVesselName;
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JPanel jPanelTitle;
     // End of variables declaration//GEN-END:variables
