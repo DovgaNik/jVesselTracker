@@ -76,8 +76,11 @@ public class JFrameAddVessel extends javax.swing.JFrame {
 
         jTextFieldIMO.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
 
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jButton1.setText("Add");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
+        jButton1.setContentAreaFilled(false);
 
         jLabelMMSI.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelMMSI.setText("Enter MMSI (Required)");
@@ -92,14 +95,14 @@ public class JFrameAddVessel extends javax.swing.JFrame {
             .addGroup(jPanelContentLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTextFieldMMSI)
+                    .addComponent(jTextFieldIMO)
                     .addGroup(jPanelContentLayout.createSequentialGroup()
                         .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelMMSI)
-                            .addComponent(jLabelIMO))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jTextFieldIMO))
+                            .addComponent(jLabelIMO)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanelContentLayout.setVerticalGroup(
@@ -114,8 +117,8 @@ public class JFrameAddVessel extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextFieldIMO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
