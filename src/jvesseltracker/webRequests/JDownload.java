@@ -1,4 +1,4 @@
-package jvesseltracker;
+package jvesseltracker.webRequests;
 
 import java.io.BufferedInputStream;
 import java.io.FileOutputStream;

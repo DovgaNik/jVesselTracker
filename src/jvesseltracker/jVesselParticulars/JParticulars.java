@@ -1,6 +1,6 @@
 package jvesseltracker.jVesselParticulars;
 
-import jvesseltracker.JGet;
+import jvesseltracker.webRequests.JGet;
 
 public class JParticulars {
     
