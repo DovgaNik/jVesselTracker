@@ -73,7 +73,6 @@ public class JFrameAddVessel extends javax.swing.JFrame {
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
 
         jTextFieldMMSI.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
-        jTextFieldMMSI.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         jTextFieldIMO.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
 
