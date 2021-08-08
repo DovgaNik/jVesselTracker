@@ -840,7 +840,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonAddNewShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddNewShipActionPerformed
 
-        JFrameAddVessel jFrameAddVessel = new JFrameAddVessel();
+        JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel();
         jFrameAddVessel.setVisible(true);
         
         System.out.println("Opening Add frame");

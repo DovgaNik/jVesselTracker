@@ -2,9 +2,9 @@ package jvesseltracker;
 
 import javax.swing.UIManager;
 
-public class JFrameAddVessel extends javax.swing.JFrame {
+public class JFrameAddEditVessel extends javax.swing.JFrame {
 
-    public JFrameAddVessel() {
+    public JFrameAddEditVessel() {
         
         initComponents();
         
@@ -220,7 +220,7 @@ public class JFrameAddVessel extends javax.swing.JFrame {
 
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             
-            java.util.logging.Logger.getLogger(JFrameAddVessel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFrameAddEditVessel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
             
         }
         
@@ -228,7 +228,7 @@ public class JFrameAddVessel extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(() -> {
             
-            new JFrameAddVessel().setVisible(true);
+            new JFrameAddEditVessel().setVisible(true);
             
         });
     }
