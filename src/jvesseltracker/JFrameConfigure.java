@@ -72,6 +72,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
         );
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelContent.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 1, new java.awt.Color(179, 73, 93)));
 
         jLabelAPIPS07.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelAPIPS07.setText("Enter API key for Single Vessel Position (PS07)");

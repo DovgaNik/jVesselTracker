@@ -68,6 +68,7 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         );
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
+        jPanelContent.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 1, new java.awt.Color(179, 73, 93)));
 
         jLabelFirst.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelFirst.setText("Do you really want to remove");
