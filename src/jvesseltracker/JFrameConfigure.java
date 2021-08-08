@@ -90,6 +90,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jButtonReset.setActionCommand("");
         jButtonReset.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonReset.setContentAreaFilled(false);
+        jButtonReset.setFocusable(false);
 
         jButtonSave.setBackground(new java.awt.Color(0, 0, 0));
         jButtonSave.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
@@ -97,6 +98,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jButtonSave.setActionCommand("");
         jButtonSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonSave.setContentAreaFilled(false);
+        jButtonSave.setFocusable(false);
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);

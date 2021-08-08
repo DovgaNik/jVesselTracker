@@ -84,12 +84,14 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         jButtonDisagree.setActionCommand("");
         jButtonDisagree.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonDisagree.setContentAreaFilled(false);
+        jButtonDisagree.setFocusable(false);
 
         jButtonAgree.setBackground(new java.awt.Color(0, 0, 0));
         jButtonAgree.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
         jButtonAgree.setText("Yes");
         jButtonAgree.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonAgree.setContentAreaFilled(false);
+        jButtonAgree.setFocusable(false);
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
