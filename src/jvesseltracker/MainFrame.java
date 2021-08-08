@@ -858,7 +858,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonEditShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditShipActionPerformed
         
-        JFrameEditVessel jFrameEditVessel = new JFrameEditVessel();
+        JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel();
         jFrameEditVessel.setVisible(true);
         
         System.out.println("Opening Edit frame");
