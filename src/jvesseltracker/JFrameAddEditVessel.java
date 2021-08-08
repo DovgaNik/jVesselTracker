@@ -90,7 +90,7 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
         jTextFieldName.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
 
         jButtonCancel.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonCancel.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jButtonCancel.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
         jButtonCancel.setText("Cancel");
         jButtonCancel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonCancel.setContentAreaFilled(false);
@@ -102,7 +102,7 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
         });
 
         jButtonAdd.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonAdd.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jButtonAdd.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
         jButtonAdd.setText("Add");
         jButtonAdd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonAdd.setContentAreaFilled(false);
@@ -117,18 +117,18 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
                 .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jTextFieldMMSI)
                     .addComponent(jTextFieldIMO)
+                    .addComponent(jTextFieldName)
                     .addGroup(jPanelContentLayout.createSequentialGroup()
                         .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelMMSI)
                             .addComponent(jLabelIMO)
                             .addComponent(jLabelName))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jTextFieldName)
                     .addGroup(jPanelContentLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButtonAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanelContentLayout.setVerticalGroup(
