@@ -85,6 +85,11 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         jButtonDisagree.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonDisagree.setContentAreaFilled(false);
         jButtonDisagree.setFocusable(false);
+        jButtonDisagree.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDisagreeActionPerformed(evt);
+            }
+        });
 
         jButtonAgree.setBackground(new java.awt.Color(0, 0, 0));
         jButtonAgree.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
@@ -151,8 +156,6 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_jButtonExitActionPerformed
-
-    //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc="Move JFrame">
     
@@ -175,6 +178,14 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jPanelTitleMousePressed
 
+    //</editor-fold>
+        
+    private void jButtonDisagreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDisagreeActionPerformed
+        
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonDisagreeActionPerformed
+    
     //</editor-fold>
     
     public static void main(String args[]) {
