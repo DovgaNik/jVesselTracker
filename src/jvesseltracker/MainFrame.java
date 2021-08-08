@@ -89,14 +89,14 @@ public class MainFrame extends javax.swing.JFrame {
         jPanelShipAnimation5 = new javax.swing.JPanel();
         jPanelContent = new javax.swing.JPanel();
         jLabelVesselImage = new javax.swing.JLabel();
-        jLabelVesselStatus = new javax.swing.JLabel();
-        jLabelRequestTimestamp = new javax.swing.JLabel();
+        jLabelVesselIMO = new javax.swing.JLabel();
+        jLabelVesselMMSI = new javax.swing.JLabel();
+        jLabelVesselCourse = new javax.swing.JLabel();
+        jLabelVesselDifferenceCourseHeading = new javax.swing.JLabel();
         jLabelVesselSpeed = new javax.swing.JLabel();
         jLabelVesselHeading = new javax.swing.JLabel();
-        jLabelVesselDifferenceCourseHeading = new javax.swing.JLabel();
-        jLabelVesselCourse = new javax.swing.JLabel();
-        jLabelVesselMMSI = new javax.swing.JLabel();
-        jLabelVesselIMO = new javax.swing.JLabel();
+        jLabelRequestTimestamp = new javax.swing.JLabel();
+        jLabelVesselStatus = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("jVesselTracker");
@@ -561,11 +561,17 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
 
-        jLabelVesselStatus.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabelVesselStatus.setText("Status:");
+        jLabelVesselIMO.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelVesselIMO.setText("IMO:");
 
-        jLabelRequestTimestamp.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabelRequestTimestamp.setText("Timestamp:");
+        jLabelVesselMMSI.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelVesselMMSI.setText("MMSI:");
+
+        jLabelVesselCourse.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelVesselCourse.setText("Course:");
+
+        jLabelVesselDifferenceCourseHeading.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelVesselDifferenceCourseHeading.setText("Difference:");
 
         jLabelVesselSpeed.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelVesselSpeed.setText("Speed:");
@@ -573,17 +579,11 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelVesselHeading.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelVesselHeading.setText("Heading:");
 
-        jLabelVesselDifferenceCourseHeading.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabelVesselDifferenceCourseHeading.setText("Difference:");
+        jLabelRequestTimestamp.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelRequestTimestamp.setText("Timestamp:");
 
-        jLabelVesselCourse.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabelVesselCourse.setText("Course:");
-
-        jLabelVesselMMSI.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabelVesselMMSI.setText("MMSI:");
-
-        jLabelVesselIMO.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabelVesselIMO.setText("IMO:");
+        jLabelVesselStatus.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelVesselStatus.setText("Status:");
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
@@ -840,7 +840,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonAddNewShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddNewShipActionPerformed
 
-        JFrameAddVessel jFrameAddVessel = new JFrameAddVessel();
+        JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel();
         jFrameAddVessel.setVisible(true);
         
         System.out.println("Opening Add frame");
@@ -858,7 +858,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonEditShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditShipActionPerformed
         
-        JFrameEditVessel jFrameEditVessel = new JFrameEditVessel();
+        JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel();
         jFrameEditVessel.setVisible(true);
         
         System.out.println("Opening Edit frame");

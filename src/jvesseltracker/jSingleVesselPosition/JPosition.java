@@ -7,7 +7,7 @@ public class JPosition {
     public String get(String mmsi, int timespan, String apikey, String agent) throws IOException{
         
         String url = "https://services.marinetraffic.com/api/exportvessel/v:5/" + apikey + "/timespan:" + timespan + "/mmsi:" + mmsi + "/protocol:json";// Addres to the API of MarineTraffic
-        jvesseltracker.JWebRequests jWeb = new jvesseltracker.JWebRequests(agent, url);
+        jvesseltracker.webRequests.JWebRequests jWeb = new jvesseltracker.webRequests.JWebRequests(agent, url);
   
         System.out.println(url);
         

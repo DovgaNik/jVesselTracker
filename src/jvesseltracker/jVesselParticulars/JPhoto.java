@@ -2,7 +2,7 @@ package jvesseltracker.jVesselParticulars;
 
 import java.io.IOException;
 import java.net.URL;
-import jvesseltracker.JDownload;
+import jvesseltracker.webRequests.JDownload;
 
 public class JPhoto {
     
@@ -12,7 +12,7 @@ public class JPhoto {
 
             System.out.println(url);
 
-            jvesseltracker.JWebRequests jWeb = new jvesseltracker.JWebRequests(agent, url);
+            jvesseltracker.webRequests.JWebRequests jWeb = new jvesseltracker.webRequests.JWebRequests(agent, url);
             String json = jWeb.sendGET();
 
             System.out.println(json);
