@@ -1,15 +1,16 @@
 package jvesseltracker;
 
-import javax.swing.UIManager;
-
 public class JFrameAddEditVessel extends javax.swing.JFrame {
 
     public JFrameAddEditVessel(vessels selectedVessel, Boolean ifEditing) {
         
         initComponents();
+        selectedVesselLocal = selectedVessel;
         
     }
 
+    vessels selectedVesselLocal;
+    
     @SuppressWarnings("unchecked")
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -107,6 +108,11 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
         jButtonAdd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonAdd.setContentAreaFilled(false);
         jButtonAdd.setFocusable(false);
+        jButtonAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAddActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
@@ -207,8 +213,35 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
         
         this.setVisible(false);
-        
+                        
     }//GEN-LAST:event_jButtonCancelActionPerformed
+
+    private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddActionPerformed
+        
+        switch(selectedVesselLocal){
+            
+            case vessel1:
+                System.out.println("seitch statement equals" + selectedVesselLocal);
+                break;
+            
+            case vessel2:
+                System.out.println("seitch statement equals" + selectedVesselLocal);
+                break;    
+                
+            case vessel3:
+                System.out.println("seitch statement equals" + selectedVesselLocal);
+                break;
+            
+            case vessel4:
+                System.out.println("seitch statement equals" + selectedVesselLocal);
+                break;
+                
+            case vessel5:
+                System.out.println("seitch statement equals" + selectedVesselLocal);
+                break;    
+        }
+        
+    }//GEN-LAST:event_jButtonAddActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAdd;
