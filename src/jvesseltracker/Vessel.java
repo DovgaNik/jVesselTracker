@@ -127,13 +127,10 @@ public class Vessel {
         
         String file = MMSI + "\n" + name + "\n" + IMO + "\n" + lat + "\n" + lon + "\n" + speed + "\n" + course + "\n" + heading + "\n" + status + "\n" + year + "\n" + month + "\n" + day + "\n" + hour + "\n" + minute + "\n" + second + "\n" + dataSource;
         
-        System.out.println(file + "jsdfjsafjklsdajfklsjlafsjlkfjlasjklf");
+        System.out.println("=== \n" + "start of file to be written \n" + file + "\n end" + "===");
         
         FileWriter fw = new FileWriter(fileLocal);
-              
-        
         fw.write(file);
-        
         fw.close();
     }
     
