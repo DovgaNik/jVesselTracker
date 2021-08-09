@@ -228,6 +228,12 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
             Logger.getLogger(JFrameAddEditVessel.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        try {
+            vesselLocal.write();
+        } catch (IOException ex) {
+            Logger.getLogger(JFrameAddEditVessel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
         this.setVisible(false);
         
     }//GEN-LAST:event_jButtonAddActionPerformed
