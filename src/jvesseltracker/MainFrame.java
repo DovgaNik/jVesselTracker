@@ -883,6 +883,7 @@ public class MainFrame extends javax.swing.JFrame {
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnimation1.setBackground(oldGloryWhite);
         update1();
+        fullUpdate();
         
     }//GEN-LAST:event_jPanelShip1MousePressed
 
@@ -893,6 +894,7 @@ public class MainFrame extends javax.swing.JFrame {
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnimation2.setBackground(oldGloryWhite);
         update2();
+        fullUpdate();
         
     }//GEN-LAST:event_jPanelShip2MousePressed
 
@@ -903,6 +905,7 @@ public class MainFrame extends javax.swing.JFrame {
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnimation3.setBackground(oldGloryWhite);
         update3();
+        fullUpdate();
         
     }//GEN-LAST:event_jPanelShip3MousePressed
 
@@ -913,6 +916,7 @@ public class MainFrame extends javax.swing.JFrame {
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnimation4.setBackground(oldGloryWhite);
         update4();
+        fullUpdate();
         
     }//GEN-LAST:event_jPanelShip4MousePressed
 
@@ -923,6 +927,7 @@ public class MainFrame extends javax.swing.JFrame {
         System.out.println("Ship selected is " + vessel);
         jPanelShipAnimation5.setBackground(oldGloryWhite);
         update5();
+        fullUpdate();
         
     }//GEN-LAST:event_jPanelShip5MousePressed
     
