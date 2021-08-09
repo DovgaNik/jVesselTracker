@@ -4,7 +4,7 @@ import javax.swing.UIManager;
 
 public class JFrameAddEditVessel extends javax.swing.JFrame {
 
-    public JFrameAddEditVessel() {
+    public JFrameAddEditVessel(vessels selectedVessel, Boolean ifEditing) {
         
         initComponents();
         
@@ -209,29 +209,6 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_jButtonCancelActionPerformed
-    
-    public static void main(String args[]) {
-
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        
-        try {
-            
-            javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            
-            java.util.logging.Logger.getLogger(JFrameAddEditVessel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            
-        }
-        
-        //</editor-fold>
-
-        java.awt.EventQueue.invokeLater(() -> {
-            
-            new JFrameAddEditVessel().setVisible(true);
-            
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAdd;
