@@ -768,25 +768,30 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void update1(){
         
-//        int difference = 0;
-//        int heading = Integer.parseInt(vessel1.heading);
-//        int course = Integer.parseInt(vessel1.course);
-//        
-//        
-//        if (heading > course) {
-//            difference = heading - course;
-//        }
-//        
-//        if (heading < course) {
-//            difference = course - heading;
-//
-//        }
-//        
-//        if (heading == course) {
-//            difference = 0;
-//        }
+        int difference = 0;
         
-        setDisplayedData("image", vessel1.MMSI, vessel1.IMO, vessel1.heading, vessel1.course, "", vessel1.speed, vessel1.status, vessel1.year + "." + vessel1.month + "." + vessel1.day);
+        if (vessel1.heading != null && vessel1.course != null){
+        
+            int heading = Integer.parseInt(vessel1.heading);
+            int course = Integer.parseInt(vessel1.course);
+
+
+            if (heading > course) {
+                difference = heading - course;
+            }
+
+            if (heading < course) {
+                difference = course - heading;
+
+            }
+
+            if (heading == course) {
+                difference = 0;
+            }   
+            
+        }
+        
+        setDisplayedData("image", vessel1.MMSI, vessel1.IMO, vessel1.heading, vessel1.course, Integer.toString(difference), vessel1.speed, vessel1.status, vessel1.year + "." + vessel1.month + "." + vessel1.day);
         
     }
     
