@@ -191,29 +191,6 @@ public class JFrameConfigure extends javax.swing.JFrame {
 
     //</editor-fold>
     
-    public static void main(String args[]) {
-
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        
-        try {
-            
-            javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            
-            java.util.logging.Logger.getLogger(JFrameConfigure.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            
-        }
-        
-        //</editor-fold>
-
-        java.awt.EventQueue.invokeLater(() -> {
-            
-            new JFrameConfigure().setVisible(true);
-            
-        });
-    }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonExit;
     private javax.swing.JButton jButtonReset;
