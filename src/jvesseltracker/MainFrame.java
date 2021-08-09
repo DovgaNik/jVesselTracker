@@ -840,7 +840,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonAddNewShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddNewShipActionPerformed
 
-        JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel(vessel, false);
+        JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel(false, vessel1);
         jFrameAddVessel.setVisible(true);
         
         System.out.println("Opening Add frame");
@@ -858,7 +858,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonEditShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditShipActionPerformed
         
-        JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel(vessel, true);
+        JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel(true, vessel1);
         jFrameEditVessel.setVisible(true);
         
         System.out.println("Opening Edit frame");

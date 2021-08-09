@@ -109,4 +109,14 @@ public class Vessel {
         
     }
     
+    void setNew (String newMMSI, String newName, String newIMO) throws IOException{
+        
+        MMSI = newMMSI;
+        name = newName;
+        IMO = newIMO;
+        
+        get(1000, "a7d4b34ff512484240984cc426ef7fe6e51f47c5");
+        
+    }
+    
 }

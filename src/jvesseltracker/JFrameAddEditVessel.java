@@ -1,15 +1,19 @@
 package jvesseltracker;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class JFrameAddEditVessel extends javax.swing.JFrame {
 
-    public JFrameAddEditVessel(vessels selectedVessel, Boolean ifEditing) {
+    public JFrameAddEditVessel(Boolean ifEditing, Vessel vessel) {
         
         initComponents();
-        selectedVesselLocal = selectedVessel;
+        vesselLocal = vessel;        
         
     }
 
-    vessels selectedVesselLocal;
+    Vessel vesselLocal;
     
     @SuppressWarnings("unchecked")
     
@@ -218,27 +222,10 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
 
     private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddActionPerformed
         
-        switch(selectedVesselLocal){
-            
-            case vessel1:
-                System.out.println("seitch statement equals" + selectedVesselLocal);
-                break;
-            
-            case vessel2:
-                System.out.println("seitch statement equals" + selectedVesselLocal);
-                break;    
-                
-            case vessel3:
-                System.out.println("seitch statement equals" + selectedVesselLocal);
-                break;
-            
-            case vessel4:
-                System.out.println("seitch statement equals" + selectedVesselLocal);
-                break;
-                
-            case vessel5:
-                System.out.println("seitch statement equals" + selectedVesselLocal);
-                break;    
+        try {
+            vesselLocal.setNew(jTextFieldMMSI.getText(), jTextFieldName.getText(), jTextFieldIMO.getText());
+        } catch (IOException ex) {
+            Logger.getLogger(JFrameAddEditVessel.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_jButtonAddActionPerformed
