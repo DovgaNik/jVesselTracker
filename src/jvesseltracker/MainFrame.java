@@ -792,25 +792,25 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void update2(){
         
-        
+        setDisplayedData("image", vessel2.MMSI, vessel2.IMO, vessel2.heading, vessel2.course, "", vessel2.speed, vessel2.status, vessel2.year + "." + vessel2.month + "." + vessel2.day);
         
     }
     
     private void update3(){
         
-        
+        setDisplayedData("image", vessel3.MMSI, vessel3.IMO, vessel3.heading, vessel3.course, "", vessel3.speed, vessel3.status, vessel3.year + "." + vessel3.month + "." + vessel3.day);   
         
     }
     
     private void update4(){
         
-        
+        setDisplayedData("image", vessel4.MMSI, vessel4.IMO, vessel4.heading, vessel4.course, "", vessel4.speed, vessel4.status, vessel4.year + "." + vessel4.month + "." + vessel4.day); 
         
     }
     
     private void update5(){
         
-        
+        setDisplayedData("image", vessel5.MMSI, vessel5.IMO, vessel5.heading, vessel5.course, "", vessel5.speed, vessel5.status, vessel5.year + "." + vessel5.month + "." + vessel5.day);
         
     }
     
