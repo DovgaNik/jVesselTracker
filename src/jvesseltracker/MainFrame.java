@@ -839,8 +839,46 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonExitActionPerformed
 
     private void jButtonAddNewShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddNewShipActionPerformed
-
-        JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel(false, vessel1);
+        
+        Vessel selectedVessel;
+        
+        switch (vessel){
+            
+            case vessel1:
+                
+                selectedVessel = vessel1;
+                
+                break;
+                
+            case vessel2:
+                                
+                selectedVessel = vessel2;
+                
+                break;
+            
+            case vessel3:
+                
+                selectedVessel = vessel3;
+                
+                break;
+                
+            case vessel4:
+                
+                selectedVessel = vessel4;
+                
+                break;
+            
+            case vessel5:
+                
+                selectedVessel = vessel5;
+                
+                break;
+            
+            default:
+                
+                selectedVessel = vessel1;
+        }
+        JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel(false, selectedVessel);
         jFrameAddVessel.setVisible(true);
         
         System.out.println("Opening Add frame");
