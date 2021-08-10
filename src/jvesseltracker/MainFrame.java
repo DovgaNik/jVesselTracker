@@ -14,7 +14,9 @@ public class MainFrame extends javax.swing.JFrame {
         
         initComponents();
         setAnimationInvisible();
-                
+        
+        //<editor-fold defaultstate="collapsed" desc="Checking if folder exists and .vesseldata files">
+        
         if (!folder.exists()){
             
             folder.mkdirs();
@@ -43,7 +45,9 @@ public class MainFrame extends javax.swing.JFrame {
                 vesselData5.createNewFile();
             
         }
-               
+           
+        //</editor-fold>
+        
         //<editor-fold defaultstate="collapsed" desc="Initialazing objects">
         
         try {
