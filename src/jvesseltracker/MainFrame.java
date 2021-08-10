@@ -15,6 +15,14 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
         setAnimationInvisible();
         
+        File folder = new File("cache");
+        
+        if (!folder.exists()){
+            
+            folder.mkdirs();
+                
+        }
+        
         //<editor-fold defaultstate="collapsed" desc="Initialazing objects">
         
         try {
