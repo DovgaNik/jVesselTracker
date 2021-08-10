@@ -188,9 +188,7 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_jButtonExitActionPerformed
-
-    //</editor-fold>
-    
+       
     //<editor-fold defaultstate="collapsed" desc="Move JFrame">
     
     int xMouse;
@@ -223,21 +221,31 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
     private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddActionPerformed
         
         try {
+            
             vesselLocal.setNew(jTextFieldMMSI.getText(), jTextFieldName.getText(), jTextFieldIMO.getText());
+            
         } catch (IOException ex) {
+            
             Logger.getLogger(JFrameAddEditVessel.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
         
         try {
+            
             vesselLocal.write();
+            
         } catch (IOException ex) {
+            
             Logger.getLogger(JFrameAddEditVessel.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
-        
+                
         this.setVisible(false);
         
     }//GEN-LAST:event_jButtonAddActionPerformed
 
+    //</editor-fold>
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAdd;
     private javax.swing.JButton jButtonCancel;
