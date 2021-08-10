@@ -14,15 +14,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         initComponents();
         setAnimationInvisible();
-        
-        File vesselData1 = new File("cache/vessel1.vesseldata");
-        File vesselData2 = new File("cache/vessel2.vesseldata");
-        File vesselData3 = new File("cache/vessel3.vesseldata");
-        File vesselData4 = new File("cache/vessel4.vesseldata");
-        File vesselData5 = new File("cache/vessel5.vesseldata");
-        
-        File folder = new File("cache");
-        
+                
         if (!folder.exists()){
             
             folder.mkdirs();
@@ -51,9 +43,7 @@ public class MainFrame extends javax.swing.JFrame {
                 vesselData5.createNewFile();
             
         }
-        
-        
-        
+               
         //<editor-fold defaultstate="collapsed" desc="Initialazing objects">
         
         try {
@@ -78,6 +68,15 @@ public class MainFrame extends javax.swing.JFrame {
     
     //<editor-fold defaultstate="collapsed" desc="Creating objects">
     
+    File vesselData1 = new File("cache/vessel1.vesseldata");
+    File vesselData2 = new File("cache/vessel2.vesseldata");
+    File vesselData3 = new File("cache/vessel3.vesseldata");
+    File vesselData4 = new File("cache/vessel4.vesseldata");
+    File vesselData5 = new File("cache/vessel5.vesseldata");
+    
+    File folder = new File("cache");
+    
+    
     vessels vessel;
     
     Vessel vessel1;
@@ -85,6 +84,7 @@ public class MainFrame extends javax.swing.JFrame {
     Vessel vessel3;
     Vessel vessel4;
     Vessel vessel5;
+    
     
     Color oldGloryWhite = new Color(250, 248, 241);
     Color oldGloryNavy = new Color(67 ,66 ,107);
@@ -819,6 +819,7 @@ public class MainFrame extends javax.swing.JFrame {
             difference = 0;
               
         return difference;
+        
     }
     
     private void update1(){
@@ -868,8 +869,6 @@ public class MainFrame extends javax.swing.JFrame {
     //<editor-fold defaultstate="collapsed" desc="Buttons in the title bar">
     
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
-        
-        System.out.println("Exiting");
 
         System.exit(0);
         
