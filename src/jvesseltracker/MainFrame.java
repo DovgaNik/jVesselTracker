@@ -10,28 +10,59 @@ import javax.swing.UIManager;
 
 public class MainFrame extends javax.swing.JFrame {
 
-    public MainFrame() {
+    public MainFrame() throws IOException {
         
         initComponents();
         setAnimationInvisible();
+        
+        File vesselData1 = new File("cache/vessel1.vesseldata");
+        File vesselData2 = new File("cache/vessel2.vesseldata");
+        File vesselData3 = new File("cache/vessel3.vesseldata");
+        File vesselData4 = new File("cache/vessel4.vesseldata");
+        File vesselData5 = new File("cache/vessel5.vesseldata");
         
         File folder = new File("cache");
         
         if (!folder.exists()){
             
             folder.mkdirs();
+            
+            vesselData1.createNewFile();
+            vesselData2.createNewFile();
+            vesselData3.createNewFile();
+            vesselData4.createNewFile();
+            vesselData5.createNewFile();
                 
+        }else{
+        
+            if(!vesselData1.exists())
+                vesselData1.createNewFile();
+                
+            if(!vesselData2.exists())
+                vesselData2.createNewFile();
+            
+            if(!vesselData3.exists())
+                vesselData3.createNewFile();
+            
+            if(!vesselData4.exists())
+                vesselData4.createNewFile();
+            
+            if(!vesselData5.exists())
+                vesselData5.createNewFile();
+            
         }
+        
+        
         
         //<editor-fold defaultstate="collapsed" desc="Initialazing objects">
         
         try {
            
-            vessel1 = new Vessel(new File("cache/vessel1.vesseldata"));
-            vessel2 = new Vessel(new File("cache/vessel2.vesseldata"));
-            vessel3 = new Vessel(new File("cache/vessel3.vesseldata"));
-            vessel4 = new Vessel(new File("cache/vessel4.vesseldata"));
-            vessel5 = new Vessel(new File("cache/vessel5.vesseldata"));
+            vessel1 = new Vessel(vesselData1);
+            vessel2 = new Vessel(vesselData2);
+            vessel3 = new Vessel(vesselData3);
+            vessel4 = new Vessel(vesselData4);
+            vessel5 = new Vessel(vesselData5);
             
         } catch (IOException ex){
             
@@ -995,7 +1026,11 @@ public class MainFrame extends javax.swing.JFrame {
         
         java.awt.EventQueue.invokeLater(() -> {
             
-            new MainFrame().setVisible(true);
+            try {
+                new MainFrame().setVisible(true);
+            } catch (IOException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
             
         });
         
