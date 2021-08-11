@@ -134,4 +134,25 @@ public class Vessel {
         fw.close();
     }
     
+    void clear(){
+        
+        MMSI = null;
+        name = null;
+        IMO = null;
+        lat = null;
+        lon = null;
+        speed = null;
+        course = null;
+        heading = null;
+        status = null;
+        year = null;        
+        month = null;        
+        day = null;
+        hour = null;
+        minute = null;
+        second = null;
+        dataSource = null;
+        
+    }
+    
 }

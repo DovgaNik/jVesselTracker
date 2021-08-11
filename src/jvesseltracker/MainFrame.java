@@ -891,7 +891,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonDeleteShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteShipActionPerformed
         
-        JFrameRemoveVessel jFrameRemoveVessel = new JFrameRemoveVessel();
+        JFrameRemoveVessel jFrameRemoveVessel = new JFrameRemoveVessel(selectedVessel);
         jFrameRemoveVessel.setVisible(true);
         
         System.out.println("Opening Remove frame");

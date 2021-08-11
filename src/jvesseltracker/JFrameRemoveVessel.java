@@ -1,13 +1,20 @@
 package jvesseltracker;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class JFrameRemoveVessel extends javax.swing.JFrame {
 
-    public JFrameRemoveVessel() {
+    public JFrameRemoveVessel(Vessel selectedVessel) {
         
         initComponents();
+        selectedVesselLocal = selectedVessel;
         
     }
 
+    Vessel selectedVesselLocal;
+    
     @SuppressWarnings("unchecked")
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -95,6 +102,11 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         jButtonAgree.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonAgree.setContentAreaFilled(false);
         jButtonAgree.setFocusable(false);
+        jButtonAgree.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAgreeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
@@ -183,6 +195,19 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_jButtonDisagreeActionPerformed
+
+    private void jButtonAgreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgreeActionPerformed
+        
+        selectedVesselLocal.clear();
+        try {
+            selectedVesselLocal.write();
+        } catch (IOException ex) {
+            Logger.getLogger(JFrameRemoveVessel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonAgreeActionPerformed
     
     //</editor-fold>
 
