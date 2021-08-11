@@ -89,6 +89,8 @@ public class MainFrame extends javax.swing.JFrame {
     Vessel vessel4;
     Vessel vessel5;
     
+    Vessel selectedVessel;
+    
     
     Color oldGloryWhite = new Color(250, 248, 241);
     Color oldGloryNavy = new Color(67 ,66 ,107);
@@ -879,45 +881,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonExitActionPerformed
 
     private void jButtonAddNewShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddNewShipActionPerformed
-        
-        Vessel selectedVessel;
-        
-        switch (vessel){
-            
-            case vessel1:
                 
-                selectedVessel = vessel1;
-                
-                break;
-                
-            case vessel2:
-                                
-                selectedVessel = vessel2;
-                
-                break;
-            
-            case vessel3:
-                
-                selectedVessel = vessel3;
-                
-                break;
-                
-            case vessel4:
-                
-                selectedVessel = vessel4;
-                
-                break;
-            
-            case vessel5:
-                
-                selectedVessel = vessel5;
-                
-                break;
-            
-            default:
-                
-                selectedVessel = vessel1;
-        }
         JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel(false, selectedVessel);
         jFrameAddVessel.setVisible(true);
         
@@ -936,7 +900,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonEditShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditShipActionPerformed
         
-        JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel(true, vessel1);
+        JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel(true, selectedVessel);
         jFrameEditVessel.setVisible(true);
         
         System.out.println("Opening Edit frame");
@@ -959,6 +923,7 @@ public class MainFrame extends javax.swing.JFrame {
         setAnimationInvisible();
         vessel = vessels.vessel1;
         System.out.println("Ship selected is " + vessel);
+        selectedVessel = vessel1;
         jPanelShipAnimation1.setBackground(oldGloryWhite);
         update1();
         fullUpdate();
@@ -970,6 +935,7 @@ public class MainFrame extends javax.swing.JFrame {
         setAnimationInvisible();
         vessel = vessels.vessel2;
         System.out.println("Ship selected is " + vessel);
+        selectedVessel = vessel2;
         jPanelShipAnimation2.setBackground(oldGloryWhite);
         update2();
         fullUpdate();
@@ -981,6 +947,7 @@ public class MainFrame extends javax.swing.JFrame {
         setAnimationInvisible();
         vessel = vessels.vessel3;
         System.out.println("Ship selected is " + vessel);
+        selectedVessel = vessel3;
         jPanelShipAnimation3.setBackground(oldGloryWhite);
         update3();
         fullUpdate();
@@ -992,6 +959,7 @@ public class MainFrame extends javax.swing.JFrame {
         setAnimationInvisible();
         vessel = vessels.vessel4;
         System.out.println("Ship selected is " + vessel);
+        selectedVessel = vessel4;
         jPanelShipAnimation4.setBackground(oldGloryWhite);
         update4();
         fullUpdate();
@@ -1003,6 +971,7 @@ public class MainFrame extends javax.swing.JFrame {
         setAnimationInvisible();
         vessel = vessels.vessel5;
         System.out.println("Ship selected is " + vessel);
+        selectedVessel = vessel5;
         jPanelShipAnimation5.setBackground(oldGloryWhite);
         update5();
         fullUpdate();
