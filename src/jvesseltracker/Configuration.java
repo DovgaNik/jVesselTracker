@@ -28,7 +28,10 @@ public class Configuration {
         String[] textSplit = text.split("\n");
         
         System.out.println("PS07" + textSplit[0]);
+        apiPS07 = textSplit[0];
+        
         System.out.println("VD01" + textSplit[1]);
+        apiVD01 = textSplit[1];
         
     }
     
