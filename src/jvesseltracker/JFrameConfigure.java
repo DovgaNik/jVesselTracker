@@ -19,9 +19,9 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jButtonExit = new javax.swing.JButton();
         jPanelContent = new javax.swing.JPanel();
         jLabelAPIPS07 = new javax.swing.JLabel();
-        jPasswordFieldPS07 = new javax.swing.JPasswordField();
+        jTextFieldPS07 = new javax.swing.JTextField();
         jLabelAPIVD01 = new javax.swing.JLabel();
-        jPasswordFieldVD01 = new javax.swing.JPasswordField();
+        jTextFieldVD01 = new javax.swing.JTextField();
         jButtonReset = new javax.swing.JButton();
         jButtonSave = new javax.swing.JButton();
 
@@ -77,12 +77,12 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jLabelAPIPS07.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelAPIPS07.setText("Enter API key for Single Vessel Position (PS07)");
 
-        jPasswordFieldPS07.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
+        jTextFieldPS07.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
 
         jLabelAPIVD01.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelAPIVD01.setText("Enter API key for Single Vessel Photo (VD01)");
 
-        jPasswordFieldVD01.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
+        jTextFieldVD01.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
 
         jButtonReset.setBackground(new java.awt.Color(0, 0, 0));
         jButtonReset.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
@@ -91,6 +91,11 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jButtonReset.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonReset.setContentAreaFilled(false);
         jButtonReset.setFocusable(false);
+        jButtonReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonResetActionPerformed(evt);
+            }
+        });
 
         jButtonSave.setBackground(new java.awt.Color(0, 0, 0));
         jButtonSave.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
@@ -107,18 +112,17 @@ public class JFrameConfigure extends javax.swing.JFrame {
             .addGroup(jPanelContentLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPasswordFieldVD01)
-                    .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanelContentLayout.createSequentialGroup()
-                            .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jLabelAPIPS07, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabelAPIVD01)
-                                .addComponent(jPasswordFieldPS07))
-                            .addGap(0, 0, Short.MAX_VALUE))
-                        .addGroup(jPanelContentLayout.createSequentialGroup()
-                            .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanelContentLayout.createSequentialGroup()
+                        .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelContentLayout.createSequentialGroup()
+                        .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jTextFieldPS07)
+                            .addComponent(jLabelAPIPS07, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabelAPIVD01, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jTextFieldVD01))
                 .addContainerGap())
         );
         jPanelContentLayout.setVerticalGroup(
@@ -126,12 +130,12 @@ public class JFrameConfigure extends javax.swing.JFrame {
             .addGroup(jPanelContentLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelAPIPS07)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordFieldPS07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addComponent(jTextFieldPS07, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelAPIVD01)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordFieldVD01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(3, 3, 3)
+                .addComponent(jTextFieldVD01, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonReset)
@@ -189,6 +193,13 @@ public class JFrameConfigure extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jPanelTitleMousePressed
 
+    private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
+        
+        jTextFieldPS07.setText(null);
+        jTextFieldVD01.setText(null);
+        
+    }//GEN-LAST:event_jButtonResetActionPerformed
+
     //</editor-fold>
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -199,7 +210,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelAPIVD01;
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JPanel jPanelTitle;
-    private javax.swing.JPasswordField jPasswordFieldPS07;
-    private javax.swing.JPasswordField jPasswordFieldVD01;
+    private javax.swing.JTextField jTextFieldPS07;
+    private javax.swing.JTextField jTextFieldVD01;
     // End of variables declaration//GEN-END:variables
 }
