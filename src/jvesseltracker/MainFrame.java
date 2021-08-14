@@ -909,9 +909,18 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonConfigureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfigureActionPerformed
         
-        JFrameConfigure jFrameConfigure = new JFrameConfigure();
-        jFrameConfigure.setVisible(true);
-        
+        JFrameConfigure jFrameConfigure;
+        try {
+            
+            jFrameConfigure = new JFrameConfigure();
+            jFrameConfigure.setVisible(true);
+            
+        } catch (IOException ex) {
+            
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            
+        }
+                
         System.out.println("Opening Configure frame");
         
     }//GEN-LAST:event_jButtonConfigureActionPerformed
