@@ -1,15 +1,24 @@
 package jvesseltracker;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.UIManager;
 
 public class JFrameConfigure extends javax.swing.JFrame {
 
-    public JFrameConfigure() {
+    public JFrameConfigure() throws IOException {
         
         initComponents();
         
+        configs.read();
+        
+        jTextFieldPS07.setText(configs.apiPS07);
+        jTextFieldVD01.setText(configs.apiVD01);
     }
 
+    Configuration configs = new Configuration();
+    
     @SuppressWarnings("unchecked")
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -104,6 +113,11 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jButtonSave.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonSave.setContentAreaFilled(false);
         jButtonSave.setFocusable(false);
+        jButtonSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSaveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
@@ -199,6 +213,21 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jTextFieldVD01.setText(null);
         
     }//GEN-LAST:event_jButtonResetActionPerformed
+
+    private void jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSaveActionPerformed
+        
+        configs.apiPS07 = jTextFieldPS07.getText();
+        configs.apiVD01 = jTextFieldVD01.getText();
+        
+        try {
+            configs.write();
+        } catch (IOException ex) {
+            Logger.getLogger(JFrameConfigure.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonSaveActionPerformed
 
     //</editor-fold>
     
