@@ -1,6 +1,7 @@
 package jvesseltracker;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -10,13 +11,22 @@ public class Configuration {
     
     public String apiPS07, apiVD01;
     
+    File configFileLocal;
+    
+    Configuration(File configFile) throws IOException {
+    
+        configFileLocal = configFile;
+        read();
+        
+    }
+        
     void read() throws FileNotFoundException, IOException {
     
-        BufferedReader br = new BufferedReader(new FileReader("cache/configuration"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(configFileLocal));
                 
         String string;
         String text = null;
-        while ((string = br.readLine()) != null){
+        while ((string = bufferedReader.readLine()) != null){
         
             if(text != null){
                 text = text + string + "\n";
@@ -48,9 +58,9 @@ public class Configuration {
         
         System.out.println("=== \n" + "start of file to be written \n" + file + "\n end" + "===");
         
-        FileWriter fw = new FileWriter("cache/configuration");
-        fw.write(file);
-        fw.close();
+        FileWriter fileWriter = new FileWriter(configFileLocal);
+        fileWriter.write(file);
+        fileWriter.close();
     }
     
 }

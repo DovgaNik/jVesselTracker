@@ -7,7 +7,9 @@ import javax.swing.UIManager;
 
 public class JFrameConfigure extends javax.swing.JFrame {
 
-    public JFrameConfigure() throws IOException {
+    public JFrameConfigure(Configuration currentConfig) throws IOException {
+        
+        configs = currentConfig ;
         
         initComponents();
         
@@ -17,7 +19,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jTextFieldVD01.setText(configs.apiVD01);
     }
 
-    Configuration configs = new Configuration();
+    Configuration configs;
     
     @SuppressWarnings("unchecked")
     

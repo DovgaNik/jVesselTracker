@@ -58,6 +58,8 @@ public class MainFrame extends javax.swing.JFrame {
             vessel4 = new Vessel(vesselData4);
             vessel5 = new Vessel(vesselData5);
             
+            configuration = new Configuration(config);
+            
         } catch (IOException ex){
             
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
@@ -78,6 +80,8 @@ public class MainFrame extends javax.swing.JFrame {
     File vesselData4 = new File("cache/vessel4.vesseldata");
     File vesselData5 = new File("cache/vessel5.vesseldata");
     
+    File config = new File("cache/config");
+    
     File folder = new File("cache");
     
     
@@ -91,6 +95,7 @@ public class MainFrame extends javax.swing.JFrame {
     
     Vessel selectedVessel;
     
+    Configuration configuration;
     
     Color oldGloryWhite = new Color(250, 248, 241);
     Color oldGloryNavy = new Color(67 ,66 ,107);
@@ -912,7 +917,7 @@ public class MainFrame extends javax.swing.JFrame {
         JFrameConfigure jFrameConfigure;
         try {
             
-            jFrameConfigure = new JFrameConfigure();
+            jFrameConfigure = new JFrameConfigure(configuration);
             jFrameConfigure.setVisible(true);
             
         } catch (IOException ex) {
