@@ -57,11 +57,11 @@ public class MainFrame extends javax.swing.JFrame {
             System.out.println(configuration.apiPS07);
             System.out.println(configuration.apiVD01);
             
-            vessel1 = new Vessel(vesselData1);
-            vessel2 = new Vessel(vesselData2);
-            vessel3 = new Vessel(vesselData3);
-            vessel4 = new Vessel(vesselData4);
-            vessel5 = new Vessel(vesselData5);
+            vessel1 = new Vessel(vesselData1, configuration.apiPS07);
+            vessel2 = new Vessel(vesselData2, configuration.apiPS07);
+            vessel3 = new Vessel(vesselData3, configuration.apiPS07);
+            vessel4 = new Vessel(vesselData4, configuration.apiPS07);
+            vessel5 = new Vessel(vesselData5, configuration.apiPS07);
             
         } catch (IOException ex){
             

@@ -29,11 +29,14 @@ public class Vessel {
     public String dataSource;
     
     File fileLocal;
+    String apiPS07Local;
     
-    Vessel(File file) throws IOException {
+    Vessel(File file, String apiPS07) throws IOException {
         
         read(file);
         fileLocal = file;
+        
+        apiPS07Local = apiPS07;
         
     }
     
@@ -92,10 +95,10 @@ public class Vessel {
                        
     }
     
-    void get(int timeStamp, String apikey) throws IOException{
+    void get(int timeStamp) throws IOException{
         
         JPosition download = new JPosition();
-        JSingleVesselPositionParsed parsed = new JSingleVesselPositionParsed(download.get(MMSI, timeStamp, apikey, "Mozilla/5.0"));
+        JSingleVesselPositionParsed parsed = new JSingleVesselPositionParsed(download.get(MMSI, timeStamp, apiPS07Local, "Mozilla/5.0"));
 
         lat = parsed.lat;
         lon = parsed.lon;
@@ -119,7 +122,7 @@ public class Vessel {
         name = newName;
         IMO = newIMO;
         
-        get(1000, "a7d4b34ff512484240984cc426ef7fe6e51f47c5");
+        get(1000);
         
     }
     
