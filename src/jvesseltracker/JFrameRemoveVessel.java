@@ -1,15 +1,20 @@
 package jvesseltracker;
 
-import javax.swing.UIManager;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class JFrameRemoveVessel extends javax.swing.JFrame {
 
-    public JFrameRemoveVessel() {
+    public JFrameRemoveVessel(Vessel selectedVessel) {
         
         initComponents();
+        selectedVesselLocal = selectedVessel;
         
     }
 
+    Vessel selectedVesselLocal;
+    
     @SuppressWarnings("unchecked")
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -97,6 +102,11 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         jButtonAgree.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonAgree.setContentAreaFilled(false);
         jButtonAgree.setFocusable(false);
+        jButtonAgree.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAgreeActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
@@ -185,31 +195,21 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_jButtonDisagreeActionPerformed
-    
-    //</editor-fold>
-    
-    public static void main(String args[]) {
 
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+    private void jButtonAgreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgreeActionPerformed
         
+        selectedVesselLocal.clear();
         try {
-            
-            javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            
-            java.util.logging.Logger.getLogger(JFrameRemoveVessel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            
+            selectedVesselLocal.write();
+        } catch (IOException ex) {
+            Logger.getLogger(JFrameRemoveVessel.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        //</editor-fold>
-
-        java.awt.EventQueue.invokeLater(() -> {
-            
-            new JFrameRemoveVessel().setVisible(true);
-            
-        });
-    }
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonAgreeActionPerformed
+    
+    //</editor-fold>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAgree;

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import jvesseltracker.jSingleVesselPosition.JPosition;
 import jvesseltracker.jSingleVesselPosition.JSingleVesselPositionParsed;
@@ -27,9 +28,12 @@ public class Vessel {
     public String second;
     public String dataSource;
     
+    File fileLocal;
+    
     Vessel(File file) throws IOException {
         
         read(file);
+        fileLocal = file;
         
     }
     
@@ -106,6 +110,48 @@ public class Vessel {
         minute = parsed.minute;
         second = parsed.second;
         dataSource = parsed.dataSource;
+        
+    }
+    
+    void setNew (String newMMSI, String newName, String newIMO) throws IOException{
+        
+        MMSI = newMMSI;
+        name = newName;
+        IMO = newIMO;
+        
+        get(1000, "a7d4b34ff512484240984cc426ef7fe6e51f47c5");
+        
+    }
+    
+    void write () throws IOException{
+        
+        String file = MMSI + "\n" + name + "\n" + IMO + "\n" + lat + "\n" + lon + "\n" + speed + "\n" + course + "\n" + heading + "\n" + status + "\n" + year + "\n" + month + "\n" + day + "\n" + hour + "\n" + minute + "\n" + second + "\n" + dataSource;
+        
+        System.out.println("=== \n" + "start of file to be written \n" + file + "\n end" + "===");
+        
+        FileWriter fw = new FileWriter(fileLocal);
+        fw.write(file);
+        fw.close();
+    }
+    
+    void clear(){
+        
+        MMSI = null;
+        name = null;
+        IMO = null;
+        lat = null;
+        lon = null;
+        speed = null;
+        course = null;
+        heading = null;
+        status = null;
+        year = null;        
+        month = null;        
+        day = null;
+        hour = null;
+        minute = null;
+        second = null;
+        dataSource = null;
         
     }
     

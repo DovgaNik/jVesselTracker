@@ -10,20 +10,55 @@ import javax.swing.UIManager;
 
 public class MainFrame extends javax.swing.JFrame {
 
-    public MainFrame() {
+    public MainFrame() throws IOException {
         
         initComponents();
         setAnimationInvisible();
+        
+        //<editor-fold defaultstate="collapsed" desc="Checking if folder exists and .vesseldata files">
+        
+        if (!folder.exists()){
+            
+            folder.mkdirs();
+            
+            vesselData1.createNewFile();
+            vesselData2.createNewFile();
+            vesselData3.createNewFile();
+            vesselData4.createNewFile();
+            vesselData5.createNewFile();
+                
+        }else{
+        
+            if(!vesselData1.exists())
+                vesselData1.createNewFile();
+                
+            if(!vesselData2.exists())
+                vesselData2.createNewFile();
+            
+            if(!vesselData3.exists())
+                vesselData3.createNewFile();
+            
+            if(!vesselData4.exists())
+                vesselData4.createNewFile();
+            
+            if(!vesselData5.exists())
+                vesselData5.createNewFile();
+            
+        }
+           
+        //</editor-fold>
         
         //<editor-fold defaultstate="collapsed" desc="Initialazing objects">
         
         try {
            
-            vessel1 = new Vessel(new File("cache/vessel1.vesseldata"));
-            vessel2 = new Vessel(new File("cache/vessel2.vesseldata"));
-            vessel3 = new Vessel(new File("cache/vessel3.vesseldata"));
-            vessel4 = new Vessel(new File("cache/vessel4.vesseldata"));
-            vessel5 = new Vessel(new File("cache/vessel5.vesseldata"));
+            vessel1 = new Vessel(vesselData1);
+            vessel2 = new Vessel(vesselData2);
+            vessel3 = new Vessel(vesselData3);
+            vessel4 = new Vessel(vesselData4);
+            vessel5 = new Vessel(vesselData5);
+            
+            configuration = new Configuration(config);
             
         } catch (IOException ex){
             
@@ -39,6 +74,17 @@ public class MainFrame extends javax.swing.JFrame {
     
     //<editor-fold defaultstate="collapsed" desc="Creating objects">
     
+    File vesselData1 = new File("cache/vessel1.vesseldata");
+    File vesselData2 = new File("cache/vessel2.vesseldata");
+    File vesselData3 = new File("cache/vessel3.vesseldata");
+    File vesselData4 = new File("cache/vessel4.vesseldata");
+    File vesselData5 = new File("cache/vessel5.vesseldata");
+    
+    File config = new File("cache/config");
+    
+    File folder = new File("cache");
+    
+    
     vessels vessel;
     
     Vessel vessel1;
@@ -46,6 +92,10 @@ public class MainFrame extends javax.swing.JFrame {
     Vessel vessel3;
     Vessel vessel4;
     Vessel vessel5;
+    
+    Vessel selectedVessel;
+    
+    Configuration configuration;
     
     Color oldGloryWhite = new Color(250, 248, 241);
     Color oldGloryNavy = new Color(67 ,66 ,107);
@@ -766,51 +816,50 @@ public class MainFrame extends javax.swing.JFrame {
     
     //<editor-fold defaultstate="collapsed" desc="Updating data">
     
+    int countDifference(int course, int heading){
+        
+        int difference = 0;
+               
+        if (heading > course)
+            difference = heading - course;
+
+        if (heading < course) 
+            difference = course - heading;
+
+        if (heading == course) 
+            difference = 0;
+              
+        return difference;
+        
+    }
+    
     private void update1(){
-        
-//        int difference = 0;
-//        int heading = Integer.parseInt(vessel1.heading);
-//        int course = Integer.parseInt(vessel1.course);
-//        
-//        
-//        if (heading > course) {
-//            difference = heading - course;
-//        }
-//        
-//        if (heading < course) {
-//            difference = course - heading;
-//
-//        }
-//        
-//        if (heading == course) {
-//            difference = 0;
-//        }
-        
-        setDisplayedData("image", vessel1.MMSI, vessel1.IMO, vessel1.heading, vessel1.course, "", vessel1.speed, vessel1.status, vessel1.year + "." + vessel1.month + "." + vessel1.day);
+                
+        setDisplayedData("image", vessel1.MMSI, vessel1.IMO, vessel1.heading, vessel1.course, Integer.toString(countDifference(Integer.parseInt(vessel1.course), Integer.parseInt(vessel1.heading))), vessel1.speed, vessel1.status, vessel1.year + "." + vessel1.month + "." + vessel1.day);
         
     }
     
     private void update2(){
         
-        
+        setDisplayedData("image", vessel2.MMSI, vessel2.IMO, vessel2.heading, vessel2.course, Integer.toString(countDifference(Integer.parseInt(vessel2.course), Integer.parseInt(vessel2.heading))), vessel2.speed, vessel2.status, vessel2.year + "." + vessel2.month + "." + vessel2.day);
         
     }
     
     private void update3(){
         
-        
+        setDisplayedData("image", vessel3.MMSI, vessel3.IMO, vessel3.heading, vessel3.course, Integer.toString(countDifference(Integer.parseInt(vessel3.course), Integer.parseInt(vessel3.heading))), vessel3.speed, vessel3.status, vessel3.year + "." + vessel3.month + "." + vessel3.day);   
         
     }
     
     private void update4(){
         
-        
+        setDisplayedData("image", vessel4.MMSI, vessel4.IMO, vessel4.heading, vessel4.course, Integer.toString(countDifference(Integer.parseInt(vessel4.course), Integer.parseInt(vessel4.heading))), vessel4.speed, vessel4.status, vessel4.year + "." + vessel4.month + "." + vessel4.day); 
         
     }
     
     private void update5(){
         
-        
+        setDisplayedData("image", vessel5.MMSI, vessel5.IMO, vessel5.heading, vessel5.course, Integer.toString(countDifference(Integer.parseInt(vessel5.course), Integer.parseInt(vessel5.heading))), vessel5.speed, vessel5.status, vessel5.year + "." + vessel5.month + "." + vessel5.day);
         
     }
     
@@ -831,16 +880,14 @@ public class MainFrame extends javax.swing.JFrame {
     //<editor-fold defaultstate="collapsed" desc="Buttons in the title bar">
     
     private void jButtonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonExitActionPerformed
-        
-        System.out.println("Exiting");
 
         System.exit(0);
         
     }//GEN-LAST:event_jButtonExitActionPerformed
 
     private void jButtonAddNewShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddNewShipActionPerformed
-
-        JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel();
+                
+        JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel(false, selectedVessel);
         jFrameAddVessel.setVisible(true);
         
         System.out.println("Opening Add frame");
@@ -849,7 +896,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonDeleteShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteShipActionPerformed
         
-        JFrameRemoveVessel jFrameRemoveVessel = new JFrameRemoveVessel();
+        JFrameRemoveVessel jFrameRemoveVessel = new JFrameRemoveVessel(selectedVessel);
         jFrameRemoveVessel.setVisible(true);
         
         System.out.println("Opening Remove frame");
@@ -858,7 +905,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonEditShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditShipActionPerformed
         
-        JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel();
+        JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel(true, selectedVessel);
         jFrameEditVessel.setVisible(true);
         
         System.out.println("Opening Edit frame");
@@ -867,9 +914,18 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonConfigureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfigureActionPerformed
         
-        JFrameConfigure jFrameConfigure = new JFrameConfigure();
-        jFrameConfigure.setVisible(true);
-        
+        JFrameConfigure jFrameConfigure;
+        try {
+            
+            jFrameConfigure = new JFrameConfigure(configuration);
+            jFrameConfigure.setVisible(true);
+            
+        } catch (IOException ex) {
+            
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            
+        }
+                
         System.out.println("Opening Configure frame");
         
     }//GEN-LAST:event_jButtonConfigureActionPerformed
@@ -881,8 +937,10 @@ public class MainFrame extends javax.swing.JFrame {
         setAnimationInvisible();
         vessel = vessels.vessel1;
         System.out.println("Ship selected is " + vessel);
+        selectedVessel = vessel1;
         jPanelShipAnimation1.setBackground(oldGloryWhite);
         update1();
+        fullUpdate();
         
     }//GEN-LAST:event_jPanelShip1MousePressed
 
@@ -891,8 +949,10 @@ public class MainFrame extends javax.swing.JFrame {
         setAnimationInvisible();
         vessel = vessels.vessel2;
         System.out.println("Ship selected is " + vessel);
+        selectedVessel = vessel2;
         jPanelShipAnimation2.setBackground(oldGloryWhite);
         update2();
+        fullUpdate();
         
     }//GEN-LAST:event_jPanelShip2MousePressed
 
@@ -901,8 +961,10 @@ public class MainFrame extends javax.swing.JFrame {
         setAnimationInvisible();
         vessel = vessels.vessel3;
         System.out.println("Ship selected is " + vessel);
+        selectedVessel = vessel3;
         jPanelShipAnimation3.setBackground(oldGloryWhite);
         update3();
+        fullUpdate();
         
     }//GEN-LAST:event_jPanelShip3MousePressed
 
@@ -911,8 +973,10 @@ public class MainFrame extends javax.swing.JFrame {
         setAnimationInvisible();
         vessel = vessels.vessel4;
         System.out.println("Ship selected is " + vessel);
+        selectedVessel = vessel4;
         jPanelShipAnimation4.setBackground(oldGloryWhite);
         update4();
+        fullUpdate();
         
     }//GEN-LAST:event_jPanelShip4MousePressed
 
@@ -921,8 +985,10 @@ public class MainFrame extends javax.swing.JFrame {
         setAnimationInvisible();
         vessel = vessels.vessel5;
         System.out.println("Ship selected is " + vessel);
+        selectedVessel = vessel5;
         jPanelShipAnimation5.setBackground(oldGloryWhite);
         update5();
+        fullUpdate();
         
     }//GEN-LAST:event_jPanelShip5MousePressed
     
@@ -946,7 +1012,11 @@ public class MainFrame extends javax.swing.JFrame {
         
         java.awt.EventQueue.invokeLater(() -> {
             
-            new MainFrame().setVisible(true);
+            try {
+                new MainFrame().setVisible(true);
+            } catch (IOException ex) {
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+            }
             
         });
         

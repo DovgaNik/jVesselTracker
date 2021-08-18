@@ -1,15 +1,20 @@
 package jvesseltracker;
 
-import javax.swing.UIManager;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class JFrameAddEditVessel extends javax.swing.JFrame {
 
-    public JFrameAddEditVessel() {
+    public JFrameAddEditVessel(Boolean ifEditing, Vessel vessel) {
         
         initComponents();
+        vesselLocal = vessel;        
         
     }
 
+    Vessel vesselLocal;
+    
     @SuppressWarnings("unchecked")
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -107,6 +112,11 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
         jButtonAdd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 66, 107), 2, true));
         jButtonAdd.setContentAreaFilled(false);
         jButtonAdd.setFocusable(false);
+        jButtonAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAddActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
@@ -178,9 +188,7 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
         this.setVisible(false);
         
     }//GEN-LAST:event_jButtonExitActionPerformed
-
-    //</editor-fold>
-    
+       
     //<editor-fold defaultstate="collapsed" desc="Move JFrame">
     
     int xMouse;
@@ -207,32 +215,37 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
         
         this.setVisible(false);
-        
+                        
     }//GEN-LAST:event_jButtonCancelActionPerformed
-    
-    public static void main(String args[]) {
 
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+    private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddActionPerformed
         
         try {
             
-            javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            vesselLocal.setNew(jTextFieldMMSI.getText(), jTextFieldName.getText(), jTextFieldIMO.getText());
             
-            java.util.logging.Logger.getLogger(JFrameAddEditVessel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            
+            Logger.getLogger(JFrameAddEditVessel.class.getName()).log(Level.SEVERE, null, ex);
             
         }
         
-        //</editor-fold>
-
-        java.awt.EventQueue.invokeLater(() -> {
+        try {
             
-            new JFrameAddEditVessel().setVisible(true);
+            vesselLocal.write();
             
-        });
-    }
+        } catch (IOException ex) {
+            
+            Logger.getLogger(JFrameAddEditVessel.class.getName()).log(Level.SEVERE, null, ex);
+            
+        }
+                
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonAddActionPerformed
 
+    //</editor-fold>
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAdd;
     private javax.swing.JButton jButtonCancel;
