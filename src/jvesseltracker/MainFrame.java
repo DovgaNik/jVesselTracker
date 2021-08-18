@@ -52,13 +52,16 @@ public class MainFrame extends javax.swing.JFrame {
         
         try {
            
+            configuration = new Configuration(config);
+            
+            System.out.println(configuration.apiPS07);
+            System.out.println(configuration.apiVD01);
+            
             vessel1 = new Vessel(vesselData1);
             vessel2 = new Vessel(vesselData2);
             vessel3 = new Vessel(vesselData3);
             vessel4 = new Vessel(vesselData4);
             vessel5 = new Vessel(vesselData5);
-            
-            configuration = new Configuration(config);
             
         } catch (IOException ex){
             
@@ -84,6 +87,7 @@ public class MainFrame extends javax.swing.JFrame {
     
     File folder = new File("cache");
     
+    Configuration configuration;
     
     vessels vessel;
     
@@ -94,9 +98,7 @@ public class MainFrame extends javax.swing.JFrame {
     Vessel vessel5;
     
     Vessel selectedVessel;
-    
-    Configuration configuration;
-    
+            
     Color oldGloryWhite = new Color(250, 248, 241);
     Color oldGloryNavy = new Color(67 ,66 ,107);
     
