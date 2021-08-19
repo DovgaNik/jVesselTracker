@@ -9,7 +9,8 @@ import java.io.IOException;
 
 public class Configuration {
     
-    public String apiPS07, apiVD01;
+    public String apiPS07;
+    public String apiVD01;
     
     File configFileLocal;
     
@@ -39,6 +40,13 @@ public class Configuration {
         String[] textSplit = text.split("\n");
         
         System.out.println(textSplit.length);
+        
+        if(textSplit.length == 1){
+        
+            System.out.println("PS07" + textSplit[0]);
+            apiPS07 = textSplit[0];
+        
+        }
         
         if(textSplit.length == 2){
         
