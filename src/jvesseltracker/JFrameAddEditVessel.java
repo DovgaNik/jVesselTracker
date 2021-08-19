@@ -11,6 +11,14 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
         initComponents();
         vesselLocal = vessel;        
         
+        if (ifEditing) {
+            
+            jTextFieldMMSI.setText(vesselLocal.MMSI);
+            jTextFieldIMO.setText(vesselLocal.IMO);
+            jTextFieldName.setText(vesselLocal.name);
+            
+        }
+        
     }
 
     Vessel vesselLocal;
