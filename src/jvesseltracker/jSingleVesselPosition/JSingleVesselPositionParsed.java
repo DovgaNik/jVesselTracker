@@ -2,21 +2,22 @@ package jvesseltracker.jSingleVesselPosition;
 
 public class JSingleVesselPositionParsed {
     
-	public String //Creating public string to store all parsed information
-		mmsi, 
-		lat, 
-		lon, 
-		speed, 
-		heading, 
-		course, 
-		status, 
-		year, 
-		month ,
-		day , 
-		hour,
-		minute ,
-		second, 
-		dataSource;
+	public String MMSI;
+        public String name;   
+        public String IMO;
+        public float lat;
+        public float lon;
+        public byte speed;
+        public int course;
+        public int heading;
+        public byte status;
+        public int year;
+        public byte month;
+        public byte day;
+        public byte hour;
+        public byte minute;
+        public byte second;
+        public String dataSource;
 	
 	protected String // Creating variables, available only in this class and used for storing temporary information
 		json, 
@@ -53,19 +54,19 @@ public class JSingleVesselPositionParsed {
 		date = dateTime[0].split("-");// Parsing date
 		time = dateTime[1].split(":");// parsing time
 		
-		mmsi = jsonInfo[0];
-		lat = jsonInfo[1];
-		lon = jsonInfo[2];
-		speed = jsonInfo[3];
-		heading = jsonInfo[4];
-		course = jsonInfo[5];
-		status = jsonInfo[6];
-		year = date[0];
-		month = date[1];
-		day = date[2];
-		hour = time[0];
-		minute = time[1];
-		second = time[2];
+		MMSI = jsonInfo[0];
+		lat = Float.valueOf(jsonInfo[1]);
+		lon = Float.valueOf(jsonInfo[2]);
+		speed = Byte.valueOf(jsonInfo[3]);
+		heading = Integer.parseInt(jsonInfo[4]);
+		course = Integer.parseInt(jsonInfo[5]);
+		status = Byte.valueOf(jsonInfo[6]);
+		year = Integer.parseInt(date[0]);
+		month = Byte.valueOf(date[1]);
+		day = Byte.valueOf(date[2]);
+		hour = Byte.valueOf(time[0]);
+		minute = Byte.valueOf(time[1]);
+		second = Byte.valueOf(time[2]);
 		dataSource = jsonInfo[8];
                 
 	}
