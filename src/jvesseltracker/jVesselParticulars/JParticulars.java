@@ -1,5 +1,7 @@
 package jvesseltracker.jVesselParticulars;
 
+import java.io.IOException;
+import java.net.URL;
 import jvesseltracker.webRequests.JGet;
 
 public class JParticulars {
@@ -27,7 +29,7 @@ public class JParticulars {
                 technicalManager,
                 type;
     
-    public static void get(String url) {
+    public static void get(URL url) throws IOException {
 
         String json = JGet.download(url);
         
