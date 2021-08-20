@@ -1,6 +1,7 @@
 package jvesseltracker.jSingleVesselPosition;
 
 public class JSingleVesselPositionParsed {
+    
 	public String //Creating public string to store all parsed information
 		mmsi, 
 		lat, 
@@ -66,5 +67,6 @@ public class JSingleVesselPositionParsed {
 		minute = time[1];
 		second = time[2];
 		dataSource = jsonInfo[8];
+                
 	}
 }
