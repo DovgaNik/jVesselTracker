@@ -88,9 +88,7 @@ public class MainFrame extends javax.swing.JFrame {
     File folder = new File("cache");
     
     Configuration configuration;
-    
-    vessels vessel;
-    
+       
     Vessel vessel1;
     Vessel vessel2;
     Vessel vessel3;
@@ -936,9 +934,8 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void jPanelShip1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip1MousePressed
         
-        setAnimationInvisible();
-        vessel = vessels.vessel1;
-        System.out.println("Ship selected is " + vessel);
+        setAnimationInvisible();        
+        System.out.println("Ship selected is 1");
         selectedVessel = vessel1;
         jPanelShipAnimation1.setBackground(oldGloryWhite);
         update1();
@@ -948,9 +945,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jPanelShip2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip2MousePressed
         
-        setAnimationInvisible();
-        vessel = vessels.vessel2;
-        System.out.println("Ship selected is " + vessel);
+        setAnimationInvisible();        
+        System.out.println("Ship selected is 2");
         selectedVessel = vessel2;
         jPanelShipAnimation2.setBackground(oldGloryWhite);
         update2();
@@ -960,9 +956,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jPanelShip3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip3MousePressed
         
-        setAnimationInvisible();
-        vessel = vessels.vessel3;
-        System.out.println("Ship selected is " + vessel);
+        setAnimationInvisible();        
+        System.out.println("Ship selected is 3");
         selectedVessel = vessel3;
         jPanelShipAnimation3.setBackground(oldGloryWhite);
         update3();
@@ -972,9 +967,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jPanelShip4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip4MousePressed
         
-        setAnimationInvisible();
-        vessel = vessels.vessel4;
-        System.out.println("Ship selected is " + vessel);
+        setAnimationInvisible();        
+        System.out.println("Ship selected is 4");
         selectedVessel = vessel4;
         jPanelShipAnimation4.setBackground(oldGloryWhite);
         update4();
@@ -984,9 +978,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jPanelShip5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip5MousePressed
         
-        setAnimationInvisible();
-        vessel = vessels.vessel5;
-        System.out.println("Ship selected is " + vessel);
+        setAnimationInvisible();        
+        System.out.println("Ship selected is 5");
         selectedVessel = vessel5;
         jPanelShipAnimation5.setBackground(oldGloryWhite);
         update5();
