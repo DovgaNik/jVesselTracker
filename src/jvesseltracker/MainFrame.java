@@ -73,7 +73,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         //</editor-fold>
         
-        fullUpdate();
+        updateSidebar();
         
     }
     
@@ -837,37 +837,13 @@ public class MainFrame extends javax.swing.JFrame {
         
     }
     
-    private void update1(){
+    private void updateContent(){
                 
-        setDisplayedData("image", vessel1.MMSI, vessel1.IMO, vessel1.heading, vessel1.course, countDifference(vessel1.course, vessel1.heading), vessel1.speed, vessel1.status, vessel1.year + "." + vessel1.month + "." + vessel1.day);
+        setDisplayedData("image", selectedVessel.MMSI, selectedVessel.IMO, selectedVessel.heading, selectedVessel.course, countDifference(selectedVessel.course, selectedVessel.heading), selectedVessel.speed, selectedVessel.status, selectedVessel.year + "." + selectedVessel.month + "." + selectedVessel.day);
         
     }
     
-    private void update2(){
-        
-        setDisplayedData("image", vessel2.MMSI, vessel2.IMO, vessel2.heading, vessel2.course, countDifference(vessel2.course, vessel2.heading), vessel2.speed, vessel2.status, vessel2.year + "." + vessel2.month + "." + vessel2.day);
-        
-    }
-    
-    private void update3(){
-        
-        setDisplayedData("image", vessel3.MMSI, vessel3.IMO, vessel3.heading, vessel3.course, countDifference(vessel3.course, vessel3.heading), vessel3.speed, vessel3.status, vessel3.year + "." + vessel3.month + "." + vessel3.day);
-        
-    }
-    
-    private void update4(){
-        
-        setDisplayedData("image", vessel4.MMSI, vessel4.IMO, vessel4.heading, vessel4.course, countDifference(vessel4.course, vessel4.heading), vessel4.speed, vessel4.status, vessel4.year + "." + vessel4.month + "." + vessel4.day);
-        
-    }
-    
-    private void update5(){
-        
-        setDisplayedData("image", vessel5.MMSI, vessel5.IMO, vessel5.heading, vessel5.course, countDifference(vessel5.course, vessel5.heading), vessel5.speed, vessel5.status, vessel5.year + "." + vessel5.month + "." + vessel5.day);
-        
-    }
-    
-    private void fullUpdate(){
+    private void updateSidebar(){
         
         setDisplayedDataSidebar1(vessel1.name, vessel1.lat + " / " + vessel1.lon);
         setDisplayedDataSidebar2(vessel2.name, vessel2.lat + " / " + vessel2.lon);
@@ -933,55 +909,50 @@ public class MainFrame extends javax.swing.JFrame {
     private void jPanelShip1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip1MousePressed
         
         setAnimationInvisible();        
-        System.out.println("Ship selected is 1");
         selectedVessel = vessel1;
         jPanelShipAnimation1.setBackground(oldGloryWhite);
-        update1();
-        fullUpdate();
+        updateContent();
+        updateSidebar();
         
     }//GEN-LAST:event_jPanelShip1MousePressed
 
     private void jPanelShip2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip2MousePressed
         
         setAnimationInvisible();        
-        System.out.println("Ship selected is 2");
         selectedVessel = vessel2;
         jPanelShipAnimation2.setBackground(oldGloryWhite);
-        update2();
-        fullUpdate();
+        updateContent();
+        updateSidebar();
         
     }//GEN-LAST:event_jPanelShip2MousePressed
 
     private void jPanelShip3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip3MousePressed
         
         setAnimationInvisible();        
-        System.out.println("Ship selected is 3");
         selectedVessel = vessel3;
         jPanelShipAnimation3.setBackground(oldGloryWhite);
-        update3();
-        fullUpdate();
+        updateContent();
+        updateSidebar();
         
     }//GEN-LAST:event_jPanelShip3MousePressed
 
     private void jPanelShip4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip4MousePressed
         
         setAnimationInvisible();        
-        System.out.println("Ship selected is 4");
         selectedVessel = vessel4;
         jPanelShipAnimation4.setBackground(oldGloryWhite);
-        update4();
-        fullUpdate();
+        updateContent();
+        updateSidebar();
         
     }//GEN-LAST:event_jPanelShip4MousePressed
 
     private void jPanelShip5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip5MousePressed
         
         setAnimationInvisible();        
-        System.out.println("Ship selected is 5");
         selectedVessel = vessel5;
         jPanelShipAnimation5.setBackground(oldGloryWhite);
-        update5();
-        fullUpdate();
+        updateContent();
+        updateSidebar();
         
     }//GEN-LAST:event_jPanelShip5MousePressed
     
