@@ -21,14 +21,19 @@ public class MainFrame extends javax.swing.JFrame {
             
             folder.mkdirs();
             
+            config.createNewFile();
+            
             vesselData1.createNewFile();
             vesselData2.createNewFile();
             vesselData3.createNewFile();
             vesselData4.createNewFile();
             vesselData5.createNewFile();
-                
+                           
         }else{
         
+            if(!config.exists())
+                config.createNewFile();
+            
             if(!vesselData1.exists())
                 vesselData1.createNewFile();
                 
@@ -890,8 +895,6 @@ public class MainFrame extends javax.swing.JFrame {
         JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel(false, selectedVessel);
         jFrameAddVessel.setVisible(true);
         
-        System.out.println("Opening Add frame");
-        
     }//GEN-LAST:event_jButtonAddNewShipActionPerformed
 
     private void jButtonDeleteShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteShipActionPerformed
@@ -899,17 +902,13 @@ public class MainFrame extends javax.swing.JFrame {
         JFrameRemoveVessel jFrameRemoveVessel = new JFrameRemoveVessel(selectedVessel);
         jFrameRemoveVessel.setVisible(true);
         
-        System.out.println("Opening Remove frame");
-        
     }//GEN-LAST:event_jButtonDeleteShipActionPerformed
 
     private void jButtonEditShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditShipActionPerformed
         
         JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel(true, selectedVessel);
         jFrameEditVessel.setVisible(true);
-        
-        System.out.println("Opening Edit frame");
-        
+                
     }//GEN-LAST:event_jButtonEditShipActionPerformed
 
     private void jButtonConfigureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfigureActionPerformed
