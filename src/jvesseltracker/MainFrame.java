@@ -59,9 +59,6 @@ public class MainFrame extends javax.swing.JFrame {
            
             configuration = new Configuration(config);
             
-            System.out.println(configuration.apiPS07);
-            System.out.println(configuration.apiVD01);
-            
             vessel1 = new Vessel(vesselData1, configuration.apiPS07);
             vessel2 = new Vessel(vesselData2, configuration.apiPS07);
             vessel3 = new Vessel(vesselData3, configuration.apiPS07);
@@ -82,15 +79,16 @@ public class MainFrame extends javax.swing.JFrame {
     
     //<editor-fold defaultstate="collapsed" desc="Creating objects">
     
+    File folder = new File("cache");
+    
+    File config = new File("cache/config");
+
     File vesselData1 = new File("cache/vessel1.vesseldata");
     File vesselData2 = new File("cache/vessel2.vesseldata");
     File vesselData3 = new File("cache/vessel3.vesseldata");
     File vesselData4 = new File("cache/vessel4.vesseldata");
     File vesselData5 = new File("cache/vessel5.vesseldata");
-    
-    File config = new File("cache/config");
-    
-    File folder = new File("cache");
+
     
     Configuration configuration;
        
@@ -101,7 +99,8 @@ public class MainFrame extends javax.swing.JFrame {
     Vessel vessel5;
     
     Vessel selectedVessel;
-            
+    
+    
     Color oldGloryWhite = new Color(250, 248, 241);
     Color oldGloryNavy = new Color(67 ,66 ,107);
     
