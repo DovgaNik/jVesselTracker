@@ -28,6 +28,8 @@ public class Vessel {
     public byte second;
     public String dataSource;
     
+    Boolean isEmpty;
+    
     File fileLocal;
     String apiPS07Local;
     
@@ -80,6 +82,8 @@ public class Vessel {
                 minute = Byte.valueOf(splitFile[13]);
                 second = Byte.valueOf(splitFile[14]);
                 dataSource = splitFile[15];
+                
+                isEmpty = false;
             }else
                 System.out.println("Error: data file is damaged!!!");
             
@@ -88,9 +92,15 @@ public class Vessel {
                 MMSI = splitFile[0];
                 name = splitFile[1];
                 IMO = splitFile[2];
+                
+                isEmpty = false;
             }else
                 System.out.println("Error: data file is damaged!!!");
         
+        }else {
+        
+            isEmpty = true;
+            
         }   
                        
     }
@@ -115,7 +125,9 @@ public class Vessel {
             minute = parsed.minute;
             second = parsed.second;
             dataSource = parsed.dataSource;
-        
+      
+            isEmpty = false;
+            
         }else {
             
             System.out.println("no api");
@@ -128,6 +140,8 @@ public class Vessel {
         MMSI = newMMSI;
         name = newName;
         IMO = newIMO;
+        
+        isEmpty = false;
         
         get(1000);
         
@@ -162,6 +176,8 @@ public class Vessel {
         minute = 0;
         second = 0;
         dataSource = null;
+        
+        isEmpty = true;
         
     }
     

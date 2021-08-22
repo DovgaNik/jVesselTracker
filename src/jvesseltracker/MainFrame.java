@@ -72,14 +72,12 @@ public class MainFrame extends javax.swing.JFrame {
         }
         
         //</editor-fold>
-        
-        vessel1.get(1000);
-        vessel2.get(1000);
-        vessel3.get(1000);
-        vessel4.get(1000);
-        vessel5.get(1000);
-        
+                
         updateSidebar();
+        
+        getAll();
+        
+        clearDisplayedData();
         
     }
     
@@ -826,6 +824,25 @@ public class MainFrame extends javax.swing.JFrame {
     
     //<editor-fold defaultstate="collapsed" desc="Updating data">
     
+    void getAll() throws IOException{
+ 
+        if (!vessel1.isEmpty)        
+            vessel1.get(1000);
+        
+        if (!vessel2.isEmpty)        
+            vessel2.get(1000);
+        
+        if (!vessel3.isEmpty)        
+            vessel3.get(1000);
+        
+        if (!vessel4.isEmpty)        
+            vessel4.get(1000);
+        
+        if (!vessel5.isEmpty)        
+            vessel5.get(1000);
+        
+    }
+    
     int countDifference(int course, int heading){
         
         int difference = 0;
@@ -845,17 +862,27 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void updateContent(){
                 
-        setDisplayedData("image", selectedVessel.MMSI, selectedVessel.IMO, selectedVessel.heading, selectedVessel.course, countDifference(selectedVessel.course, selectedVessel.heading), selectedVessel.speed, selectedVessel.status, selectedVessel.year + "." + selectedVessel.month + "." + selectedVessel.day);
+        if (!selectedVessel.isEmpty)
+            setDisplayedData("image", selectedVessel.MMSI, selectedVessel.IMO, selectedVessel.heading, selectedVessel.course, countDifference(selectedVessel.course, selectedVessel.heading), selectedVessel.speed, selectedVessel.status, selectedVessel.year + "." + selectedVessel.month + "." + selectedVessel.day);
         
     }
     
     private void updateSidebar(){
         
-        setDisplayedDataSidebar1(vessel1.name, vessel1.lat + " / " + vessel1.lon);
+        if(!vessel1.isEmpty)
+            setDisplayedDataSidebar1(vessel1.name, vessel1.lat + " / " + vessel1.lon);
+        
+        if(!vessel2.isEmpty)
         setDisplayedDataSidebar2(vessel2.name, vessel2.lat + " / " + vessel2.lon);
-        setDisplayedDataSidebar3(vessel3.name, vessel3.lat + " / " + vessel3.lon);
-        setDisplayedDataSidebar4(vessel4.name, vessel4.lat + " / " + vessel4.lon);
-        setDisplayedDataSidebar5(vessel5.name, vessel5.lat + " / " + vessel5.lon);
+        
+        if(!vessel3.isEmpty)
+            setDisplayedDataSidebar3(vessel3.name, vessel3.lat + " / " + vessel3.lon);
+        
+        if(!vessel4.isEmpty)
+            setDisplayedDataSidebar4(vessel4.name, vessel4.lat + " / " + vessel4.lon);
+        
+        if(!vessel5.isEmpty)
+            setDisplayedDataSidebar5(vessel5.name, vessel5.lat + " / " + vessel5.lon);
         
     }
     
