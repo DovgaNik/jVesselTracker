@@ -73,6 +73,12 @@ public class MainFrame extends javax.swing.JFrame {
         
         //</editor-fold>
         
+        vessel1.get(1000);
+        vessel2.get(1000);
+        vessel3.get(1000);
+        vessel4.get(1000);
+        vessel5.get(1000);
+        
         updateSidebar();
         
     }
