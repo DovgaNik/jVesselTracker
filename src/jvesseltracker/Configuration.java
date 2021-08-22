@@ -35,26 +35,27 @@ public class Configuration {
                 text = string + "\n";
             }
         }        
-        System.out.println(text);
         
-        String[] textSplit = text.split("\n");
+        if (text != null){
         
-        System.out.println(textSplit.length);
-        
-        if(textSplit.length == 1){
-        
-            System.out.println("PS07" + textSplit[0]);
-            apiPS07 = textSplit[0];
-        
-        }
-        
-        if(textSplit.length == 2){
-        
-            System.out.println("PS07" + textSplit[0]);
-            apiPS07 = textSplit[0];
+            String[] textSplit = text.split("\n");
 
-            System.out.println("VD01" + textSplit[1]);
-            apiVD01 = textSplit[1];
+            if(textSplit.length == 1){
+
+                System.out.println("PS07" + textSplit[0]);
+                apiPS07 = textSplit[0];
+
+            }
+
+            if(textSplit.length == 2){
+
+                System.out.println("PS07" + textSplit[0]);
+                apiPS07 = textSplit[0];
+
+                System.out.println("VD01" + textSplit[1]);
+                apiVD01 = textSplit[1];
+
+            }
         
         }
         

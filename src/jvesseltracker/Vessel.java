@@ -97,23 +97,30 @@ public class Vessel {
     
     void get(int timeStamp) throws IOException{
         
-        JPosition download = new JPosition();
-        JSingleVesselPositionParsed parsed = new JSingleVesselPositionParsed(download.get(MMSI, timeStamp, apiPS07Local, "Mozilla/5.0"));
-
-        lat = parsed.lat;
-        lon = parsed.lon;
-        speed = parsed.speed;
-        course = parsed.course;
-        heading = parsed.heading;
-        status = parsed.status;
-        year = parsed.year;
-        month = parsed.month;
-        day = parsed.day;
-        hour = parsed.hour;
-        minute = parsed.minute;
-        second = parsed.second;
-        dataSource = parsed.dataSource;
+        if (apiPS07Local != null){
         
+            JPosition download = new JPosition();
+            JSingleVesselPositionParsed parsed = new JSingleVesselPositionParsed(download.get(MMSI, timeStamp, apiPS07Local, "Mozilla/5.0"));
+
+            lat = parsed.lat;
+            lon = parsed.lon;
+            speed = parsed.speed;
+            course = parsed.course;
+            heading = parsed.heading;
+            status = parsed.status;
+            year = parsed.year;
+            month = parsed.month;
+            day = parsed.day;
+            hour = parsed.hour;
+            minute = parsed.minute;
+            second = parsed.second;
+            dataSource = parsed.dataSource;
+        
+        }else {
+            
+            System.out.println("no api");
+            
+        }
     }
     
     void setNew (String newMMSI, String newName, String newIMO) throws IOException{
