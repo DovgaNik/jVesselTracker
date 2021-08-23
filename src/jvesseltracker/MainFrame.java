@@ -77,6 +77,8 @@ public class MainFrame extends javax.swing.JFrame {
         
         getAll();
         
+        updateSidebar();
+        
         clearDisplayedData();
         
     }

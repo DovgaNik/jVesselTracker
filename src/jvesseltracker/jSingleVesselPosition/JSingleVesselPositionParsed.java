@@ -57,7 +57,8 @@ public class JSingleVesselPositionParsed {
 		MMSI = jsonInfo[0];
 		lat = Float.valueOf(jsonInfo[1]);
 		lon = Float.valueOf(jsonInfo[2]);
-		speed = Byte.valueOf(jsonInfo[3]);
+                int speedInteger = Integer.valueOf(jsonInfo[3]) / 10;
+		speed = (byte) speedInteger;
 		heading = Integer.parseInt(jsonInfo[4]);
 		course = Integer.parseInt(jsonInfo[5]);
 		status = Byte.valueOf(jsonInfo[6]);
