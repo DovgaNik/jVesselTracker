@@ -945,8 +945,17 @@ public class MainFrame extends javax.swing.JFrame {
         
         setAnimationInvisible();        
         selectedVessel = vessel1;
-        jPanelShipAnimation1.setBackground(oldGloryWhite);
-        updateContent();
+        
+        if(!selectedVessel.isEmpty){
+        
+            jPanelShipAnimation1.setBackground(oldGloryWhite);
+            updateContent();
+            
+        }else {
+        
+            clearDisplayedData();
+            
+        }
         updateSidebar();
         
     }//GEN-LAST:event_jPanelShip1MousePressed
@@ -955,8 +964,16 @@ public class MainFrame extends javax.swing.JFrame {
         
         setAnimationInvisible();        
         selectedVessel = vessel2;
-        jPanelShipAnimation2.setBackground(oldGloryWhite);
-        updateContent();
+        if(!selectedVessel.isEmpty){
+        
+            jPanelShipAnimation2.setBackground(oldGloryWhite);
+            updateContent();
+            
+        }else {
+        
+            clearDisplayedData();
+            
+        }
         updateSidebar();
         
     }//GEN-LAST:event_jPanelShip2MousePressed
@@ -965,30 +982,54 @@ public class MainFrame extends javax.swing.JFrame {
         
         setAnimationInvisible();        
         selectedVessel = vessel3;
-        jPanelShipAnimation3.setBackground(oldGloryWhite);
-        updateContent();
-        updateSidebar();
+        if(!selectedVessel.isEmpty){
         
+            jPanelShipAnimation3.setBackground(oldGloryWhite);
+            updateContent();
+            
+        }else {
+        
+            clearDisplayedData();
+            
+        }
+        updateSidebar();
+
     }//GEN-LAST:event_jPanelShip3MousePressed
 
     private void jPanelShip4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip4MousePressed
         
         setAnimationInvisible();        
         selectedVessel = vessel4;
-        jPanelShipAnimation4.setBackground(oldGloryWhite);
-        updateContent();
-        updateSidebar();
+        if(!selectedVessel.isEmpty){
         
+            jPanelShipAnimation4.setBackground(oldGloryWhite);
+            updateContent();
+            
+        }else {
+        
+            clearDisplayedData();
+            
+        }
+        updateSidebar();
+
     }//GEN-LAST:event_jPanelShip4MousePressed
 
     private void jPanelShip5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip5MousePressed
         
         setAnimationInvisible();        
         selectedVessel = vessel5;
-        jPanelShipAnimation5.setBackground(oldGloryWhite);
-        updateContent();
-        updateSidebar();
+        if(!selectedVessel.isEmpty){
         
+            jPanelShipAnimation5.setBackground(oldGloryWhite);
+            updateContent();
+            
+        }else {
+        
+            clearDisplayedData();
+            
+        }
+        updateSidebar();
+
     }//GEN-LAST:event_jPanelShip5MousePressed
     
     //</editor-fold>
