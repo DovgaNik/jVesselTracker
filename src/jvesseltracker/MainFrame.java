@@ -1038,6 +1038,9 @@ public class MainFrame extends javax.swing.JFrame {
         
         //<editor-fold defaultstate="collapsed" desc="Look and feel setting code">
         
+        System.setProperty("awt.useSystemAAFontSettings","on");
+        System.setProperty("swing.aatext", "true");
+        
         try {
             
             javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -1047,7 +1050,7 @@ public class MainFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
             
         }
-                
+
         //</editor-fold>
         
         java.awt.EventQueue.invokeLater(() -> {
