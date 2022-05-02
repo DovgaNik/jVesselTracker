@@ -1,5 +1,7 @@
 package jvesseltracker.jSingleVesselPosition;
 
+import jvesseltracker.JFrameError;
+
 public class JSingleVesselPositionParsed {
     
 	public String MMSI;
@@ -73,7 +75,12 @@ public class JSingleVesselPositionParsed {
 		second = Byte.valueOf(time[2]);
 		dataSource = jsonInfo[8];
             
-            }    
+            } else {
+            
+                JFrameError jFrameError = new JFrameError("API not working");
+                jFrameError.setVisible(true);
+            
+            }
             
 	}
 }
