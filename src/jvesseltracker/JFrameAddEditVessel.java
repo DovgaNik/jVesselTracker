@@ -239,7 +239,7 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
         }
         
         try {
-            
+            vesselLocal.get(1000);
             vesselLocal.write();
             
         } catch (IOException ex) {
