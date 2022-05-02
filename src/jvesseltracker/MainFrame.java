@@ -232,6 +232,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/mooringPoingExit.png"))); // NOI18N
         jButtonExit.setToolTipText("Close");
         jButtonExit.setBorder(null);
+        jButtonExit.setContentAreaFilled(false);
         jButtonExit.setFocusable(false);
         jButtonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

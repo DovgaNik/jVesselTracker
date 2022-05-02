@@ -36,10 +36,11 @@ public class JFrameError extends javax.swing.JFrame {
             }
         });
 
-        jButtonExit.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonExit.setBackground(new java.awt.Color(179, 73, 93));
         jButtonExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/mooringPoingExit.png"))); // NOI18N
         jButtonExit.setToolTipText("Close");
         jButtonExit.setBorder(null);
+        jButtonExit.setContentAreaFilled(false);
         jButtonExit.setFocusable(false);
         jButtonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
