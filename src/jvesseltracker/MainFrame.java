@@ -902,8 +902,12 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonAddNewShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddNewShipActionPerformed
                 
-        JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel(false, selectedVessel);
-        jFrameAddVessel.setVisible(true);
+        if (selectedVessel != null) {
+        
+            JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel(false, selectedVessel);
+            jFrameAddVessel.setVisible(true);
+        
+        }
         
     }//GEN-LAST:event_jButtonAddNewShipActionPerformed
 
