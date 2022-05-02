@@ -33,7 +33,10 @@ public class JSingleVesselPositionParsed {
 	}
 	
 	private void parse(){
-		// <editor-fold defaultstate="collapsed" desc="deleting all unwanted characters in downloaded jason file">
+            
+            if (json != null){
+            
+		// <editor-fold defaultstate="collapsed" desc="deleting all unwanted characters in downloaded json file">
 		for (int i = 0; i < json.length(); i++) {
 			char charAt = json.charAt(i);
 			if (charAt != '[' & json.charAt(i) != ']' & json.charAt(i) != '"') {
@@ -69,6 +72,8 @@ public class JSingleVesselPositionParsed {
 		minute = Byte.valueOf(time[1]);
 		second = Byte.valueOf(time[2]);
 		dataSource = jsonInfo[8];
-                
+            
+            }    
+            
 	}
 }

@@ -14,18 +14,24 @@ public class JPosition {
         String json = jWeb.sendGET();
         System.out.println(json);
 		
-        System.out.println(json.length());
-		
-        if(json.length() == 3){
-            
-            System.out.println("Fuck");
-            return(null);
-            
-        }else{
-	
-            return(json);
-            
-	}
+        if (json != null){
+        
+            System.out.println(json.length());
+
+            if(json.length() == 3){
+
+                System.out.println("Fuck");
+                return(null);
+
+            }else{
+
+                return(json);
+
+            }
+        
+        }
+        
+        return null;
         
     }
     
