@@ -1,3 +1,7 @@
+//********************
+//*DovgaNik 2021-2022*
+//********************
+
 package jvesseltracker;
 
 import java.awt.Color;
