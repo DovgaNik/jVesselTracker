@@ -923,8 +923,16 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonEditShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditShipActionPerformed
         
-        JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel(true, selectedVessel);
-        jFrameEditVessel.setVisible(true);
+        if (selectedVessel != null) {
+        
+            JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel(true, selectedVessel);
+            jFrameEditVessel.setVisible(true);
+
+        }else {
+        
+            System.out.println("You haven't chosen anything");
+        
+        }
                 
     }//GEN-LAST:event_jButtonEditShipActionPerformed
 
