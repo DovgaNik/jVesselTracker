@@ -35,6 +35,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jTextFieldVD01 = new javax.swing.JTextField();
         jButtonReset = new javax.swing.JButton();
         jButtonSave = new javax.swing.JButton();
+        jLabelAPIPS8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Configuration");
@@ -77,16 +78,17 @@ public class JFrameConfigure extends javax.swing.JFrame {
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelTitleLayout.createSequentialGroup()
-                .addComponent(jButtonExit)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jButtonExit)
         );
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
         jPanelContent.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 1, new java.awt.Color(179, 73, 93)));
 
         jLabelAPIPS07.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabelAPIPS07.setText("Enter API key for Single Vessel Position (PS07)");
+        jLabelAPIPS07.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabelAPIPS07.setText("<html> Note: You need to restart application <br>after API key change  </html>");
+        jLabelAPIPS07.setToolTipText("");
+        jLabelAPIPS07.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         jTextFieldPS07.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
 
@@ -121,31 +123,32 @@ public class JFrameConfigure extends javax.swing.JFrame {
             }
         });
 
+        jLabelAPIPS8.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelAPIPS8.setText("Enter API key for Single Vessel Position (PS07)");
+
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
         jPanelContentLayout.setHorizontalGroup(
             jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelContentLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabelAPIVD01, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTextFieldPS07)
+                    .addComponent(jLabelAPIPS8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanelContentLayout.createSequentialGroup()
                         .addComponent(jButtonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelContentLayout.createSequentialGroup()
-                        .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextFieldPS07)
-                            .addComponent(jLabelAPIPS07, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelAPIVD01, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jTextFieldVD01))
-                .addContainerGap())
+                    .addComponent(jTextFieldVD01)
+                    .addComponent(jLabelAPIPS07))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelContentLayout.setVerticalGroup(
             jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelContentLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabelAPIPS07)
+                .addComponent(jLabelAPIPS8)
                 .addGap(3, 3, 3)
                 .addComponent(jTextFieldPS07, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -156,7 +159,9 @@ public class JFrameConfigure extends javax.swing.JFrame {
                 .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonReset)
                     .addComponent(jButtonSave))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelAPIPS07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -164,15 +169,15 @@ public class JFrameConfigure extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanelContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanelContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -238,6 +243,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
     private javax.swing.JButton jButtonReset;
     private javax.swing.JButton jButtonSave;
     private javax.swing.JLabel jLabelAPIPS07;
+    private javax.swing.JLabel jLabelAPIPS8;
     private javax.swing.JLabel jLabelAPIVD01;
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JPanel jPanelTitle;
