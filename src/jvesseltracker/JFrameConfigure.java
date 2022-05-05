@@ -1,9 +1,13 @@
+//********************************************************************************
+//*DovgaNik 2021-2022                                                            *
+//*All files and this project are distributed under GNU Generel Public License V3*
+//********************************************************************************
+
 package jvesseltracker;
 
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.UIManager;
 
 public class JFrameConfigure extends javax.swing.JFrame {
 
