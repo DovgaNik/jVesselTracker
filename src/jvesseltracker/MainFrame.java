@@ -884,7 +884,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void updateContent(){
                 
         if (!selectedVessel.isEmpty)
-            setDisplayedData("image", selectedVessel.MMSI, selectedVessel.IMO, selectedVessel.heading, selectedVessel.course, countDifference(selectedVessel.course, selectedVessel.heading), selectedVessel.speed, selectedVessel.status, selectedVessel.year + "." + selectedVessel.month + "." + selectedVessel.day);
+            setDisplayedData(selectedVessel.MMSI + ".jpg", selectedVessel.MMSI, selectedVessel.IMO, selectedVessel.heading, selectedVessel.course, countDifference(selectedVessel.course, selectedVessel.heading), selectedVessel.speed, selectedVessel.status, selectedVessel.year + "." + selectedVessel.month + "." + selectedVessel.day);
         
     }
     

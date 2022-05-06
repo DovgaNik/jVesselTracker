@@ -37,7 +37,7 @@ public class JPhoto {
 
             System.out.println(temp);        
 
-            JDownload.download(new URL(temp), "photo.jpg");
+            JDownload.download(new URL(temp), mmsi + ".jpg");
 
     }
     
