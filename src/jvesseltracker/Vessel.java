@@ -37,13 +37,15 @@ public class Vessel {
     
     File fileLocal;
     String apiPS07Local;
+    String apiVD01Local;
     
-    Vessel(File file, String apiPS07) throws IOException {
+    Vessel(File file, String apiPS07, String apiVD01) throws IOException {
         
         read(file);
         fileLocal = file;
         
         apiPS07Local = apiPS07;
+        apiVD01Local = apiVD01;
         
     }
     
@@ -113,7 +115,7 @@ public class Vessel {
     void get(int timeStamp) throws IOException{
         
         if (apiPS07Local != null){
-        
+            
             JPosition download = new JPosition();
             JSingleVesselPositionParsed parsed = new JSingleVesselPositionParsed(download.get(MMSI, timeStamp, apiPS07Local, "Mozilla/5.0"));
 
@@ -138,6 +140,14 @@ public class Vessel {
             System.out.println("no api");
             
         }
+        
+        if (apiVD01Local != null){
+        
+            jvesseltracker.jVesselParticulars.JPhoto jPhoto = new jvesseltracker.jVesselParticulars.JPhoto();
+            jPhoto.get(MMSI, apiVD01Local, "Mozilla/5.0");
+            
+        }
+        
     }
     
     void setNew (String newMMSI, String newName, String newIMO) throws IOException{

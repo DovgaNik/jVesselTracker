@@ -11,7 +11,7 @@ import jvesseltracker.webRequests.JDownload;
 
 public class JPhoto {
     
-    public static void get(String mmsi, String apikey, String agent) throws IOException{
+    public void get(String mmsi, String apikey, String agent) throws IOException{
 
             String url = "https://services.marinetraffic.com/api/exportvesselphoto/" + apikey + "/vessel_id:" + mmsi + "/protocol:json";
 
@@ -37,7 +37,7 @@ public class JPhoto {
 
             System.out.println(temp);        
 
-            JDownload.download(new URL(temp), mmsi + ".jpg");
+            JDownload.download(new URL(temp), "cache/" + mmsi + ".jpg");
 
     }
     
