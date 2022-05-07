@@ -64,11 +64,11 @@ public class MainFrame extends javax.swing.JFrame {
            
             configuration = new Configuration(config);
             
-            vessel1 = new Vessel(vesselData1, configuration.apiPS07);
-            vessel2 = new Vessel(vesselData2, configuration.apiPS07);
-            vessel3 = new Vessel(vesselData3, configuration.apiPS07);
-            vessel4 = new Vessel(vesselData4, configuration.apiPS07);
-            vessel5 = new Vessel(vesselData5, configuration.apiPS07);
+            vessel1 = new Vessel(vesselData1, configuration.apiPS07, configuration.apiVD01);
+            vessel2 = new Vessel(vesselData2, configuration.apiPS07, configuration.apiVD01);
+            vessel3 = new Vessel(vesselData3, configuration.apiPS07, configuration.apiVD01);
+            vessel4 = new Vessel(vesselData4, configuration.apiPS07, configuration.apiVD01);
+            vessel5 = new Vessel(vesselData5, configuration.apiPS07, configuration.apiVD01);
             
         } catch (IOException ex){
             
@@ -729,7 +729,7 @@ public class MainFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanelSidebar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanelContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -884,7 +884,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void updateContent(){
                 
         if (!selectedVessel.isEmpty)
-            setDisplayedData("image", selectedVessel.MMSI, selectedVessel.IMO, selectedVessel.heading, selectedVessel.course, countDifference(selectedVessel.course, selectedVessel.heading), selectedVessel.speed, selectedVessel.status, selectedVessel.year + "." + selectedVessel.month + "." + selectedVessel.day);
+            setDisplayedData("cache/" + selectedVessel.MMSI + ".jpg", selectedVessel.MMSI, selectedVessel.IMO, selectedVessel.heading, selectedVessel.course, countDifference(selectedVessel.course, selectedVessel.heading), selectedVessel.speed, selectedVessel.status, selectedVessel.year + "." + selectedVessel.month + "." + selectedVessel.day);
         
     }
     
