@@ -169,7 +169,7 @@ public class MainFrame extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
         setLocationByPlatform(true);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1000, 600));
+        setPreferredSize(new java.awt.Dimension(1000, 620));
         setResizable(false);
 
         jPanelTitle.setBackground(new java.awt.Color(179, 73, 93));
