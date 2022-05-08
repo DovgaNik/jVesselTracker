@@ -782,7 +782,7 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void clearDisplayedData(){
         
-        jLabelVesselImage.setText("");
+        jLabelVesselImage.setIcon(null);
         jLabelVesselMMSI.setText("");
         jLabelVesselIMO.setText("");
         jLabelVesselHeading.setText("");
