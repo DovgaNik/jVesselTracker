@@ -22,29 +22,33 @@ public class JPhoto {
 
             System.out.println(url);
 
-            jvesseltracker.webRequests.JWebRequests jWeb = new jvesseltracker.webRequests.JWebRequests(agent, url);
-            String json = jWeb.sendGET();
-
-            System.out.println(json);
-
-            String temp = "";
-
-            // <editor-fold defaultstate="collapsed" desc="deleting all unwanted characters in downloaded jason file">
+            File fileCheck = new File("cache/" + mmsi + "temp.jpg");
             
-                for (int i = 0; i < json.length(); i++) {
-                    char charAt = json.charAt(i);
-                    if (charAt != '[' & json.charAt(i) != ']' & json.charAt(i) != '"' & json.charAt(i) != '\\') {
-                        temp += charAt;
+            if (!fileCheck.exists()){
+            
+                jvesseltracker.webRequests.JWebRequests jWeb = new jvesseltracker.webRequests.JWebRequests(agent, url);
+                String json = jWeb.sendGET();
+
+                System.out.println(json);
+
+                String temp = "";
+
+                // <editor-fold defaultstate="collapsed" desc="Deleting all unwanted characters in downloaded JSON file">
+
+                    for (int i = 0; i < json.length(); i++) {
+                        char charAt = json.charAt(i);
+                        if (charAt != '[' & json.charAt(i) != ']' & json.charAt(i) != '"' & json.charAt(i) != '\\') {
+                            temp += charAt;
+                        }
                     }
-                }
-                
-            // </editor-fold>
 
-            System.out.println(temp);        
+                // </editor-fold>
 
-            JDownload.download(new URL(temp), "cache/" + mmsi + "temp.jpg");
-            
-//            resizeImage(getImage("cache/" + mmsi + "temp.jpg"), 688, 405);
+                System.out.println(temp);        
+
+                JDownload.download(new URL(temp), "cache/" + mmsi + "temp.jpg");
+
+            }
             
     }
     
