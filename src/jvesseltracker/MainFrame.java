@@ -127,7 +127,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonEditShip = new javax.swing.JButton();
         jButtonConfigure = new javax.swing.JButton();
         jButtonExit = new javax.swing.JButton();
-        jButtonConfigure1 = new javax.swing.JButton();
+        jButtonRefresh = new javax.swing.JButton();
         jPanelSidebar = new javax.swing.JPanel();
         jPanelShipRoot1 = new javax.swing.JPanel();
         jPanelShip1 = new javax.swing.JPanel();
@@ -234,6 +234,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/mooringPoingExit.png"))); // NOI18N
         jButtonExit.setToolTipText("Close");
         jButtonExit.setBorder(null);
+        jButtonExit.setBorderPainted(false);
         jButtonExit.setContentAreaFilled(false);
         jButtonExit.setFocusable(false);
         jButtonExit.addActionListener(new java.awt.event.ActionListener() {
@@ -242,14 +243,14 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jButtonConfigure1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/refresh.png"))); // NOI18N
-        jButtonConfigure1.setBorder(null);
-        jButtonConfigure1.setBorderPainted(false);
-        jButtonConfigure1.setContentAreaFilled(false);
-        jButtonConfigure1.setFocusable(false);
-        jButtonConfigure1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/refresh.png"))); // NOI18N
+        jButtonRefresh.setBorder(null);
+        jButtonRefresh.setBorderPainted(false);
+        jButtonRefresh.setContentAreaFilled(false);
+        jButtonRefresh.setFocusable(false);
+        jButtonRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonConfigure1ActionPerformed(evt);
+                jButtonRefreshActionPerformed(evt);
             }
         });
 
@@ -267,8 +268,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonConfigure, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonConfigure1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 751, Short.MAX_VALUE)
+                .addComponent(jButtonRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -279,7 +280,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addComponent(jButtonDeleteShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jButtonEditShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jButtonConfigure, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButtonConfigure1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jButtonRefresh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
@@ -676,7 +677,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabelVesselImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelContentLayout.createSequentialGroup()
                         .addComponent(jLabelRequestTimestamp)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 482, Short.MAX_VALUE)
                         .addComponent(jLabelVesselStatus))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelContentLayout.createSequentialGroup()
                         .addComponent(jLabelVesselIMO)
@@ -724,7 +725,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jPanelSidebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanelContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jPanelTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanelTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1067,7 +1068,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jPanelShip5MousePressed
 
-    private void jButtonConfigure1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfigure1ActionPerformed
+    private void jButtonRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefreshActionPerformed
         try {
             
             getAll();
@@ -1079,7 +1080,7 @@ public class MainFrame extends javax.swing.JFrame {
         }
         
         updateSidebar();
-    }//GEN-LAST:event_jButtonConfigure1ActionPerformed
+    }//GEN-LAST:event_jButtonRefreshActionPerformed
     
     //</editor-fold>
     
@@ -1119,10 +1120,10 @@ public class MainFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAddNewShip;
     private javax.swing.JButton jButtonConfigure;
-    private javax.swing.JButton jButtonConfigure1;
     private javax.swing.JButton jButtonDeleteShip;
     private javax.swing.JButton jButtonEditShip;
     private javax.swing.JButton jButtonExit;
+    private javax.swing.JButton jButtonRefresh;
     private javax.swing.JLabel jLabelRequestTimestamp;
     private javax.swing.JLabel jLabelVesselCoordinates1;
     private javax.swing.JLabel jLabelVesselCoordinates2;

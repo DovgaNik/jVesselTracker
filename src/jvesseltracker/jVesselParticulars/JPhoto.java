@@ -51,7 +51,7 @@ public class JPhoto {
     public BufferedImage getBufferedImage(String mmsi, String apikey, String agent) throws IOException {
     
         get(mmsi, apikey, agent);
-        return resizeImage(getImage("cache/" + mmsi + "temp.jpg"), 668, 405);
+        return resizeImage(getImage("cache/" + mmsi + "temp.jpg"), 665, 420);
         
     }
     
