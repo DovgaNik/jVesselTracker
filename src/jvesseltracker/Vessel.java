@@ -5,6 +5,7 @@
 
 package jvesseltracker;
 
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,6 +17,7 @@ import jvesseltracker.jSingleVesselPosition.JSingleVesselPositionParsed;
 
 public class Vessel {
     
+    public BufferedImage photo;
     public String MMSI;
     public String name;   
     public String IMO;
@@ -144,7 +146,7 @@ public class Vessel {
         if (apiVD01Local != null){
         
             jvesseltracker.jVesselParticulars.JPhoto jPhoto = new jvesseltracker.jVesselParticulars.JPhoto();
-            jPhoto.get(MMSI, apiVD01Local, "Mozilla/5.0");
+            photo = jPhoto.getBufferedImage(MMSI, apiVD01Local, "Mozilla/5.0");
             
         }
         

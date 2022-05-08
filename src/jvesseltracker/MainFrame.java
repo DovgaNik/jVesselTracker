@@ -6,6 +6,7 @@
 package jvesseltracker;
 
 import java.awt.Color;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -792,9 +793,9 @@ public class MainFrame extends javax.swing.JFrame {
         
     }
     
-    private void setDisplayedData(String linkToIcon, String MMSI, String IMO, int heading, int course, int differenceCourseHeading, int speed, byte status, String timestamp){
+    private void setDisplayedData(BufferedImage photo, String MMSI, String IMO, int heading, int course, int differenceCourseHeading, int speed, byte status, String timestamp){
         
-        jLabelVesselImage.setIcon(new ImageIcon(linkToIcon));
+        jLabelVesselImage.setIcon(new ImageIcon(photo));
         jLabelVesselMMSI.setText("MMSI :" + MMSI);
         jLabelVesselIMO.setText("IMO :" + IMO);
         jLabelVesselHeading.setText("Heading :" + heading);
@@ -884,7 +885,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void updateContent(){
                 
         if (!selectedVessel.isEmpty)
-            setDisplayedData("cache/" + selectedVessel.MMSI + ".jpg", selectedVessel.MMSI, selectedVessel.IMO, selectedVessel.heading, selectedVessel.course, countDifference(selectedVessel.course, selectedVessel.heading), selectedVessel.speed, selectedVessel.status, selectedVessel.year + "." + selectedVessel.month + "." + selectedVessel.day);
+            setDisplayedData(selectedVessel.photo, selectedVessel.MMSI, selectedVessel.IMO, selectedVessel.heading, selectedVessel.course, countDifference(selectedVessel.course, selectedVessel.heading), selectedVessel.speed, selectedVessel.status, selectedVessel.year + "." + selectedVessel.month + "." + selectedVessel.day);
         
     }
     
