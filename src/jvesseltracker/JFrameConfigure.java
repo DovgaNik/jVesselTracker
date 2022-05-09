@@ -40,6 +40,8 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jButtonReset = new javax.swing.JButton();
         jButtonSave = new javax.swing.JButton();
         jLabelAPIPS8 = new javax.swing.JLabel();
+        jTextFieldVD2 = new javax.swing.JTextField();
+        jLabelAPIVD2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Configuration");
@@ -130,6 +132,11 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jLabelAPIPS8.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelAPIPS8.setText("Enter API key for Single Vessel Position (PS07)");
 
+        jTextFieldVD2.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
+
+        jLabelAPIVD2.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
+        jLabelAPIVD2.setText("Update intervel (minutes)");
+
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
         jPanelContent.setLayout(jPanelContentLayout);
         jPanelContentLayout.setHorizontalGroup(
@@ -145,7 +152,9 @@ public class JFrameConfigure extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonSave, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jTextFieldVD01)
-                    .addComponent(jLabelAPIPS07))
+                    .addComponent(jLabelAPIPS07)
+                    .addComponent(jLabelAPIVD2, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldVD2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelContentLayout.setVerticalGroup(
@@ -160,12 +169,16 @@ public class JFrameConfigure extends javax.swing.JFrame {
                 .addGap(3, 3, 3)
                 .addComponent(jTextFieldVD01, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelAPIVD2)
+                .addGap(3, 3, 3)
+                .addComponent(jTextFieldVD2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonReset)
                     .addComponent(jButtonSave))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelAPIPS07, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -179,9 +192,9 @@ public class JFrameConfigure extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanelContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -249,9 +262,11 @@ public class JFrameConfigure extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelAPIPS07;
     private javax.swing.JLabel jLabelAPIPS8;
     private javax.swing.JLabel jLabelAPIVD01;
+    private javax.swing.JLabel jLabelAPIVD2;
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JPanel jPanelTitle;
     private javax.swing.JTextField jTextFieldPS07;
     private javax.swing.JTextField jTextFieldVD01;
+    private javax.swing.JTextField jTextFieldVD2;
     // End of variables declaration//GEN-END:variables
 }
