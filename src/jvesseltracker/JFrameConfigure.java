@@ -21,6 +21,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
         
         jTextFieldPS07.setText(configs.apiPS07);
         jTextFieldVD01.setText(configs.apiVD01);
+        jTextFieldUpdateInterval.setText(String.valueOf(configs.interval / 1000));
     }
 
     Configuration configs;
@@ -40,7 +41,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jButtonReset = new javax.swing.JButton();
         jButtonSave = new javax.swing.JButton();
         jLabelAPIPS8 = new javax.swing.JLabel();
-        jTextFieldVD2 = new javax.swing.JTextField();
+        jTextFieldUpdateInterval = new javax.swing.JTextField();
         jLabelAPIVD2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -132,7 +133,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
         jLabelAPIPS8.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelAPIPS8.setText("Enter API key for Single Vessel Position (PS07)");
 
-        jTextFieldVD2.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
+        jTextFieldUpdateInterval.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
 
         jLabelAPIVD2.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelAPIVD2.setText("Update intervel (minutes)");
@@ -154,7 +155,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
                     .addComponent(jTextFieldVD01)
                     .addComponent(jLabelAPIPS07)
                     .addComponent(jLabelAPIVD2, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldVD2))
+                    .addComponent(jTextFieldUpdateInterval))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelContentLayout.setVerticalGroup(
@@ -171,7 +172,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelAPIVD2)
                 .addGap(3, 3, 3)
-                .addComponent(jTextFieldVD2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldUpdateInterval, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonReset)
@@ -235,6 +236,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
         
         jTextFieldPS07.setText(null);
         jTextFieldVD01.setText(null);
+        jTextFieldUpdateInterval.setText(null);
         
     }//GEN-LAST:event_jButtonResetActionPerformed
 
@@ -242,6 +244,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
         
         configs.apiPS07 = jTextFieldPS07.getText();
         configs.apiVD01 = jTextFieldVD01.getText();
+        configs.interval = Long.parseLong(jTextFieldUpdateInterval.getText()) * 1000;
         
         try {
             configs.write();
@@ -266,7 +269,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JPanel jPanelTitle;
     private javax.swing.JTextField jTextFieldPS07;
+    private javax.swing.JTextField jTextFieldUpdateInterval;
     private javax.swing.JTextField jTextFieldVD01;
-    private javax.swing.JTextField jTextFieldVD2;
     // End of variables declaration//GEN-END:variables
 }

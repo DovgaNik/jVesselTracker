@@ -871,7 +871,7 @@ public class MainFrame extends javax.swing.JFrame {
     };
     Timer timer = new Timer("Update timer");
     
-    long delay = 10000L;
+    long delay = configuration.interval;
     timer.schedule(task, delay);
 }
     

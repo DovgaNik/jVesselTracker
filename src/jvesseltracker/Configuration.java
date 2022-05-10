@@ -16,6 +16,7 @@ public class Configuration {
     
     public String apiPS07;
     public String apiVD01;
+    public long interval;
     
     File configFileLocal;
     
@@ -44,31 +45,41 @@ public class Configuration {
         if (text != null){
         
             String[] textSplit = text.split("\n");
-
-            if(textSplit.length == 1){
-
-                System.out.println("PS07" + textSplit[0]);
-                apiPS07 = textSplit[0];
-
-            }
-
-            if(textSplit.length == 2){
-
-                System.out.println("PS07" + textSplit[0]);
-                apiPS07 = textSplit[0];
-
-                System.out.println("VD01" + textSplit[1]);
-                apiVD01 = textSplit[1];
-
-            }
         
+            switch (textSplit.length){
+                case 1:
+                    System.out.println("PS07" + textSplit[0]);
+                    apiPS07 = textSplit[0];
+                    break;
+                
+                case 2:
+                    System.out.println("PS07" + textSplit[0]);
+                    apiPS07 = textSplit[0];
+
+                    System.out.println("VD01" + textSplit[1]);
+                    apiVD01 = textSplit[1];                        
+                    break;
+                
+                case 3:
+                    System.out.println("PS07" + textSplit[0]);
+                    apiPS07 = textSplit[0];
+
+                    System.out.println("VD01" + textSplit[1]);
+                    apiVD01 = textSplit[1];
+                    
+                    System.out.println("Interval " + textSplit[2]);
+                    interval = Long.parseLong(textSplit[2]);
+                    break;
+                        
+            }
+
         }
         
     }
     
     void write () throws IOException{
         
-        String file = apiPS07 + "\n" + apiVD01;
+        String file = apiPS07 + "\n" + apiVD01 + "\n" + interval;
         
         System.out.println("=== \n" + "start of file to be written \n" + file + "\n end" + "===");
         

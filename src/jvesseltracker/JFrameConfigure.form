@@ -125,7 +125,7 @@
                       <Component id="jTextFieldVD01" alignment="0" max="32767" attributes="0"/>
                       <Component id="jLabelAPIPS07" alignment="0" max="32767" attributes="0"/>
                       <Component id="jLabelAPIVD2" alignment="0" min="-2" pref="483" max="-2" attributes="0"/>
-                      <Component id="jTextFieldVD2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jTextFieldUpdateInterval" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -145,7 +145,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabelAPIVD2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                  <Component id="jTextFieldVD2" min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="jTextFieldUpdateInterval" min="-2" pref="32" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButtonReset" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -248,7 +248,7 @@
             <Property name="text" type="java.lang.String" value="Enter API key for Single Vessel Position (PS07)"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="jTextFieldVD2">
+        <Component class="javax.swing.JTextField" name="jTextFieldUpdateInterval">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Lato" size="18" style="0"/>
