@@ -9,9 +9,12 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+
 import javax.swing.UIManager;
 
 public class MainFrame extends javax.swing.JFrame {
@@ -87,6 +90,8 @@ public class MainFrame extends javax.swing.JFrame {
         
         clearDisplayedData();
         
+        
+        givenUsingTimer_whenSchedulingTaskOnce_thenCorrect();
     }
     
     //<editor-fold defaultstate="collapsed" desc="Creating objects">
@@ -847,6 +852,28 @@ public class MainFrame extends javax.swing.JFrame {
     //</editor-fold>
     
     //<editor-fold defaultstate="collapsed" desc="Updating data">
+    
+    public void givenUsingTimer_whenSchedulingTaskOnce_thenCorrect() {
+    TimerTask task = new TimerTask() {
+        public void run() {
+            try {
+                
+                getAll();
+                givenUsingTimer_whenSchedulingTaskOnce_thenCorrect();
+                
+            } catch (IOException ex) {
+                
+                Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+                
+            }
+            
+        }
+    };
+    Timer timer = new Timer("Update timer");
+    
+    long delay = 10000L;
+    timer.schedule(task, delay);
+}
     
     void getAll() throws IOException{
  

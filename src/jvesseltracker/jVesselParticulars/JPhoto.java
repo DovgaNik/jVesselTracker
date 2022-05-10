@@ -34,7 +34,9 @@ public class JPhoto {
                 String temp = "";
 
                 // <editor-fold defaultstate="collapsed" desc="Deleting all unwanted characters in downloaded JSON file">
-
+                
+                if (json != null){
+                
                     for (int i = 0; i < json.length(); i++) {
                         char charAt = json.charAt(i);
                         if (charAt != '[' & json.charAt(i) != ']' & json.charAt(i) != '"' & json.charAt(i) != '\\') {
@@ -44,10 +46,12 @@ public class JPhoto {
 
                 // </editor-fold>
 
-                System.out.println(temp);        
+                    System.out.println(temp);        
 
-                JDownload.download(new URL(temp), "cache/" + mmsi + "temp.jpg");
-
+                    JDownload.download(new URL(temp), "cache/" + mmsi + "temp.jpg");
+                
+                }
+                
             }
             
     }
@@ -61,10 +65,19 @@ public class JPhoto {
     
     BufferedImage resizeImage(BufferedImage originalImage, int targetWidth, int targetHeight) throws IOException {
         
-        Image resultingImage = originalImage.getScaledInstance(targetWidth, targetHeight, Image.SCALE_DEFAULT);
-        BufferedImage outputImage = new BufferedImage(targetWidth, targetHeight, BufferedImage.TYPE_INT_RGB);
-        outputImage.getGraphics().drawImage(resultingImage, 0, 0, null);
-        return outputImage;
+        if (originalImage != null){
+        
+            Image resultingImage = originalImage.getScaledInstance(targetWidth, targetHeight, Image.SCALE_DEFAULT);
+            BufferedImage outputImage = new BufferedImage(targetWidth, targetHeight, BufferedImage.TYPE_INT_RGB);
+            outputImage.getGraphics().drawImage(resultingImage, 0, 0, null);
+            return outputImage;
+            
+        }else {
+        
+            return null;
+            
+        }
+        
         
     }
     
