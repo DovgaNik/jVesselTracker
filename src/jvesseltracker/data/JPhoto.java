@@ -3,7 +3,7 @@
 //*All files and this project are distributed under GNU Generel Public License V3*
 //********************************************************************************
 
-package jvesseltracker.jVesselParticulars;
+package jvesseltracker.data;
 
 import java.awt.Image;
 import java.awt.image.BufferedImage;

@@ -12,8 +12,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import jvesseltracker.jSingleVesselPosition.JPosition;
-import jvesseltracker.jSingleVesselPosition.JSingleVesselPositionParsed;
+import jvesseltracker.data.JPosition;
+import jvesseltracker.data.JSingleVesselPositionParsed;
 
 public class Vessel {
     
@@ -145,7 +145,7 @@ public class Vessel {
         
         if (apiVD01Local != null){
         
-            jvesseltracker.jVesselParticulars.JPhoto jPhoto = new jvesseltracker.jVesselParticulars.JPhoto();
+            jvesseltracker.data.JPhoto jPhoto = new jvesseltracker.data.JPhoto();
             photo = jPhoto.getBufferedImage(MMSI, apiVD01Local, "Mozilla/5.0");
             
         }

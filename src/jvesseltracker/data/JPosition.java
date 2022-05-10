@@ -3,7 +3,7 @@
 //*All files and this project are distributed under GNU Generel Public License V3*
 //********************************************************************************
 
-package jvesseltracker.jSingleVesselPosition;
+package jvesseltracker.data;
 
 import java.io.IOException;
 
