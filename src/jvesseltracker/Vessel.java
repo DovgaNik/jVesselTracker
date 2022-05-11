@@ -17,23 +17,15 @@ import jvesseltracker.data.JSingleVesselPositionParsed;
 
 public class Vessel {
     
+    //<editor-fold defaultstate="collapsed" desc="Ship data">
+    
+    public byte speed, status, month, day, hour, minute, second;
+    public int course, heading, year;
+    public float lat, lon;
+    public String MMSI, name, IMO, dataSource;
     public BufferedImage photo;
-    public String MMSI;
-    public String name;   
-    public String IMO;
-    public float lat;
-    public float lon;
-    public byte speed;
-    public int course;
-    public int heading;
-    public byte status;
-    public int year;
-    public byte month;
-    public byte day;
-    public byte hour;
-    public byte minute;
-    public byte second;
-    public String dataSource;
+    
+    //</editor-fold>    
     
     Boolean isEmpty;
     

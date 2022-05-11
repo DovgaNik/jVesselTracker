@@ -38,7 +38,7 @@ public class JParticulars {
 
         String json = JGet.download(url);
         
-        // <editor-fold defaultstate="collapsed" desc="deleting all unwanted characters in downloaded jason file">
+        // <editor-fold defaultstate="collapsed" desc="Seleting all unwanted characters in downloaded JSON file">
             
                 String temp = "";
                 
@@ -49,7 +49,7 @@ public class JParticulars {
                     }
                 }
                 
-            // </editor-fold>
+        // </editor-fold>
         
             String[] dataArr = temp.split(",");
             
@@ -74,28 +74,6 @@ public class JParticulars {
             financialOwner = dataArr[18];
             technicalManager = dataArr[19];
             type = dataArr[20];
-            
-            System.out.println(mmsi);
-            System.out.println(imo);
-            System.out.println(name);
-            System.out.println(placeOfBuild);
-            System.out.println(build);
-            System.out.println(breadth);
-            System.out.println(dwt);
-            System.out.println(displacement);
-            System.out.println(callsign);
-            System.out.println(flag);
-            System.out.println(draught);
-            System.out.println(length);
-            System.out.println(fuelConsumption);
-            System.out.println(maxSpeed);
-            System.out.println(serviceSpeed);
-            System.out.println(oilCapacity);
-            System.out.println(owner);
-            System.out.println(manager);
-            System.out.println(financialOwner);
-            System.out.println(technicalManager);
-            System.out.println(type);
             
     }
             
