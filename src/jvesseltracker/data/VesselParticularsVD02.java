@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 import jvesseltracker.webRequests.JGet;
 
-public class JParticulars {
+public class VesselParticularsVD02 {
     
     public static String 
                 mmsi,

@@ -14,7 +14,7 @@ import java.net.URL;
 import javax.imageio.ImageIO;
 import jvesseltracker.webRequests.JDownload;
 
-public class JPhoto {
+public class VesselPhotoVD01 {
     
     public void get(String mmsi, String apikey, String agent) throws IOException{
 

@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import jvesseltracker.data.JPosition;
+import jvesseltracker.data.SingleVesselPositionPS07;
 import jvesseltracker.data.JSingleVesselPositionParsed;
 
 public class Vessel {
@@ -110,7 +110,7 @@ public class Vessel {
         
         if (apiPS07Local != null){
             
-            JPosition download = new JPosition();
+            SingleVesselPositionPS07 download = new SingleVesselPositionPS07();
             JSingleVesselPositionParsed parsed = new JSingleVesselPositionParsed(download.get(MMSI, timeStamp, apiPS07Local, "Mozilla/5.0"));
 
             lat = parsed.lat;
@@ -137,7 +137,7 @@ public class Vessel {
         
         if (apiVD01Local != null){
         
-            jvesseltracker.data.JPhoto jPhoto = new jvesseltracker.data.JPhoto();
+            jvesseltracker.data.VesselPhotoVD01 jPhoto = new jvesseltracker.data.VesselPhotoVD01();
             photo = jPhoto.getBufferedImage(MMSI, apiVD01Local, "Mozilla/5.0");
             
         }

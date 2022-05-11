@@ -7,7 +7,7 @@ package jvesseltracker.data;
 
 import java.io.IOException;
 
-public class JPosition {
+public class SingleVesselPositionPS07 {
     
     public String get(String mmsi, int timespan, String apikey, String agent) throws IOException{
         
