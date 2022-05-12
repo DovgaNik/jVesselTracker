@@ -1131,7 +1131,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButtonRefresh1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefresh1ActionPerformed
         
         jvesseltracker.webRequests.Browse browse = new jvesseltracker.webRequests.Browse();
-        browse.browse("https://www.youtube.com/watch?v=--UABwqW9Sg&list=RDckVYO9oI8vc&index=2");
+        browse.browse("https://www.google.com/maps/search/?api=1&query=" + selectedVessel.lat + ", " + selectedVessel.lon);
             
     }//GEN-LAST:event_jButtonRefresh1ActionPerformed
     
