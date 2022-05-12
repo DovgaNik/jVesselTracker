@@ -85,6 +85,8 @@
                   <Component id="jButtonConfigure" min="-2" pref="34" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButtonRefresh" min="-2" pref="34" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButtonRefresh1" min="-2" pref="34" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="jButtonExit" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -99,6 +101,7 @@
               <Component id="jButtonEditShip" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="jButtonConfigure" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
               <Component id="jButtonRefresh" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
+              <Component id="jButtonRefresh1" alignment="1" min="-2" pref="34" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -201,6 +204,22 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRefreshActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonRefresh1">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/jvesseltracker/icons/refresh.png"/>
+            </Property>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="null"/>
+            </Property>
+            <Property name="borderPainted" type="boolean" value="false"/>
+            <Property name="contentAreaFilled" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonRefresh1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -782,7 +801,7 @@
                       <Component id="jLabelVesselImage" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabelRequestTimestamp" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="482" max="32767" attributes="0"/>
+                          <EmptySpace pref="486" max="32767" attributes="0"/>
                           <Component id="jLabelVesselStatus" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">

@@ -6,9 +6,12 @@
 package jvesseltracker;
 
 import java.awt.Color;
+import java.awt.Desktop;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
@@ -133,6 +136,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonConfigure = new javax.swing.JButton();
         jButtonExit = new javax.swing.JButton();
         jButtonRefresh = new javax.swing.JButton();
+        jButtonRefresh1 = new javax.swing.JButton();
         jPanelSidebar = new javax.swing.JPanel();
         jPanelShipRoot1 = new javax.swing.JPanel();
         jPanelShip1 = new javax.swing.JPanel();
@@ -259,6 +263,17 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButtonRefresh1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/refresh.png"))); // NOI18N
+        jButtonRefresh1.setBorder(null);
+        jButtonRefresh1.setBorderPainted(false);
+        jButtonRefresh1.setContentAreaFilled(false);
+        jButtonRefresh1.setFocusable(false);
+        jButtonRefresh1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRefresh1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanelTitleLayout = new javax.swing.GroupLayout(jPanelTitle);
         jPanelTitle.setLayout(jPanelTitleLayout);
         jPanelTitleLayout.setHorizontalGroup(
@@ -274,6 +289,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jButtonConfigure, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonRefresh1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -286,6 +303,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addComponent(jButtonEditShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jButtonConfigure, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jButtonRefresh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jButtonRefresh1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
@@ -682,7 +700,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabelVesselImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelContentLayout.createSequentialGroup()
                         .addComponent(jLabelRequestTimestamp)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 482, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 486, Short.MAX_VALUE)
                         .addComponent(jLabelVesselStatus))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelContentLayout.createSequentialGroup()
                         .addComponent(jLabelVesselIMO)
@@ -1109,6 +1127,13 @@ public class MainFrame extends javax.swing.JFrame {
         
         updateSidebar();
     }//GEN-LAST:event_jButtonRefreshActionPerformed
+
+    private void jButtonRefresh1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefresh1ActionPerformed
+        
+        jvesseltracker.webRequests.Browse browse = new jvesseltracker.webRequests.Browse();
+        browse.browse("https://www.youtube.com/watch?v=--UABwqW9Sg&list=RDckVYO9oI8vc&index=2");
+            
+    }//GEN-LAST:event_jButtonRefresh1ActionPerformed
     
     //</editor-fold>
     
@@ -1152,6 +1177,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonEditShip;
     private javax.swing.JButton jButtonExit;
     private javax.swing.JButton jButtonRefresh;
+    private javax.swing.JButton jButtonRefresh1;
     private javax.swing.JLabel jLabelRequestTimestamp;
     private javax.swing.JLabel jLabelVesselCoordinates1;
     private javax.swing.JLabel jLabelVesselCoordinates2;
