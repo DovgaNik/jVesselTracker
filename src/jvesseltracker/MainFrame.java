@@ -1132,7 +1132,9 @@ public class MainFrame extends javax.swing.JFrame {
         
         jvesseltracker.webRequests.Browse browse = new jvesseltracker.webRequests.Browse();
         browse.browse("https://www.google.com/maps/search/?api=1&query=" + selectedVessel.lat + ", " + selectedVessel.lon);
-            
+        browse.browse("http://www.openstreetmap.org/?mlat=" + selectedVessel.lat + "&mlon=" + selectedVessel.lon + "&zoom=16&layers=M");
+        browse.browse("http://map.openseamap.org/?zoom=17&lat=" + selectedVessel.lat + "&lon=" + selectedVessel.lon + "&layers=BFTFFTTFFTF0FFFTFFFFTT");
+        
     }//GEN-LAST:event_jButtonRefresh1ActionPerformed
     
     //</editor-fold>
