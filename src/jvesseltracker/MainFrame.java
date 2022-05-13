@@ -68,13 +68,13 @@ public class MainFrame extends javax.swing.JFrame {
            
             configuration = new Configuration(config);
         
-            JFrameError jFrameError = new JFrameError("API not working");
+            JFrameError jFrameErrorAPINowWorking = new JFrameError("API not working");
             
-            vessel1 = new Vessel(vesselData1, configuration.apiPS07, configuration.apiVD01, jFrameError);
-            vessel2 = new Vessel(vesselData2, configuration.apiPS07, configuration.apiVD01, jFrameError);
-            vessel3 = new Vessel(vesselData3, configuration.apiPS07, configuration.apiVD01, jFrameError);
-            vessel4 = new Vessel(vesselData4, configuration.apiPS07, configuration.apiVD01, jFrameError);
-            vessel5 = new Vessel(vesselData5, configuration.apiPS07, configuration.apiVD01, jFrameError);
+            vessel1 = new Vessel(vesselData1, configuration.apiPS07, configuration.apiVD01, jFrameErrorAPINowWorking);
+            vessel2 = new Vessel(vesselData2, configuration.apiPS07, configuration.apiVD01, jFrameErrorAPINowWorking);
+            vessel3 = new Vessel(vesselData3, configuration.apiPS07, configuration.apiVD01, jFrameErrorAPINowWorking);
+            vessel4 = new Vessel(vesselData4, configuration.apiPS07, configuration.apiVD01, jFrameErrorAPINowWorking);
+            vessel5 = new Vessel(vesselData5, configuration.apiPS07, configuration.apiVD01, jFrameErrorAPINowWorking);
             
         } catch (IOException ex){
             
