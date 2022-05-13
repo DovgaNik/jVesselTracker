@@ -17,6 +17,7 @@ public class Configuration {
     public String apiPS07;
     public String apiVD01;
     public long interval;
+    public byte defaultMap;
     
     File configFileLocal;
     
@@ -70,16 +71,30 @@ public class Configuration {
                     System.out.println("Interval " + textSplit[2]);
                     interval = Long.parseLong(textSplit[2]);
                     break;
-                        
-            }
+                      
+                case 4:
+                    System.out.println("PS07" + textSplit[0]);
+                    apiPS07 = textSplit[0];
 
+                    System.out.println("VD01" + textSplit[1]);
+                    apiVD01 = textSplit[1];
+                    
+                    System.out.println("Interval " + textSplit[2]);
+                    interval = Long.parseLong(textSplit[2]);
+                    
+                    System.out.println("Default map " + textSplit[3]);
+                    defaultMap = Byte.valueOf(textSplit[3]);
+                    break;
+                    
+            }
+            
         }
         
     }
     
     void write () throws IOException{
         
-        String file = apiPS07 + "\n" + apiVD01 + "\n" + interval;
+        String file = apiPS07 + "\n" + apiVD01 + "\n" + interval + "\n" + defaultMap;
         
         System.out.println("=== \n" + "start of file to be written \n" + file + "\n end" + "===");
         
