@@ -33,10 +33,13 @@ public class Vessel {
     String apiPS07Local;
     String apiVD01Local;
     
-    Vessel(File file, String apiPS07, String apiVD01) throws IOException {
+    JFrameError jFrameErrorLocal;
+    
+    Vessel(File file, String apiPS07, String apiVD01, JFrameError jFrameError) throws IOException {
         
         read(file);
         fileLocal = file;
+        jFrameErrorLocal = jFrameError;
         
         apiPS07Local = apiPS07;
         apiVD01Local = apiVD01;
@@ -111,7 +114,7 @@ public class Vessel {
         if (apiPS07Local != null){
             
             SingleVesselPositionPS07 download = new SingleVesselPositionPS07();
-            JSingleVesselPositionParsed parsed = new JSingleVesselPositionParsed(download.get(MMSI, timeStamp, apiPS07Local, "Mozilla/5.0"));
+            JSingleVesselPositionParsed parsed = new JSingleVesselPositionParsed(download.get(MMSI, timeStamp, apiPS07Local, "Mozilla/5.0"), jFrameErrorLocal);
 
             lat = parsed.lat;
             lon = parsed.lon;

@@ -33,9 +33,11 @@ public class JSingleVesselPositionParsed {
 		date[], 
 		time[];
 	
-	public JSingleVesselPositionParsed(String jsonToParse){ // Constructor of the class
+        JFrameError jFrameErrorLocal;
+        
+	public JSingleVesselPositionParsed(String jsonToParse, JFrameError jFrameError){ // Constructor of the class
 		json = jsonToParse; // Writes variable, given by driver code to a protected variable
-		
+		jFrameErrorLocal = jFrameError;
 		parse(); //Calling parsing function
 	}
 	
@@ -82,8 +84,7 @@ public class JSingleVesselPositionParsed {
             
             } else {
             
-                JFrameError jFrameError = new JFrameError("API not working");
-                jFrameError.setVisible(true);
+                jFrameErrorLocal.setVisible(true);
             
             }
             
