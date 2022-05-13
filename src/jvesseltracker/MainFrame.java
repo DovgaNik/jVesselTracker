@@ -6,12 +6,9 @@
 package jvesseltracker;
 
 import java.awt.Color;
-import java.awt.Desktop;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
@@ -1130,11 +1127,8 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonRefresh1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefresh1ActionPerformed
         
-        jvesseltracker.webRequests.Browse browse = new jvesseltracker.webRequests.Browse();
-        browse.browse("https://www.google.com/maps/search/?api=1&query=" + selectedVessel.lat + ", " + selectedVessel.lon);
-        browse.browse("http://www.openstreetmap.org/?mlat=" + selectedVessel.lat + "&mlon=" + selectedVessel.lon + "&zoom=16&layers=M");
-        browse.browse("http://map.openseamap.org/?zoom=17&lat=" + selectedVessel.lat + "&lon=" + selectedVessel.lon + "&layers=BFTFFTTFFTF0FFFTFFFFTT");
-        browse.browse("https://yandex.ru/maps/?pt=" + selectedVessel.lon + "," + selectedVessel.lat + "&z=17&l=map");
+        JFrameAskMap jFrameAskMap = new JFrameAskMap(selectedVessel);
+        jFrameAskMap.setVisible(true);
         
     }//GEN-LAST:event_jButtonRefresh1ActionPerformed
     
