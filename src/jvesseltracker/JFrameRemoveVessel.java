@@ -29,7 +29,6 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         jButtonExit = new javax.swing.JButton();
         jPanelContent = new javax.swing.JPanel();
         jLabelFirst = new javax.swing.JLabel();
-        jLabelVesselName = new javax.swing.JLabel();
         jButtonDisagree = new javax.swing.JButton();
         jButtonAgree = new javax.swing.JButton();
 
@@ -81,12 +80,8 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
         jPanelContent.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 1, 1, 1, new java.awt.Color(179, 73, 93)));
 
         jLabelFirst.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabelFirst.setText("Do you really want to remove");
+        jLabelFirst.setText("Do you really want to remove the vessel");
         jLabelFirst.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-
-        jLabelVesselName.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
-        jLabelVesselName.setText("vessel");
-        jLabelVesselName.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         jButtonDisagree.setBackground(new java.awt.Color(0, 0, 0));
         jButtonDisagree.setFont(new java.awt.Font("Lato", 0, 18)); // NOI18N
@@ -121,14 +116,12 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelContentLayout.createSequentialGroup()
+                        .addComponent(jLabelFirst)
+                        .addGap(0, 2, Short.MAX_VALUE))
+                    .addGroup(jPanelContentLayout.createSequentialGroup()
                         .addComponent(jButtonDisagree, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonAgree, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanelContentLayout.createSequentialGroup()
-                        .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelVesselName)
-                            .addComponent(jLabelFirst))
-                        .addGap(0, 114, Short.MAX_VALUE)))
+                        .addComponent(jButtonAgree, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanelContentLayout.setVerticalGroup(
@@ -136,8 +129,6 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
             .addGroup(jPanelContentLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabelFirst)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelVesselName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanelContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonDisagree)
@@ -221,7 +212,6 @@ public class JFrameRemoveVessel extends javax.swing.JFrame {
     private javax.swing.JButton jButtonDisagree;
     private javax.swing.JButton jButtonExit;
     private javax.swing.JLabel jLabelFirst;
-    private javax.swing.JLabel jLabelVesselName;
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JPanel jPanelTitle;
     // End of variables declaration//GEN-END:variables
