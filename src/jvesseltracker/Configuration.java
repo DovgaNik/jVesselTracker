@@ -16,7 +16,7 @@ public class Configuration {
     
     public String apiPS07;
     public String apiVD01;
-    public long interval;
+    public long interval = 600000;
     public byte defaultMap;
     
     File configFileLocal;
