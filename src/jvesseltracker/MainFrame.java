@@ -665,6 +665,9 @@ public class MainFrame extends javax.swing.JFrame {
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
 
+        jLabelVesselImage.setFont(new java.awt.Font("Open Sans", 0, 86)); // NOI18N
+        jLabelVesselImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
         jLabelVesselIMO.setFont(new java.awt.Font("Lato", 0, 24)); // NOI18N
         jLabelVesselIMO.setText("IMO:");
 
@@ -806,6 +809,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void clearDisplayedData(){
         
         jLabelVesselImage.setIcon(null);
+        jLabelVesselImage.setText("jVesselTracker");
         jLabelVesselMMSI.setText("");
         jLabelVesselIMO.setText("");
         jLabelVesselHeading.setText("");
@@ -820,6 +824,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void setDisplayedData(BufferedImage photo, String MMSI, String IMO, int heading, int course, int differenceCourseHeading, int speed, byte status, String timestamp){
         
         jLabelVesselImage.setIcon(new ImageIcon(photo));
+        jLabelVesselImage.setText(null);
         jLabelVesselMMSI.setText("MMSI :" + MMSI);
         jLabelVesselIMO.setText("IMO :" + IMO);
         jLabelVesselHeading.setText("Heading :" + heading);
