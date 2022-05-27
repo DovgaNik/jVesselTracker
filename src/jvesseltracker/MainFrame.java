@@ -1300,16 +1300,25 @@ public class MainFrame extends javax.swing.JFrame {
             case 122:
                 map();
                 break;
+            case 123:
+                about();
+                break;                  
         }
         
     }//GEN-LAST:event_formKeyPressed
 
     private void jButtonAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAboutActionPerformed
         
-        JFrameAbout jFrameAbout = new JFrameAbout();
-        jFrameAbout.setVisible(true);
+        about();
         
     }//GEN-LAST:event_jButtonAboutActionPerformed
+    
+    public void about() {
+    
+        JFrameAbout jFrameAbout = new JFrameAbout();
+        jFrameAbout.setVisible(true);
+    
+    }
     
     //</editor-fold>
     

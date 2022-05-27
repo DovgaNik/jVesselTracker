@@ -3,7 +3,7 @@
 # jVesselTracker
 
 An easy way to track marine vessels with a lightweight interface
-![Screenshot](docs/main.png) 
+![Screenshot](/home/dovganik/Documents/Projects/jVesselTracker/docs/main.png) 
 
 ## Installation
 
@@ -90,3 +90,5 @@ If you don't want to waut untill the selected delay passes and you want to manua
 * Refresh the data F10
 
 * Open map in browser F11
+
+* Open about window F12
