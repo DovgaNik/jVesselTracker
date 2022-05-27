@@ -135,7 +135,8 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonConfigure = new javax.swing.JButton();
         jButtonExit = new javax.swing.JButton();
         jButtonRefresh = new javax.swing.JButton();
-        jButtonRefresh1 = new javax.swing.JButton();
+        jButtonMap = new javax.swing.JButton();
+        jLabelTitle = new javax.swing.JLabel();
         jPanelSidebar = new javax.swing.JPanel();
         jPanelShipRoot1 = new javax.swing.JPanel();
         jPanelShip1 = new javax.swing.JPanel();
@@ -195,6 +196,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButtonAddNewShip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/add.png"))); // NOI18N
+        jButtonAddNewShip.setToolTipText("Add a new ship");
         jButtonAddNewShip.setBorder(null);
         jButtonAddNewShip.setBorderPainted(false);
         jButtonAddNewShip.setContentAreaFilled(false);
@@ -206,6 +208,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButtonDeleteShip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/delete.png"))); // NOI18N
+        jButtonDeleteShip.setToolTipText("Delete the selected ship");
         jButtonDeleteShip.setBorder(null);
         jButtonDeleteShip.setBorderPainted(false);
         jButtonDeleteShip.setContentAreaFilled(false);
@@ -217,6 +220,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButtonEditShip.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/edit.png"))); // NOI18N
+        jButtonEditShip.setToolTipText("Edit the selected ship");
         jButtonEditShip.setBorder(null);
         jButtonEditShip.setBorderPainted(false);
         jButtonEditShip.setContentAreaFilled(false);
@@ -228,6 +232,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButtonConfigure.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/settings.png"))); // NOI18N
+        jButtonConfigure.setToolTipText("Open configuretion panel");
         jButtonConfigure.setBorder(null);
         jButtonConfigure.setBorderPainted(false);
         jButtonConfigure.setContentAreaFilled(false);
@@ -252,6 +257,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButtonRefresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/refresh.png"))); // NOI18N
+        jButtonRefresh.setToolTipText("Refresh all the ships");
         jButtonRefresh.setBorder(null);
         jButtonRefresh.setBorderPainted(false);
         jButtonRefresh.setContentAreaFilled(false);
@@ -262,16 +268,20 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jButtonRefresh1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/map.png"))); // NOI18N
-        jButtonRefresh1.setBorder(null);
-        jButtonRefresh1.setBorderPainted(false);
-        jButtonRefresh1.setContentAreaFilled(false);
-        jButtonRefresh1.setFocusable(false);
-        jButtonRefresh1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonMap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/map.png"))); // NOI18N
+        jButtonMap.setToolTipText("Open map");
+        jButtonMap.setBorder(null);
+        jButtonMap.setBorderPainted(false);
+        jButtonMap.setContentAreaFilled(false);
+        jButtonMap.setFocusable(false);
+        jButtonMap.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRefresh1ActionPerformed(evt);
+                jButtonMapActionPerformed(evt);
             }
         });
+
+        jLabelTitle.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabelTitle.setForeground(new java.awt.Color(250, 248, 241));
 
         javax.swing.GroupLayout jPanelTitleLayout = new javax.swing.GroupLayout(jPanelTitle);
         jPanelTitle.setLayout(jPanelTitleLayout);
@@ -289,20 +299,28 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonRefresh1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonMap, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButtonAddNewShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButtonDeleteShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButtonEditShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButtonConfigure, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButtonRefresh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(jButtonRefresh1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanelTitleLayout.createSequentialGroup()
+                .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTitleLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabelTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonAddNewShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(jButtonDeleteShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(jButtonEditShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(jButtonConfigure, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(jButtonRefresh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(jButtonMap, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)))
         );
 
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
@@ -316,7 +334,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabelVesselName1.setFont(new java.awt.Font("Open Sans", 0, 36)); // NOI18N
+        jLabelVesselName1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabelVesselName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelVesselName1.setText("N/A");
         jLabelVesselName1.setToolTipText("");
@@ -386,7 +404,7 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelVesselCoordinates2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelVesselCoordinates2.setText("N/A");
 
-        jLabelVesselName2.setFont(new java.awt.Font("Open Sans", 0, 36)); // NOI18N
+        jLabelVesselName2.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabelVesselName2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelVesselName2.setText("N/A");
 
@@ -447,7 +465,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabelVesselName3.setFont(new java.awt.Font("Open Sans", 0, 36)); // NOI18N
+        jLabelVesselName3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabelVesselName3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelVesselName3.setText("N/A");
 
@@ -512,7 +530,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabelVesselName4.setFont(new java.awt.Font("Open Sans", 0, 36)); // NOI18N
+        jLabelVesselName4.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabelVesselName4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelVesselName4.setText("N/A");
 
@@ -577,7 +595,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabelVesselName5.setFont(new java.awt.Font("Open Sans", 0, 36)); // NOI18N
+        jLabelVesselName5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabelVesselName5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelVesselName5.setText("N/A");
 
@@ -668,28 +686,28 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelVesselImage.setFont(new java.awt.Font("Open Sans", 0, 86)); // NOI18N
         jLabelVesselImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        jLabelVesselIMO.setFont(new java.awt.Font("Open Sans", 0, 24)); // NOI18N
+        jLabelVesselIMO.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabelVesselIMO.setText("IMO:");
 
-        jLabelVesselMMSI.setFont(new java.awt.Font("Open Sans", 0, 24)); // NOI18N
+        jLabelVesselMMSI.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabelVesselMMSI.setText("MMSI:");
 
-        jLabelVesselCourse.setFont(new java.awt.Font("Open Sans", 0, 24)); // NOI18N
+        jLabelVesselCourse.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabelVesselCourse.setText("Course:");
 
-        jLabelVesselDifferenceCourseHeading.setFont(new java.awt.Font("Open Sans", 0, 24)); // NOI18N
+        jLabelVesselDifferenceCourseHeading.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabelVesselDifferenceCourseHeading.setText("Difference:");
 
-        jLabelVesselSpeed.setFont(new java.awt.Font("Open Sans", 0, 24)); // NOI18N
+        jLabelVesselSpeed.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabelVesselSpeed.setText("Speed:");
 
-        jLabelVesselHeading.setFont(new java.awt.Font("Open Sans", 0, 24)); // NOI18N
+        jLabelVesselHeading.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabelVesselHeading.setText("Heading:");
 
-        jLabelRequestTimestamp.setFont(new java.awt.Font("Open Sans", 0, 24)); // NOI18N
+        jLabelRequestTimestamp.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabelRequestTimestamp.setText("Timestamp:");
 
-        jLabelVesselStatus.setFont(new java.awt.Font("Open Sans", 0, 24)); // NOI18N
+        jLabelVesselStatus.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabelVesselStatus.setText("Status:");
 
         javax.swing.GroupLayout jPanelContentLayout = new javax.swing.GroupLayout(jPanelContent);
@@ -702,7 +720,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(jLabelVesselImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelContentLayout.createSequentialGroup()
                         .addComponent(jLabelRequestTimestamp)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 479, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 489, Short.MAX_VALUE)
                         .addComponent(jLabelVesselStatus))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelContentLayout.createSequentialGroup()
                         .addComponent(jLabelVesselIMO)
@@ -760,7 +778,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanelSidebar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanelContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 45, Short.MAX_VALUE))
         );
 
         jPanelSidebar.getAccessibleContext().setAccessibleName("Sidebar");
@@ -1132,12 +1150,12 @@ public class MainFrame extends javax.swing.JFrame {
         updateSidebar();
     }//GEN-LAST:event_jButtonRefreshActionPerformed
 
-    private void jButtonRefresh1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefresh1ActionPerformed
+    private void jButtonMapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMapActionPerformed
         
         JFrameAskMap jFrameAskMap = new JFrameAskMap(selectedVessel);
         jFrameAskMap.setVisible(true);
         
-    }//GEN-LAST:event_jButtonRefresh1ActionPerformed
+    }//GEN-LAST:event_jButtonMapActionPerformed
     
     //</editor-fold>
     
@@ -1180,9 +1198,10 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonDeleteShip;
     private javax.swing.JButton jButtonEditShip;
     private javax.swing.JButton jButtonExit;
+    private javax.swing.JButton jButtonMap;
     private javax.swing.JButton jButtonRefresh;
-    private javax.swing.JButton jButtonRefresh1;
     private javax.swing.JLabel jLabelRequestTimestamp;
+    private javax.swing.JLabel jLabelTitle;
     private javax.swing.JLabel jLabelVesselCoordinates1;
     private javax.swing.JLabel jLabelVesselCoordinates2;
     private javax.swing.JLabel jLabelVesselCoordinates3;
