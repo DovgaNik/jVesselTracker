@@ -1,4 +1,4 @@
-[![Java CI](https://github.com/DovgaNik/jVesselTracker/actions/workflows/ant.yml/badge.svg)](https://github.com/DovgaNik/jVesselTracker/actions/workflows/ant.yml)
+[![Java CI](https://github.com/DovgaNik/jVesselTracker/actions/workflows/ant.yml/badge.svg)](https://github.com/DovgaNik/jVesselTracker/actions/workflows/ant.yml)		[My PGP public key](https://dovganik.github.io/DovgaNik/) 
 
 # jVesselTracker
 
@@ -71,3 +71,9 @@ If you don't want to waut untill the selected delay passes and you want to manua
 1. Press on the map pin button in the title bar![](src/jvesseltracker/icons/map.png) 
 
 2. Select the map provider you want to use. These are Google, Yandex, OpenStreetMap and OpenSeaMap. OpenSeaMap is preferred as it provides more maritime data. However, you can use any of these if they are more convenient for you.
+
+## Keyboard shortcuts
+
+* To clear the working panel and hide selected ship press Escape
+
+* If you don't want to choose the ship with your mouse, you should use number keys from 1 to 5
