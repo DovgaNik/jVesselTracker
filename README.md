@@ -1,4 +1,4 @@
-[![Java CI](https://github.com/DovgaNik/jVesselTracker/actions/workflows/ant.yml/badge.svg)](https://github.com/DovgaNik/jVesselTracker/actions/workflows/ant.yml)		[My PGP public key](https://dovganik.github.io/DovgaNik/) 
+[![Java CI](https://github.com/DovgaNik/jVesselTracker/actions/workflows/ant.yml/badge.svg)](https://github.com/DovgaNik/jVesselTracker/actions/workflows/ant.yml)   [My PGP public key](https://dovganik.github.io/DovgaNik/) 
 
 # jVesselTracker
 
@@ -76,4 +76,16 @@ If you don't want to waut untill the selected delay passes and you want to manua
 
 * To clear the working panel and hide selected ship press Escape
 
-* If you don't want to choose the ship with your mouse, you should use number keys from 1 to 5
+* If you don't want to choose the ship with your mouse, you should use F keys from F1 to F5
+
+* Add new ship F6
+
+* Delete a ship F7
+
+* Edit ship data F8
+
+* Open configuration panel F9
+
+* Refresh the data F10
+
+* Open map in browser F11

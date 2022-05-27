@@ -998,6 +998,12 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jButtonAddNewShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddNewShipActionPerformed
                 
+        add();
+        
+    }//GEN-LAST:event_jButtonAddNewShipActionPerformed
+
+    private void add(){
+    
         if (selectedVessel == null) {
         
             setAnimationInvisible();        
@@ -1008,17 +1014,29 @@ public class MainFrame extends javax.swing.JFrame {
         JFrameAddEditVessel jFrameAddVessel = new JFrameAddEditVessel(false, selectedVessel);
         jFrameAddVessel.setVisible(true);
         
-    }//GEN-LAST:event_jButtonAddNewShipActionPerformed
-
+    }
+    
     private void jButtonDeleteShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteShipActionPerformed
         
-        JFrameRemoveVessel jFrameRemoveVessel = new JFrameRemoveVessel(selectedVessel);
-        jFrameRemoveVessel.setVisible(true);
+        delete();
         
     }//GEN-LAST:event_jButtonDeleteShipActionPerformed
 
+    private void delete(){
+    
+        JFrameRemoveVessel jFrameRemoveVessel = new JFrameRemoveVessel(selectedVessel);
+        jFrameRemoveVessel.setVisible(true);
+        
+    }
+    
     private void jButtonEditShipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditShipActionPerformed
         
+        edit();
+                
+    }//GEN-LAST:event_jButtonEditShipActionPerformed
+
+    private void edit() {
+    
         if (selectedVessel != null) {
         
             JFrameAddEditVessel jFrameEditVessel = new JFrameAddEditVessel(true, selectedVessel);
@@ -1029,11 +1047,17 @@ public class MainFrame extends javax.swing.JFrame {
             System.out.println("You haven't chosen anything");
         
         }
-                
-    }//GEN-LAST:event_jButtonEditShipActionPerformed
-
+        
+    }
+    
     private void jButtonConfigureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfigureActionPerformed
         
+        configure();
+        
+    }//GEN-LAST:event_jButtonConfigureActionPerformed
+
+    private void configure() {
+    
         JFrameConfigure jFrameConfigure;
         try {
             
@@ -1047,9 +1071,9 @@ public class MainFrame extends javax.swing.JFrame {
         }
                 
         System.out.println("Opening Configure frame");
-        
-    }//GEN-LAST:event_jButtonConfigureActionPerformed
-
+    
+    }
+    
     //</editor-fold>
     
     private void jPanelShip1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip1MousePressed
@@ -1174,6 +1198,13 @@ public class MainFrame extends javax.swing.JFrame {
     }
     
     private void jButtonRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefreshActionPerformed
+        
+        refresh();
+        
+    }//GEN-LAST:event_jButtonRefreshActionPerformed
+
+    private void refresh() {
+    
         try {
             
             getAll();
@@ -1185,17 +1216,24 @@ public class MainFrame extends javax.swing.JFrame {
         }
         
         updateSidebar();
-    }//GEN-LAST:event_jButtonRefreshActionPerformed
-
+        
+    }
+    
     private void jButtonMapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMapActionPerformed
         
-        JFrameAskMap jFrameAskMap = new JFrameAskMap(selectedVessel);
-        jFrameAskMap.setVisible(true);
+        map();
         
     }//GEN-LAST:event_jButtonMapActionPerformed
 
+    private void map() {
+    
+        JFrameAskMap jFrameAskMap = new JFrameAskMap(selectedVessel);
+        jFrameAskMap.setVisible(true);
+        
+    }
+    
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
-                        
+                
         switch (evt.getKeyCode()){
         
             case 27:
@@ -1203,25 +1241,49 @@ public class MainFrame extends javax.swing.JFrame {
                 setAnimationInvisible();
                 break;
                
-            case 49:
+            case 112:
                 Ship1();
                 break;
             
-            case 50:
+            case 113:
                 Ship2();
                 break;
                 
-            case 51:
+            case 114:
                 Ship3();
                 break;
                
-            case 52:
+            case 115:
                 Ship4();
                 break;
             
-            case 53:
+            case 116:
                 Ship5();
-                break;    
+                break;
+                
+            case 117:
+                add();
+                break;
+               
+            case 118:
+                delete();
+                break;
+            
+            case 119:
+                edit();
+                break;
+                
+            case 120:
+                configure();
+                break;
+               
+            case 121:
+                refresh();
+                break;
+            
+            case 122:
+                map();
+                break;
         }
         
     }//GEN-LAST:event_formKeyPressed
