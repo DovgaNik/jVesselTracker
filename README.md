@@ -3,7 +3,7 @@
 # jVesselTracker
 
 An easy way to track marine vessels with a lightweight interface
-![Screenshot](/home/dovganik/Documents/Projects/jVesselTracker/docs/main.png) 
+![Screenshot](docs/main.png) 
 
 ## Installation
 
