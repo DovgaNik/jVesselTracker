@@ -828,6 +828,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         jLabelVesselImage.setIcon(null);
         jLabelVesselImage.setText("jVesselTracker");
+        jLabelTitle.setText(null);
         jLabelVesselMMSI.setText("");
         jLabelVesselIMO.setText("");
         jLabelVesselHeading.setText("");
@@ -843,6 +844,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         jLabelVesselImage.setIcon(new ImageIcon(photo));
         jLabelVesselImage.setText(null);
+        jLabelTitle.setText("jVesselTracker");
         jLabelVesselMMSI.setText("MMSI :" + MMSI);
         jLabelVesselIMO.setText("IMO :" + IMO);
         jLabelVesselHeading.setText("Heading :" + heading);
