@@ -1305,7 +1305,10 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_formKeyPressed
 
     private void jButtonAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAboutActionPerformed
-        // TODO add your handling code here:
+        
+        JFrameAbout jFrameAbout = new JFrameAbout();
+        jFrameAbout.setVisible(true);
+        
     }//GEN-LAST:event_jButtonAboutActionPerformed
     
     //</editor-fold>
