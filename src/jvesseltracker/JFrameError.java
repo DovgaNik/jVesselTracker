@@ -24,7 +24,7 @@ public class JFrameError extends javax.swing.JFrame {
         jLabelError = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Add Vessel");
+        setTitle("Error");
         setLocationByPlatform(true);
         setUndecorated(true);
         setType(java.awt.Window.Type.POPUP);

@@ -181,6 +181,11 @@ public class MainFrame extends javax.swing.JFrame {
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1000, 640));
         setResizable(false);
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
 
         jPanelTitle.setBackground(new java.awt.Color(179, 73, 93));
         jPanelTitle.setToolTipText("");
@@ -1158,6 +1163,17 @@ public class MainFrame extends javax.swing.JFrame {
         jFrameAskMap.setVisible(true);
         
     }//GEN-LAST:event_jButtonMapActionPerformed
+
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+        
+        if (evt.getKeyCode() == 27) {
+        
+            clearDisplayedData();
+            setAnimationInvisible();
+        
+        }
+        
+    }//GEN-LAST:event_formKeyPressed
     
     //</editor-fold>
     
