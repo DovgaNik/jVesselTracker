@@ -3,6 +3,7 @@
 # jVesselTracker
 
 An easy way to track marine vessels with a lightweight interface
+![Screenshot](/home/dovganik/Documents/Projects/jVesselTracker/docs/main.png) 
 
 ## Installation
 
@@ -44,7 +45,7 @@ jVesselTracker is written in Java. This means that the project can be used on an
 
 1. Select the vessel you want do delete in the sidebar on the left
 
-2. Click on the minus button in the title bar ![](src/jvesseltracker/icons/delete.png) 
+2. Click on the minus button in the title bar ![delete](src/jvesseltracker/icons/delete.png) 
 
 3. Confirm your desire to delete the vessel
 
@@ -54,7 +55,7 @@ If you typed incorrect MMSI, IMO or name or you just want to change the ship
 
 1. Select wanted place to change information in the sidebar on the left
 
-2. Click on pencil button in the title bar ![](/home/dovganik/Documents/Projects/jVesselTracker/src/jvesseltracker/icons/edit.png) 
+2. Click on pencil button in the title bar ![edit](/home/dovganik/Documents/Projects/jVesselTracker/src/jvesseltracker/icons/edit.png) 
 
 3. Change desired information
 
@@ -64,11 +65,11 @@ If you typed incorrect MMSI, IMO or name or you just want to change the ship
 
 If you don't want to waut untill the selected delay passes and you want to manually update the received information
 
-1. Press refresh button ![](src/jvesseltracker/icons/refresh.png) 
+1. Press refresh button ![refresh](src/jvesseltracker/icons/refresh.png) 
 
 ### Show ship position on map
 
-1. Press on the map pin button in the title bar![](src/jvesseltracker/icons/map.png) 
+1. Press on the map pin button in the title bar![map](src/jvesseltracker/icons/map.png) 
 
 2. Select the map provider you want to use. These are Google, Yandex, OpenStreetMap and OpenSeaMap. OpenSeaMap is preferred as it provides more maritime data. However, you can use any of these if they are more convenient for you.
 
