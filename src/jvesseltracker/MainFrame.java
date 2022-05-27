@@ -850,13 +850,13 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelVesselImage.setIcon(new ImageIcon(photo));
         jLabelVesselImage.setText(null);
         jLabelTitle.setText("jVesselTracker");
-        jLabelVesselMMSI.setText("MMSI :" + MMSI);
-        jLabelVesselIMO.setText("IMO :" + IMO);
-        jLabelVesselHeading.setText("Heading :" + heading);
-        jLabelVesselCourse.setText("Course :" + course);
-        jLabelVesselDifferenceCourseHeading.setText("Difference :" + differenceCourseHeading);
-        jLabelVesselSpeed.setText("Speed:" + speed);
-        jLabelVesselStatus.setText("Status: " + status);
+        jLabelVesselMMSI.setText("MMSI: " + MMSI); //Right
+        jLabelVesselIMO.setText("IMO: " + IMO);
+        jLabelVesselHeading.setText("Heading: " + heading); //Right
+        jLabelVesselCourse.setText("Course: " + course);
+        jLabelVesselDifferenceCourseHeading.setText("Difference: " + differenceCourseHeading); //Right
+        jLabelVesselSpeed.setText("Speed: " + speed + " knots");
+        jLabelVesselStatus.setText("Status: " + status); //Right
         jLabelRequestTimestamp.setText("Timestamp: " + timestamp);
         
     }
