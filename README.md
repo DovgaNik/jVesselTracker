@@ -55,7 +55,7 @@ If you typed incorrect MMSI, IMO or name or you just want to change the ship
 
 1. Select wanted place to change information in the sidebar on the left
 
-2. Click on pencil button in the title bar ![edit](/home/dovganik/Documents/Projects/jVesselTracker/src/jvesseltracker/icons/edit.png) 
+2. Click on pencil button in the title bar ![edit](src/jvesseltracker/icons/edit.png) 
 
 3. Change desired information
 
