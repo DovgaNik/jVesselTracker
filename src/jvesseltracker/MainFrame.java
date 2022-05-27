@@ -132,11 +132,12 @@ public class MainFrame extends javax.swing.JFrame {
         jButtonAddNewShip = new javax.swing.JButton();
         jButtonDeleteShip = new javax.swing.JButton();
         jButtonEditShip = new javax.swing.JButton();
-        jButtonConfigure = new javax.swing.JButton();
-        jButtonExit = new javax.swing.JButton();
-        jButtonRefresh = new javax.swing.JButton();
         jButtonMap = new javax.swing.JButton();
+        jButtonRefresh = new javax.swing.JButton();
+        jButtonConfigure = new javax.swing.JButton();
+        jButtonAbout = new javax.swing.JButton();
         jLabelTitle = new javax.swing.JLabel();
+        jButtonExit = new javax.swing.JButton();
         jPanelSidebar = new javax.swing.JPanel();
         jPanelShipRoot1 = new javax.swing.JPanel();
         jPanelShip1 = new javax.swing.JPanel();
@@ -236,28 +237,15 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jButtonConfigure.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/settings.png"))); // NOI18N
-        jButtonConfigure.setToolTipText("Open configuretion panel");
-        jButtonConfigure.setBorder(null);
-        jButtonConfigure.setBorderPainted(false);
-        jButtonConfigure.setContentAreaFilled(false);
-        jButtonConfigure.setFocusable(false);
-        jButtonConfigure.addActionListener(new java.awt.event.ActionListener() {
+        jButtonMap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/map.png"))); // NOI18N
+        jButtonMap.setToolTipText("Open map");
+        jButtonMap.setBorder(null);
+        jButtonMap.setBorderPainted(false);
+        jButtonMap.setContentAreaFilled(false);
+        jButtonMap.setFocusable(false);
+        jButtonMap.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonConfigureActionPerformed(evt);
-            }
-        });
-
-        jButtonExit.setBackground(new java.awt.Color(179, 73, 93));
-        jButtonExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/mooringPoingExit.png"))); // NOI18N
-        jButtonExit.setToolTipText("Close");
-        jButtonExit.setBorder(null);
-        jButtonExit.setBorderPainted(false);
-        jButtonExit.setContentAreaFilled(false);
-        jButtonExit.setFocusable(false);
-        jButtonExit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonExitActionPerformed(evt);
+                jButtonMapActionPerformed(evt);
             }
         });
 
@@ -273,20 +261,46 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jButtonMap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/map.png"))); // NOI18N
-        jButtonMap.setToolTipText("Open map");
-        jButtonMap.setBorder(null);
-        jButtonMap.setBorderPainted(false);
-        jButtonMap.setContentAreaFilled(false);
-        jButtonMap.setFocusable(false);
-        jButtonMap.addActionListener(new java.awt.event.ActionListener() {
+        jButtonConfigure.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/settings.png"))); // NOI18N
+        jButtonConfigure.setToolTipText("Open configuretion panel");
+        jButtonConfigure.setBorder(null);
+        jButtonConfigure.setBorderPainted(false);
+        jButtonConfigure.setContentAreaFilled(false);
+        jButtonConfigure.setFocusable(false);
+        jButtonConfigure.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonMapActionPerformed(evt);
+                jButtonConfigureActionPerformed(evt);
+            }
+        });
+
+        jButtonAbout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/info.png"))); // NOI18N
+        jButtonAbout.setToolTipText("Open configuretion panel");
+        jButtonAbout.setBorder(null);
+        jButtonAbout.setBorderPainted(false);
+        jButtonAbout.setContentAreaFilled(false);
+        jButtonAbout.setFocusable(false);
+        jButtonAbout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAboutActionPerformed(evt);
             }
         });
 
         jLabelTitle.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabelTitle.setForeground(new java.awt.Color(250, 248, 241));
+        jLabelTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        jButtonExit.setBackground(new java.awt.Color(179, 73, 93));
+        jButtonExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/jvesseltracker/icons/mooringPoingExit.png"))); // NOI18N
+        jButtonExit.setToolTipText("Close");
+        jButtonExit.setBorder(null);
+        jButtonExit.setBorderPainted(false);
+        jButtonExit.setContentAreaFilled(false);
+        jButtonExit.setFocusable(false);
+        jButtonExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonExitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelTitleLayout = new javax.swing.GroupLayout(jPanelTitle);
         jPanelTitle.setLayout(jPanelTitleLayout);
@@ -300,11 +314,13 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonEditShip, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonConfigure, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonMap, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonMap, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonConfigure, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonAbout, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -313,19 +329,19 @@ public class MainFrame extends javax.swing.JFrame {
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelTitleLayout.createSequentialGroup()
-                .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jButtonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTitleLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabelTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonAddNewShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(jButtonDeleteShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(jButtonEditShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(jButtonConfigure, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(jButtonRefresh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                    .addComponent(jButtonMap, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)))
+                .addGroup(jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jLabelTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonAddNewShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                        .addComponent(jButtonDeleteShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonEditShip, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonConfigure, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonMap, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonAbout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButtonRefresh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         jPanelSidebar.setBackground(new java.awt.Color(67, 66, 107));
@@ -1287,6 +1303,10 @@ public class MainFrame extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_formKeyPressed
+
+    private void jButtonAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAboutActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonAboutActionPerformed
     
     //</editor-fold>
     
@@ -1324,6 +1344,7 @@ public class MainFrame extends javax.swing.JFrame {
     //<editor-fold defaultstate="collapsed" desc="Variable declaration">
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonAbout;
     private javax.swing.JButton jButtonAddNewShip;
     private javax.swing.JButton jButtonConfigure;
     private javax.swing.JButton jButtonDeleteShip;
