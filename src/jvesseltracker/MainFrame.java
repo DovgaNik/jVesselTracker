@@ -1054,6 +1054,12 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void jPanelShip1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip1MousePressed
         
+        Ship1();
+        
+    }//GEN-LAST:event_jPanelShip1MousePressed
+
+    private void Ship1(){
+    
         setAnimationInvisible();        
         selectedVessel = vessel1;
         
@@ -1068,11 +1074,17 @@ public class MainFrame extends javax.swing.JFrame {
             
         }
         updateSidebar();
-        
-    }//GEN-LAST:event_jPanelShip1MousePressed
-
+    
+    }
+    
     private void jPanelShip2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip2MousePressed
         
+        Ship2();
+        
+    }//GEN-LAST:event_jPanelShip2MousePressed
+
+    private void Ship2(){
+    
         setAnimationInvisible();        
         selectedVessel = vessel2;
         if(!selectedVessel.isEmpty){
@@ -1086,11 +1098,17 @@ public class MainFrame extends javax.swing.JFrame {
             
         }
         updateSidebar();
-        
-    }//GEN-LAST:event_jPanelShip2MousePressed
-
+    
+    }
+    
     private void jPanelShip3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip3MousePressed
         
+        Ship3();
+
+    }//GEN-LAST:event_jPanelShip3MousePressed
+
+    private void Ship3(){
+    
         setAnimationInvisible();        
         selectedVessel = vessel3;
         if(!selectedVessel.isEmpty){
@@ -1104,11 +1122,17 @@ public class MainFrame extends javax.swing.JFrame {
             
         }
         updateSidebar();
-
-    }//GEN-LAST:event_jPanelShip3MousePressed
-
+    
+    }
+    
     private void jPanelShip4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip4MousePressed
         
+        Ship4();
+
+    }//GEN-LAST:event_jPanelShip4MousePressed
+
+    private void Ship4(){
+    
         setAnimationInvisible();        
         selectedVessel = vessel4;
         if(!selectedVessel.isEmpty){
@@ -1122,11 +1146,17 @@ public class MainFrame extends javax.swing.JFrame {
             
         }
         updateSidebar();
-
-    }//GEN-LAST:event_jPanelShip4MousePressed
-
+    
+    }
+    
     private void jPanelShip5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelShip5MousePressed
         
+        Ship5();
+
+    }//GEN-LAST:event_jPanelShip5MousePressed
+
+    private void Ship5(){
+    
         setAnimationInvisible();        
         selectedVessel = vessel5;
         if(!selectedVessel.isEmpty){
@@ -1140,9 +1170,9 @@ public class MainFrame extends javax.swing.JFrame {
             
         }
         updateSidebar();
-
-    }//GEN-LAST:event_jPanelShip5MousePressed
-
+    
+    }
+    
     private void jButtonRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRefreshActionPerformed
         try {
             
@@ -1165,12 +1195,33 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonMapActionPerformed
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+                        
+        switch (evt.getKeyCode()){
         
-        if (evt.getKeyCode() == 27) {
-        
-            clearDisplayedData();
-            setAnimationInvisible();
-        
+            case 27:
+                clearDisplayedData();
+                setAnimationInvisible();
+                break;
+               
+            case 49:
+                Ship1();
+                break;
+            
+            case 50:
+                Ship2();
+                break;
+                
+            case 51:
+                Ship3();
+                break;
+               
+            case 52:
+                Ship4();
+                break;
+            
+            case 53:
+                Ship5();
+                break;    
         }
         
     }//GEN-LAST:event_formKeyPressed
