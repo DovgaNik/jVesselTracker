@@ -33,6 +33,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
 
         jPanelTitle = new javax.swing.JPanel();
         jButtonExit = new javax.swing.JButton();
+        jLabelTitle = new javax.swing.JLabel();
         jPanelContent = new javax.swing.JPanel();
         jLabelAPIPS07 = new javax.swing.JLabel();
         jTextFieldPS07 = new javax.swing.JTextField();
@@ -74,18 +75,25 @@ public class JFrameConfigure extends javax.swing.JFrame {
             }
         });
 
+        jLabelTitle.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabelTitle.setForeground(new java.awt.Color(250, 248, 241));
+        jLabelTitle.setText("Configuration");
+
         javax.swing.GroupLayout jPanelTitleLayout = new javax.swing.GroupLayout(jPanelTitle);
         jPanelTitle.setLayout(jPanelTitleLayout);
         jPanelTitleLayout.setHorizontalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTitleLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonExit)
                 .addContainerGap())
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButtonExit)
+            .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
@@ -193,7 +201,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
                 .addComponent(jPanelContent, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0))
         );
@@ -266,6 +274,7 @@ public class JFrameConfigure extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelAPIPS8;
     private javax.swing.JLabel jLabelAPIVD01;
     private javax.swing.JLabel jLabelAPIVD2;
+    private javax.swing.JLabel jLabelTitle;
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JPanel jPanelTitle;
     private javax.swing.JTextField jTextFieldPS07;

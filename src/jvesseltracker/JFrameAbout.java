@@ -25,6 +25,7 @@ public class JFrameAbout extends javax.swing.JFrame {
 
         jPanelTitle = new javax.swing.JPanel();
         jButtonExit = new javax.swing.JButton();
+        jLabelTitle = new javax.swing.JLabel();
         jPanelContent = new javax.swing.JPanel();
         jLabelText = new javax.swing.JLabel();
         jLabelGitHubRepository = new javax.swing.JLabel();
@@ -61,18 +62,25 @@ public class JFrameAbout extends javax.swing.JFrame {
             }
         });
 
+        jLabelTitle.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabelTitle.setForeground(new java.awt.Color(250, 248, 241));
+        jLabelTitle.setText("About");
+
         javax.swing.GroupLayout jPanelTitleLayout = new javax.swing.GroupLayout(jPanelTitle);
         jPanelTitle.setLayout(jPanelTitleLayout);
         jPanelTitleLayout.setHorizontalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTitleLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonExit)
                 .addContainerGap())
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButtonExit)
+            .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
@@ -183,6 +191,7 @@ public class JFrameAbout extends javax.swing.JFrame {
     private javax.swing.JButton jButtonExit;
     private javax.swing.JLabel jLabelGitHubRepository;
     private javax.swing.JLabel jLabelText;
+    private javax.swing.JLabel jLabelTitle;
     private javax.swing.JLabel jLabelWebPage;
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JPanel jPanelTitle;

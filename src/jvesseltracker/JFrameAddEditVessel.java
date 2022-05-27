@@ -21,7 +21,12 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
             jTextFieldMMSI.setText(vesselLocal.MMSI);
             jTextFieldIMO.setText(vesselLocal.IMO);
             jTextFieldName.setText(vesselLocal.name);
+            jLabelTitle.setText("Edit vessel");
             
+        }else {
+        
+            jLabelTitle.setText("Add vessel");
+        
         }
         
     }
@@ -35,6 +40,7 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
 
         jPanelTitle = new javax.swing.JPanel();
         jButtonExit = new javax.swing.JButton();
+        jLabelTitle = new javax.swing.JLabel();
         jPanelContent = new javax.swing.JPanel();
         jLabelMMSI = new javax.swing.JLabel();
         jTextFieldMMSI = new javax.swing.JTextField();
@@ -75,18 +81,24 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
             }
         });
 
+        jLabelTitle.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabelTitle.setForeground(new java.awt.Color(250, 248, 241));
+
         javax.swing.GroupLayout jPanelTitleLayout = new javax.swing.GroupLayout(jPanelTitle);
         jPanelTitle.setLayout(jPanelTitleLayout);
         jPanelTitleLayout.setHorizontalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTitleLayout.createSequentialGroup()
-                .addContainerGap(357, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonExit)
                 .addContainerGap())
         );
         jPanelTitleLayout.setVerticalGroup(
             jPanelTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButtonExit)
+            .addComponent(jLabelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanelContent.setBackground(new java.awt.Color(250, 248, 241));
@@ -146,7 +158,7 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
                             .addComponent(jLabelMMSI)
                             .addComponent(jLabelIMO)
                             .addComponent(jLabelName))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 136, Short.MAX_VALUE))
                     .addGroup(jPanelContentLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -266,6 +278,7 @@ public class JFrameAddEditVessel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelIMO;
     private javax.swing.JLabel jLabelMMSI;
     private javax.swing.JLabel jLabelName;
+    private javax.swing.JLabel jLabelTitle;
     private javax.swing.JPanel jPanelContent;
     private javax.swing.JPanel jPanelTitle;
     private javax.swing.JTextField jTextFieldIMO;
