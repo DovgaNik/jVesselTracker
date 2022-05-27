@@ -3,7 +3,7 @@
 # jVesselTracker
 
 An easy way to track marine vessels with a lightweight interface
-![Screenshot](/home/dovganik/Documents/Projects/jVesselTracker/docs/main.png) 
+![Screenshot](docs/main.png) 
 
 ## Installation
 
@@ -92,3 +92,11 @@ If you don't want to waut untill the selected delay passes and you want to manua
 * Open map in browser F11
 
 * Open about window F12
+
+### TO-DO
+
+* Add support of FleetMon and VesselFinder APIs
+
+* Add more error handlers, e.g wrong or expired api key
+
+* Add download multithreading
