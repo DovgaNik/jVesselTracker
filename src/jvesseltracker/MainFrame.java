@@ -868,7 +868,17 @@ public class MainFrame extends javax.swing.JFrame {
         jLabelTitle.setText("jVesselTracker");
         jLabelVesselMMSI.setText("MMSI: " + MMSI); //Right
         jLabelVesselIMO.setText("IMO: " + IMO);
-        jLabelVesselHeading.setText("Heading: " + heading); //Right
+        
+        if (heading == 511){
+            
+            jLabelVesselHeading.setText("Heading: N/A"); //Right
+            
+        } else{
+            
+            jLabelVesselHeading.setText("Heading: " + heading); //Right
+            
+        }
+        
         jLabelVesselCourse.setText("Course: " + course);
         jLabelVesselDifferenceCourseHeading.setText("Difference: " + differenceCourseHeading); //Right
         jLabelVesselSpeed.setText("Speed: " + speed + " knots");
