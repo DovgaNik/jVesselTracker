@@ -93,7 +93,7 @@ public class MainFrame extends javax.swing.JFrame {
         clearDisplayedData();
         
         
-        givenUsingTimer_whenSchedulingTaskOnce_thenCorrect();
+        updateTimer();
     }
     
     //<editor-fold defaultstate="collapsed" desc="Creating objects">
@@ -926,13 +926,13 @@ public class MainFrame extends javax.swing.JFrame {
     
     //<editor-fold defaultstate="collapsed" desc="Updating data">
     
-    public void givenUsingTimer_whenSchedulingTaskOnce_thenCorrect() {
+    public void updateTimer() {
     TimerTask task = new TimerTask() {
         public void run() {
             try {
                 
                 getAll();
-                givenUsingTimer_whenSchedulingTaskOnce_thenCorrect();
+                updateTimer();
                 
             } catch (IOException ex) {
                 
